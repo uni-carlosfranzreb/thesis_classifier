@@ -65,7 +65,9 @@ def find_ngrams(fname, n=20):
 def remove_upper(old_file, new_file):
   """ Remove all upper-cased words from the vec file. To ensure that no words
   lost, look for the lower-cased version of the word in the file. If it is not
-  found, lower-case the word and add it to the new file. """
+  found, lower-case the word and add it to the new file. The first line of the
+  file shows the number of entries and the number of embeddings. It has to 
+  be updated after the procedure. """
   old = io.open(old_file, encoding='utf-8', newline='\n', errors='ignore')
   new = open(new_file, 'a', encoding='utf-8')
   for line in old:
@@ -77,6 +79,10 @@ def remove_upper(old_file, new_file):
         new.write(low_line)
     else:
       new.write(line)
+  lines = open(new_file).readlines()
+  lines[0] = f'{len(lines)-1} {lines[0].rstrip().split(" ")[1]}'
+  with open(new_file, 'w') as f:
+    f.writelines(lines)
 
 
 if __name__ == '__main__':
