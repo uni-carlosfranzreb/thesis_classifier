@@ -22,4 +22,6 @@ However, instead of using sigmoid cross entropy as a loss function, we use Ben-B
 
 The fasttext embeddings includes one million 300-dimensional vectors for words without lemmatizing or even lower-casing. For instance, all these words are in the file: `machine, machines, learn, learning, learns, learned`, both lower- and upper-cased.
 
+Although Mikolov mentions training phrases as well, they were not published together with the words.
+
 Given that we are only interested in lower-cased words, we create a new file containing only lower-cased words.
