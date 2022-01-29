@@ -38,11 +38,16 @@ def find_vec(fname, token):
       return list(map(float, tokens[1:]))
 
 
-if __name__ == '__main__':
-  vecs_file = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
-  # vecs = sample_vectors(vecs_file)
-  # json.dump(vecs, open('sample_vecs.json', 'w'))
+def test_embeddings():
+  """ See what kind of words are in the file, i.e. if words are lemmatized or 
+  lower-cased. """
   for word in ['machine', 'machines', 'learn', 'learning', 'learns', 'learned']:
     print(word, find_vec(vecs_file, word) is not None)
   for word in ['Machine', 'Machines', 'Learn', 'Learning', 'Learns', 'Learned']:
     print(word, find_vec(vecs_file, word) is not None)
+
+
+if __name__ == '__main__':
+  vecs_file = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
+  vecs = sample_vectors(vecs_file)
+  json.dump(vecs, open('sample_vecs.json', 'w'))
