@@ -27,8 +27,25 @@ However, instead of using sigmoid cross entropy as a loss function, we use Ben-B
 
 ## Word embeddings
 
-The fasttext file includes 999,994 300-dimensional vectors for words without lemmatizing or even lower-casing. For instance, all these words are in the file: `machine, machines, learn, learning, learns, learned`, both lower- and upper-cased.
+The fasttext file (`wiki-news-300d-1M-subword.vec`) includes 999,994 300-dimensional vectors for words without lemmatizing or even lower-casing. For instance, all these words are in the file: `machine, machines, learn, learning, learns, learned`, both lower- and upper-cased. Although Mikolov mentions training phrases as well, they were not published together with the words.
 
-Although Mikolov mentions training phrases as well, they were not published together with the words.
+Given that we are only interested in lower-cased words, we create a new file containing only lower-cased words. Removing all lower-cased words yields a file with 410,568 words.
 
-Given that we are only interested in lower-cased words, we create a new file containing only lower-cased words. After removing upper-cased words, 410,569 words remain in the file.
+## Structure of the data file
+
+Data files must follow a certain format. There can be many of them, as the Dataset receives the folder as an input.
+
+Data is ordered by subject, as it was extracted ensuring that all subjects are present. Therefore, the first level of the file is the subject IDs. Each ID is mapped to a dictionary of documents, where the document IDs are mapped to a dictionary containing their data and subjects. The data is the concatenation of the title and the abstract.
+
+Here is an example:
+
+```
+{
+  'subject ID': {
+    'document ID': {
+      'data': data (str),
+      'subjects': subject (list)
+    }
+  }
+}
+```
