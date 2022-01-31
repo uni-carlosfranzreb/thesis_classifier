@@ -85,7 +85,26 @@ def remove_upper(old_file, new_file):
   new.close()
   lines = open(new_file, encoding='utf-8').readlines()
   logging.info(f'New file has {len(lines)-1} words')
-  lines[0] = f'{len(lines)-1} {lines[0].rstrip().split(" ")[1]}'
+  lines[0] = f'{len(lines)-1} {lines[0].split(" ")[1]}'
+  with open(new_file, 'w', encoding='utf-8') as f:
+    f.writelines(lines)
+
+
+def remove_all_upper(old_file, new_file):
+  """ Remove all upper-cased words from the vec file. To ensure that no words
+  lost, look for the lower-cased version of the word in the file. If it is not
+  found, lower-case the word and add it to the new file. The first line of the
+  file shows the number of entries and the number of embeddings. It has to 
+  be updated after the procedure. """
+  old = io.open(old_file, encoding='utf-8', newline='\n', errors='ignore')
+  new = open(new_file, 'a', encoding='utf-8')
+  for line in old:
+    if not line[0].isupper():
+      new.write(line)
+  new.close()
+  lines = open(new_file, encoding='utf-8').readlines()
+  logging.info(f'New file has {len(lines)-1} words')
+  lines[0] = f'{len(lines)-1} {lines[0].split(" ")[1]}'
   with open(new_file, 'w', encoding='utf-8') as f:
     f.writelines(lines)
 
@@ -120,20 +139,22 @@ def vocab_vectors(vecs_file, vocab_file, dump_file):
   logging.info(f'{len(vocab)} vocab words are not in the vector file')
   lines = open(dump_file, encoding='utf-8').readlines()
   logging.info(f'{len(lines)-1} lines in the new file')
-  lines[0] = f'{len(lines)-1} {lines[0].rstrip().split(" ")[1]}'
+  lines[0] = f'{len(lines)-1} {lines[0].split(" ")[1]}'
   with open(dump_file, 'w', encoding='utf-8') as f:
     f.writelines(lines)
   
 
 if __name__ == '__main__':
   vecs_file = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
+  lowercased_file = 'data/pretrained_vecs/lowercased_vecs.vec'
   lower_file = 'data/pretrained_vecs/lower_vecs.vec'
   vocab_file = 'data/pretrained_vecs/vocab_vecs.vec'
   vocab_json = 'data/vocab/vocab.json'
   logging.basicConfig(
     level=logging.INFO, 
-    handlers=[logging.FileHandler('logs/vocab_vectors.log', 'w', 'utf-8')],
+    handlers=[logging.FileHandler('logs/remove_all_upper.log', 'w', 'utf-8')],
     format='%(message)s'
   )
-  vocab_vectors(vecs_file, vocab_json, vocab_file)
+  remove_all_upper(vecs_file, lower_file)
   # vocab_vectors(lower_file, vocab_file, dump_file)
+  # load_vectors(lower_file)
