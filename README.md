@@ -14,6 +14,8 @@ The architecture and embedding choices are similar to those described in Giargul
 3. a fully connected two layer neural network, whose output layer has as many nodes as there are subjects,
 4. training occurs with batch size 10, learning rate 0.1, momentum 0.5 and Nesterov accelerated gradient.
 
+He does not mention clipping in the paper, so we will first try to train the model without.
+
 An issue with Giargiulo implementation is that the first max-pooling (MP) layer is said to have kernel size 1. This can not be right, as the input would remain unchanged. It wouldn't make sense either to be a MP layer of size 2, as the resulting output would have as many vectors are as expected from the second convolutional layer. In numbers: thei first conv. layer outputs 200 vectors; the second one, 100 vectors. If there was a pooling layer with kernel size 2 in between, the second convolutional layer would not reduce the dimensionality of the input. This is possible but unlikely (is it?). We therefore remove this pooling layer.
 
 The convolution layers are stated to be one-dimensional. The pooling layers are not. In NLP, the common pooling practice is [max-pooling over time](https://cezannec.github.io/CNN_Text_Classification/). This (blog post)[https://lena-voita.github.io/nlp_course/models/convolutional.html] explains hwo to use convolutions and pooling for text very well:
