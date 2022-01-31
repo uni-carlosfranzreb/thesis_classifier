@@ -73,14 +73,17 @@ def get_vecs():
   vecs_folder = 'data/openalex/doc_vecs'
   for file in listdir(docs_folder):
     docs = json.load(open(f'{docs_folder}/{file}', encoding='utf-8'))
-    vecs = []
-    for doc in docs:
-      vecs.append([])
-      for w in doc:
-        vec = find_vec(w)
-        if vec is not None:
-          vecs[-1].append(vec)
-      logging.info(f'Found {len(vecs[-1])} vecs for {len(doc)} words')
+    vecs = {}
+    for subject in docs:
+      vecs[subject] = []
+      for doc in docs[subject]:
+        vecs[subject].append({'data': [], 'subjects': doc['subjects']})
+        for w in doc['data']:
+          vec = find_vec(w)
+          if vec is not None:
+            vecs[subject][-1]['data'].append(vec)
+        logging.info(f'Found {len(vecs[subject][-1])["data"]} vecs \
+        for {len(doc["data"])} words')
     json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
 
 
