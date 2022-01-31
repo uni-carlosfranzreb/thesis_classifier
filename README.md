@@ -43,17 +43,19 @@ Giargulo splits the dataset into 99 % training and 1 % test sets. This is done b
 
 Data files must follow a certain format. There can be many of them, as the Dataset receives the folder as an input.
 
-Data is ordered by subject, as it was extracted ensuring that all subjects are present. Therefore, the first level of the file is the subject IDs. Each ID is mapped to a dictionary of documents, where the document IDs are mapped to a dictionary containing their data and subjects. The data is the concatenation of the title and the abstract.
+Data is ordered by subject, as it was extracted ensuring that all subjects are present. Therefore, the first level of the file is the subject IDs. Each ID is mapped to a list of documents, containing text and subjects of the documents. The data is the concatenation of the title and the abstract. The subjects are extracted from the OpenAlex API with the file `get_publications.py`.
+
+If the data is still raw text, you can process it with the file `process_docs.py`. It will tokenize and lemmatize the text, without removing any words.
 
 Here is an example:
 
-```
+```json
 {
-  'subject ID': {
-    'document ID': {
-      'data': data (str),
-      'subjects': subject (list)
+  "subject ID": [
+    {
+      "data": "text (str)",
+      "subjects": "list of subject IDs"
     }
-  }
+  ]
 }
 ```
