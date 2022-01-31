@@ -71,16 +71,24 @@ def lowercase(old_file, new_file):
   be updated after the procedure. """
   old = io.open(old_file, encoding='utf-8', newline='\n', errors='ignore')
   new = open(new_file, 'a', encoding='utf-8')
+  already_low, lowercased = set(), set()
+  for line in old:  # words that do not have capital letters
+    word = line.split(' ')[0]
+    if not any_upper(word):
+      already_low.add(word)
+  for line in old:  # upper-cased words that are not in already_low
+    word = line.split(' ')[0]
+    if any_upper(word) and not word.lower() in already_low:
+      lowercased.add(word.lower())
+  written = list()
   for line in old:
     tokens = line.rstrip().split(' ')
-    if any_upper(tokens[0]):  # word is upper-cased
-      low_token = tokens[0].lower()
-      if find_vec(old_file, low_token) is None:
-        logging.info(f'{tokens[0]} has no lower-cased equivalent')
-        low_line = ' '.join([low_token] + tokens[1:])
-        new.write(low_line)
-    else:  # word is lower-cased
+    if tokens[0] in already_low:
       new.write(line)
+      written.append(tokens[0])
+    elif tokens[0].lower() in lowercased:
+      new.write(' '.join([tokens[0].lower()] + tokens[1:]))
+      written.append(tokens[0].lower())
   new.close()
   lines = open(new_file, encoding='utf-8').readlines()
   logging.info(f'New file has {len(lines)-1} words')
