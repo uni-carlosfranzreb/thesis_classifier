@@ -6,6 +6,8 @@ both sources. """
 
 import json
 from os import listdir
+import io
+import logging
 
 from flair.data import Sentence
 from flair.tokenization import SpacyTokenizer
@@ -65,5 +67,38 @@ def process_docs():
     json.dump(processed, open(f'{dump_folder}/{file}', 'w', encoding='utf-8'))
 
 
+def get_vecs():
+  """ Retrieve the vectors of the docs and dump them in another folder. """
+  docs_folder = 'data/openalex/processed_docs'
+  vecs_folder = 'data/openalex/doc_vecs'
+  for file in listdir(docs_folder):
+    docs = json.load(open(f'{docs_folder}/{file}', encoding='utf-8'))
+    vecs = []
+    for doc in docs:
+      vecs.append([])
+      for w in doc:
+        vec = find_vec(w)
+        if vec is not None:
+          vecs[-1].append(vec)
+      logging.info(f'Found {len(vecs[-1])} vecs for {len(doc)} words')
+    json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
+
+
+def find_vec(token):
+  """ Return the vector for the given token or None if not found. """
+  fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
+  fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
+  for line in fin:
+    if line[:len(token)+1] == token + ' ':
+      tokens = line.rstrip().split(' ')
+      return list(map(float, tokens[1:]))
+  logging.info(f'{token} not found')
+
+
 if __name__ == '__main__':
-  process_docs()
+  logging.basicConfig(
+    level=logging.INFO,
+    format='%(message)s',
+    filename='logs/get_vecs.log'
+  )
+  get_vecs()
