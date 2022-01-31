@@ -25,7 +25,9 @@ The convolution layers are stated to be one-dimensional. The pooling layers are 
 
 We also ensure labels are coherent, as Giargiulo: all ancestors of assigned labels should also be assigned.
 
-However, instead of using sigmoid cross entropy as a loss function, we use Ben-Baruch's assymetric loss, which accounts for the imbalance between positive and negative labels and considers noise. The loss dynamically down-weights and hard-thresholds easy negative samples, while also discarding possibly mislabeled samples.
+Giargulo trains the model with the sigmoid cross entropy loss function. This is the same as the Binary Cross Entropy Loss of PyTorch.
+
+We will train it again with Ben-Baruch's assymetric loss, which accounts for the imbalance between positive and negative labels and considers noise. The loss dynamically down-weights and hard-thresholds easy negative samples, while also discarding possibly mislabeled samples.
 
 ## Word embeddings
 
