@@ -71,24 +71,20 @@ def lowercase(old_file, new_file):
   be updated after the procedure. """
   old = io.open(old_file, encoding='utf-8', newline='\n', errors='ignore')
   new = open(new_file, 'a', encoding='utf-8')
-  already_low, lowercased = set(), set()
+  written = []
   for line in old:  # words that do not have capital letters
     word = line.split(' ')[0]
     if not any_upper(word):
-      already_low.add(word)
-  for line in old:  # upper-cased words that are not in already_low
-    word = line.split(' ')[0]
-    if any_upper(word) and not word.lower() in already_low:
-      lowercased.add(word.lower())
-  written = list()
-  for line in old:
-    tokens = line.rstrip().split(' ')
-    if tokens[0] in already_low:
+      written.append(word)
       new.write(line)
-      written.append(tokens[0])
-    elif tokens[0].lower() in lowercased:
+      logging.info(f'{word} has no capital letters')
+  old = io.open(old_file, encoding='utf-8', newline='\n', errors='ignore')
+  for line in old:  # upper-cased words that are not in written
+    tokens = line.rstrip().split(' ')
+    if any_upper(tokens[0]) and tokens[0].lower() not in written:
       new.write(' '.join([tokens[0].lower()] + tokens[1:]))
       written.append(tokens[0].lower())
+      logging.info(f'{tokens[0]} has has no lower-cased version')
   new.close()
   lines = open(new_file, encoding='utf-8').readlines()
   logging.info(f'New file has {len(lines)-1} words')
