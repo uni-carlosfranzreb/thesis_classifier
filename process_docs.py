@@ -82,8 +82,8 @@ def get_vecs():
           vec = find_vec(w)
           if vec is not None:
             vecs[subject][-1]['data'].append(vec)
-        logging.info(f'Found {len(vecs[subject][-1])["data"]} vecs \
-        for {len(doc["data"])} words')
+        found = len(vecs[subject][-1]["data"])
+        logging.info(f'Found {found} vecs for {len(doc["data"])} words')
     json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
 
 
@@ -100,8 +100,8 @@ def find_vec(token):
 
 if __name__ == '__main__':
   logging.basicConfig(
-    level=logging.INFO,
-    format='%(message)s',
-    filename='logs/get_vecs.log'
+    level=logging.INFO, 
+    handlers=[logging.FileHandler('logs/get_vecs.log', 'w', 'utf-8')],
+    format='%(message)s'
   )
   get_vecs()
