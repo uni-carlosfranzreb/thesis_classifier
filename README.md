@@ -35,6 +35,10 @@ The fasttext file (`wiki-news-300d-1M-subword.vec`) includes 999,994 300-dimensi
 
 Given that we are only interested in lower-cased words, we create a new file containing only lower-cased words. Removing all lower-cased words yields a file with 410,568 words.
 
+## Training
+
+Giargulo splits the dataset into 99 % training and 1 % test sets. This is done by the file `split_data.py`.
+
 ## Structure of the data file
 
 Data files must follow a certain format. There can be many of them, as the Dataset receives the folder as an input.
