@@ -63,7 +63,7 @@ def find_ngrams(fname, n=20):
         return
 
 
-def remove_upper(old_file, new_file):
+def lowercase(old_file, new_file):
   """ Remove all upper-cased words from the vec file. To ensure that no words
   lost, look for the lower-cased version of the word in the file. If it is not
   found, lower-case the word and add it to the new file. The first line of the
@@ -71,16 +71,15 @@ def remove_upper(old_file, new_file):
   be updated after the procedure. """
   old = io.open(old_file, encoding='utf-8', newline='\n', errors='ignore')
   new = open(new_file, 'a', encoding='utf-8')
-  low_words = get_lower(old_file)
   for line in old:
-    if line[0].isupper():  # first char of line is upper-case
-      tokens = line.rstrip().split(' ')
+    tokens = line.rstrip().split(' ')
+    if any_upper(tokens[0]):  # word is upper-cased
       low_token = tokens[0].lower()
-      if low_token not in low_words:
+      if find_vec(old_file, low_token) is None:
         logging.info(f'{tokens[0]} has no lower-cased equivalent')
         low_line = ' '.join([low_token] + tokens[1:])
         new.write(low_line)
-    else:
+    else:  # word is lower-cased
       new.write(line)
   new.close()
   lines = open(new_file, encoding='utf-8').readlines()
@@ -88,6 +87,14 @@ def remove_upper(old_file, new_file):
   lines[0] = f'{len(lines)-1} {lines[0].split(" ")[1]}'
   with open(new_file, 'w', encoding='utf-8') as f:
     f.writelines(lines)
+
+
+def any_upper(word):
+  """ Return True if any char is upper-cased, else False. """
+  for char in word:
+    if char.isupper():
+      return True
+  return False
 
 
 def remove_all_upper(old_file, new_file):
@@ -107,17 +114,6 @@ def remove_all_upper(old_file, new_file):
   lines[0] = f'{len(lines)-1} {lines[0].split(" ")[1]}'
   with open(new_file, 'w', encoding='utf-8') as f:
     f.writelines(lines)
-
-
-def get_lower(fname):
-  """Return all the lower words in the given IO object as a list. """
-  vecs = io.open(fname, encoding='utf-8', newline='\n', errors='ignore')
-  words = []
-  for line in vecs:
-    if not line[0].isupper():
-      words.append(line.rstrip().split(' ')[0])
-  logging.info(f'{len(words)} non-capitalized words found in the file')
-  return words
 
 
 def vocab_vectors(vecs_file, vocab_file, dump_file):
@@ -152,9 +148,9 @@ if __name__ == '__main__':
   vocab_json = 'data/vocab/vocab.json'
   logging.basicConfig(
     level=logging.INFO, 
-    handlers=[logging.FileHandler('logs/remove_all_upper.log', 'w', 'utf-8')],
+    handlers=[logging.FileHandler('logs/lowercase.log', 'w', 'utf-8')],
     format='%(message)s'
   )
-  remove_all_upper(vecs_file, lower_file)
+  lowercase(vecs_file, lowercased_file)
   # vocab_vectors(lower_file, vocab_file, dump_file)
   # load_vectors(lower_file)
