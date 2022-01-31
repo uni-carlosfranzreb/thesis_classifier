@@ -59,3 +59,13 @@ Here is an example:
   ]
 }
 ```
+
+
+## Open questions
+
+* Subjects are assigned to documents with proability scores. How can I include these scores? Gargulio's subjects are assigned by humans (no scores).
+* How are the scores of MAG's subject assignments computed? Are they probabilities?
+
+## TODO
+
+Right now I'm implemented the training procedure. We want to evaluate the model after each epoch. I have just changed how subject assignments are returned by the dataset. They are a vector as long as the number of output neurons (= no. of subjects), so the BCELoss can be computed. I have to implement the loss calculation and the backward procedure in the train and eval functions next.
