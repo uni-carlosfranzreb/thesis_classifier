@@ -27,6 +27,7 @@ class Classifier(nn.Module):
     super(Classifier, self).__init__()
     self.conv1 = nn.Conv1d(n_words, 200, 5, padding='same')
     self.conv2 = nn.Conv1d(200, 100, 3, padding='same')
+    self.dropout = nn.Dropout(0.001)
     self.fc1 = nn.Linear(10000, 1024)
     self.fc2 = nn.Linear(1024, n_labels)
 
@@ -36,5 +37,6 @@ class Classifier(nn.Module):
     """
     x = F.max_pool1d(F.relu(self.conv1(x.transpose(1, 2))), 2)
     x = F.max_pool1d(F.relu(self.conv2(x)), 2)
+    x = self.dropout(x)
     x = F.relu(self.fc1(x.transpose(1, 2).flatten(start_dim=1)))
     return torch.sigmoid(self.fc2(x))
