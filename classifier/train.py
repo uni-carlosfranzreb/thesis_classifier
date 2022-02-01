@@ -45,10 +45,10 @@ class ModelTrainer:
       self.cnt, self.current_loss = 0, 0  # for last 100 batches
       self.epoch_cnt, self.epoch_loss = 0, 0  # for epoch
       logging.info(f'Starting epoch {epoch}')
-      for batch, labels in loader:
+      for batch in loader:
+        data, labels = [t.to(self.device) for t in batch]
         optimizer.zero_grad()
-        out = self.model(*[t.to(self.device) for t in batch])
-        loss = loss_fn.backward(out, labels)
+        out = self.model(data)
         optimizer.step()
         self.cnt += 1
         self.current_loss += loss
