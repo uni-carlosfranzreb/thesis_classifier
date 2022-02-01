@@ -49,6 +49,8 @@ class ModelTrainer:
         data, labels = [t.to(self.device) for t in batch]
         optimizer.zero_grad()
         out = self.model(data)
+        loss = loss_fn(out, labels)
+        loss.backward()
         optimizer.step()
         self.cnt += 1
         self.current_loss += loss
