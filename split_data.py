@@ -33,4 +33,4 @@ if __name__ == '__main__':
     filename='logs/split_data.log',
     format='%(message)s'
   )
-  split('data/openalex/docs', 'data/openalex/training_docs')
+  split('data/openalex/doc_vecs', 'data/openalex/split_docs')
