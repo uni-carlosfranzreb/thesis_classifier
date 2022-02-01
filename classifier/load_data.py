@@ -11,7 +11,7 @@ from torch.utils.data import IterableDataset
 
 
 class Dataset(IterableDataset):
-  def __init__(self, folder, subjects_file):
+  def __init__(self, folder, subjects_file, n_words, n_dims):
     """ Initializes the Dataset.
     folder (str): location of the folder that contains the training files. The
       file structure is explained in the README.
@@ -21,6 +21,8 @@ class Dataset(IterableDataset):
     self.subject_info = json.load(open(subjects_file))
     self.subjects = [subject_id for subject_id in self.subject_info]
     self.n_docs = 0
+    self.n_words = n_words
+    self.n_dims = n_dims
     for file in listdir(self.folder):
       docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
       self.n_docs += sum([len(v) for v in docs.values()])
@@ -41,11 +43,17 @@ class Dataset(IterableDataset):
       for subject_id in docs:
         logging.info(f'Retrieving docs with subject {subject_id}')
         for doc in docs[subject_id]:
+          all_data = torch.tensor(doc['data'])
+          if all_data.shape[0] >= self.n_words:
+            data = all_data[:self.n_words]
+          else:
+            data = torch.zeros(self.n_words, self.n_dims)
+            data[:all_data.shape[0]] = all_data
           subjects = torch.zeros(len(self.subjects))
           for subject in doc['subjects']:
             if subject in self.subjects:
               subjects[self.subjects.index(subject)] = 1
-          return (torch.tensor(doc['data']), torch.tensor(subjects))
+          yield (data, torch.tensor(subjects))
   
   def test_set(self, fname='test'):
     """ Load the test set into a dictionary and return it. If the test file is
