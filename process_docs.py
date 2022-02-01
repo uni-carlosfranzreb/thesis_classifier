@@ -6,7 +6,6 @@ both sources. """
 
 import json
 from os import listdir
-import io
 import logging
 from collections import OrderedDict
 
@@ -72,9 +71,10 @@ def get_vecs():
   """ Retrieve the vectors of the docs and dump them in another folder. """
   docs_folder = 'data/openalex/processed_docs'
   vecs_folder = 'data/openalex/doc_vecs'
-  fname = 'data/pretrained_vecs/lowercased_vecs.vec'
-  fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
+  fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
+  fin = open(fname, encoding='utf-8', newline='\n', errors='ignore')
   pretrained = {}
+  fin.readline()  # skip first line
   for line in fin:
     tokens = line.rstrip().split(' ')
     pretrained[tokens[0]] = list(map(float, tokens[1:]))
@@ -95,9 +95,8 @@ def get_vecs():
 
 def find_vec(token):
   """ Return the vector for the given token or None if not found. """
-  fname = 'data/pretrained_vecs/lowercased_vecs.vec'
-  fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
-  for line in fin:
+  fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
+  for line in open(fname, encoding='utf-8', newline='\n', errors='ignore'):
     if line[:len(token)+1] == token + ' ':
       tokens = line.rstrip().split(' ')
       return list(map(float, tokens[1:]))
