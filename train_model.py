@@ -15,7 +15,7 @@ if __name__ == '__main__':
   subjects_file = 'data/openalex/subjects.json'
   n_words = 400
   n_dims = 300
-  loss = BCELoss
+  loss = BCELoss()
   batch_size = 10
   n_epochs = 20
   lr = .1
