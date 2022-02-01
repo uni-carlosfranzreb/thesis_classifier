@@ -8,6 +8,7 @@ import json
 from os import listdir
 import io
 import logging
+from collections import OrderedDict
 
 from flair.data import Sentence
 from flair.tokenization import SpacyTokenizer
@@ -74,14 +75,26 @@ def get_vecs():
   for file in listdir(docs_folder):
     docs = json.load(open(f'{docs_folder}/{file}', encoding='utf-8'))
     vecs = {}
+    not_found = set()
+    last_found = OrderedDict()
     for subject in docs:
       vecs[subject] = []
       for doc in docs[subject]:
         vecs[subject].append({'data': [], 'subjects': doc['subjects']})
         for w in doc['data']:
+          if w in last_found:
+            vecs[subject][-1]['data'].append(last_found[w])
+            last_found.move_to_end(w, last=False)
+          elif w in not_found:
+            continue
           vec = find_vec(w)
           if vec is not None:
             vecs[subject][-1]['data'].append(vec)
+            last_found[w] = vec
+            if len(last_found) > 1000:
+              last_found.popitem()
+          else:
+            not_found.add(w)
         found = len(vecs[subject][-1]["data"])
         logging.info(f'Found {found} vecs for {len(doc["data"])} words')
     json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
@@ -89,7 +102,7 @@ def get_vecs():
 
 def find_vec(token):
   """ Return the vector for the given token or None if not found. """
-  fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
+  fname = 'data/lowercased_vecs.vec'
   fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
   for line in fin:
     if line[:len(token)+1] == token + ' ':
