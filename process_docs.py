@@ -102,7 +102,7 @@ def get_vecs():
 
 def find_vec(token):
   """ Return the vector for the given token or None if not found. """
-  fname = 'data/lowercased_vecs.vec'
+  fname = 'data/pretrained_vecs/lowercased_vecs.vec'
   fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
   for line in fin:
     if line[:len(token)+1] == token + ' ':
