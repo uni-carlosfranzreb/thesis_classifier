@@ -88,7 +88,7 @@ class ModelTrainer:
       
 
 def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
-    loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1):
+    loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1, momentum=.5):
   """ Configure logging, log the parameters of this training procedure and
   initialize training. """
   logging.info(f'Training Run ID: {run_id}')
@@ -100,10 +100,11 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   logging.info(f'Training loss function: {loss}')
   logging.info(f'Batch size: {batch_size}')
   logging.info(f'No. of epochs: {n_epochs}')
-  logging.info(f'Learning rate: {lr}\n')
+  logging.info(f'Learning rate: {lr}')
+  logging.info(f'Momentum: {momentum}\n')
   dataset = Dataset(docs_folder, subjects_file)
   logging.info(f'Dataset has {dataset.vocab.n_words} documents')
   logging.info(f'There are {len(dataset.subjects)} subjects.\n')
   model = Classifier(n_words, n_dims)
   trainer = ModelTrainer(run_id, model, dataset)
-  trainer.train(loss, batch_size, n_epochs, lr)
+  trainer.train(loss, batch_size, n_epochs, lr, momentum)
