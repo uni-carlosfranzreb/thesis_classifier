@@ -43,7 +43,8 @@ class Dataset(IterableDataset):
         for doc in docs[subject_id]:
           subjects = torch.zeros(len(self.subjects))
           for subject in doc['subjects']:
-            subjects[self.subjects.index(subject)] = 1
+            if subject in self.subjects:
+              subjects[self.subjects.index(subject)] = 1
           return (torch.tensor(doc['data']), torch.tensor(subjects))
   
   def test_set(self, fname='test'):
