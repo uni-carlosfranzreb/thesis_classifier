@@ -72,11 +72,11 @@ def get_vecs():
   """ Retrieve the vectors of the docs and dump them in another folder. """
   docs_folder = 'data/openalex/processed_docs'
   vecs_folder = 'data/openalex/doc_vecs'
+  last_found = OrderedDict()
   for file in listdir(docs_folder):
     docs = json.load(open(f'{docs_folder}/{file}', encoding='utf-8'))
     vecs = {}
     not_found = set()
-    last_found = OrderedDict()
     for subject in docs:
       vecs[subject] = []
       for doc in docs[subject]:
@@ -87,14 +87,15 @@ def get_vecs():
             last_found.move_to_end(w, last=False)
           elif w in not_found:
             continue
-          vec = find_vec(w)
-          if vec is not None:
-            vecs[subject][-1]['data'].append(vec)
-            last_found[w] = vec
-            if len(last_found) > 1000:
-              last_found.popitem()
           else:
-            not_found.add(w)
+            vec = find_vec(w)
+            if vec is not None:
+              vecs[subject][-1]['data'].append(vec)
+              last_found[w] = vec
+              if len(last_found) > 10000:
+                last_found.popitem()
+            else:
+              not_found.add(w)
         found = len(vecs[subject][-1]["data"])
         logging.info(f'Found {found} vecs for {len(doc["data"])} words')
     json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
