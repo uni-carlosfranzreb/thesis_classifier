@@ -19,13 +19,13 @@ import torch.nn.functional as F
 
 
 class Classifier(nn.Module):
-  def __init__(self, n_labels, n_words):
+  def __init__(self, n_labels, n_dims):
     """ Initializes the model.
     n_labels (int): no. of subjects in the classification problem.
-    n_words (int): no. of words in the input.
+    n_dims (int): no. of dimensions of each input word.
     """
     super(Classifier, self).__init__()
-    self.conv1 = nn.Conv1d(n_words, 200, 5, padding='same')
+    self.conv1 = nn.Conv1d(n_dims, 200, 5, padding='same')
     self.conv2 = nn.Conv1d(200, 100, 3, padding='same')
     self.dropout = nn.Dropout(0.001)
     self.fc1 = nn.Linear(10000, 1024)

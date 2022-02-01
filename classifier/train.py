@@ -112,6 +112,6 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   dataset = Dataset(docs_folder, subjects_file)
   logging.info(f'Dataset has {len(dataset)} documents')
   logging.info(f'There are {len(dataset.subjects)} subjects.\n')
-  model = Classifier(n_words, n_dims)
+  model = Classifier(n_subjects, n_dims)
   trainer = ModelTrainer(run_id, model, dataset)
   trainer.train(loss, batch_size, n_epochs, lr, momentum)
