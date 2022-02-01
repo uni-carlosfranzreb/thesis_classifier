@@ -37,7 +37,7 @@ class Dataset(IterableDataset):
     for file in listdir(self.folder):
       if 'test' in file:
         continue
-      docs = json.load(open(file, encoding='utf-8'))
+      docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
       for subject_id in docs:
         logging.info(f'Retrieving docs with subject {subject_id}')
         for doc in docs[subject_id]:
@@ -49,4 +49,4 @@ class Dataset(IterableDataset):
   def test_set(self, fname='test'):
     """ Load the test set into a dictionary and return it. If the test file is
     not called 'test', pass the name to the function.  """
-    return json.load(open(f'{self.folder}{fname}.json'))
+    return json.load(open(f'{self.folder}/{fname}.json'))
