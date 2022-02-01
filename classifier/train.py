@@ -103,7 +103,7 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   logging.info(f'Learning rate: {lr}')
   logging.info(f'Momentum: {momentum}\n')
   dataset = Dataset(docs_folder, subjects_file)
-  logging.info(f'Dataset has {dataset.vocab.n_words} documents')
+  logging.info(f'Dataset has {len(dataset)} documents')
   logging.info(f'There are {len(dataset.subjects)} subjects.\n')
   model = Classifier(n_words, n_dims)
   trainer = ModelTrainer(run_id, model, dataset)
