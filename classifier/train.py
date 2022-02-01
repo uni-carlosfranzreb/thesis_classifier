@@ -10,6 +10,7 @@ the model without.
 
 
 import logging
+import os
 
 import torch
 from torch.utils.data import DataLoader
@@ -29,7 +30,11 @@ class ModelTrainer:
     self.dataset = dataset
     self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     self.model.to(self.device)
-    self.dump_folder = f'classifier/trained_models/{self.run_id}'
+    self.dump_folder = f'models/{self.run_id}'
+    if os.path.exists(self.dump_folder):
+      raise ValueError('Folder {run_id} already exists. It should not')
+    else:
+      os.mkdir(self.dump_folder)
 
   def train(self, loss_fn, batch_size, n_epochs, lr, momentum):
     optimizer = torch.optim.SGD(
