@@ -8,7 +8,7 @@ from math import ceil
 import logging
 
 
-def split(docs_folder, dump_folder, test_pctg=1):
+def split(docs_folder, dump_folder, test_pctg=.01):
   """ Split the data into two files with the ts_file having test_pctg % of
   the data and tr_file having the rest. Split the data of each subject, so the
   test file contains samples with all subjects. To avoid sampling zero docs of
