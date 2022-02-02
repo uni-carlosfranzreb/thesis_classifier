@@ -25,7 +25,7 @@ class Dataset(IterableDataset):
     self.n_dims = n_dims
     for file in listdir(self.folder):
       docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
-      self.n_docs += sum([len(v) for v in docs.values()])
+      self.n_docs += sum([len(doc) for doc in docs])
   
   def __len__(self):
     """ Return the number of documents across all files. """
@@ -40,22 +40,29 @@ class Dataset(IterableDataset):
       if 'test' in file:
         continue
       docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
-      for subject_id in docs:
-        logging.info(f'Retrieving docs with subject {subject_id}')
-        for doc in docs[subject_id]:
-          all_data = torch.tensor(doc['data'])
-          if all_data.shape[0] >= self.n_words:
-            data = all_data[:self.n_words]
-          else:
-            data = torch.zeros(self.n_words, self.n_dims)
-            data[:all_data.shape[0]] = all_data
-          subjects = torch.zeros(len(self.subjects))
-          for subject in doc['subjects']:
-            if subject in self.subjects:
-              subjects[self.subjects.index(subject)] = 1
-          yield (data, torch.tensor(subjects))
+      for doc in docs:
+        data, labels = self.prepare_data(doc)
+        yield data, labels
   
+  def prepare_data(self, doc):
+    """ Yield vectors and labels after resizing the vectors to fit the number
+    of words and converting labels into a one-hot vector. """
+    all_data = torch.tensor(doc['data'])
+    if all_data.shape[0] >= self.n_words:
+      data = all_data[:self.n_words]
+    else:
+      data = torch.zeros(self.n_words, self.n_dims)
+      data[:all_data.shape[0]] = all_data
+    subjects = torch.zeros(len(self.subjects))
+    for subject in doc['subjects']:
+      if subject in self.subjects:
+        subjects[self.subjects.index(subject)] = 1
+    return data, torch.tensor(subjects)
+
   def test_set(self, fname='test'):
     """ Load the test set into a dictionary and return it. If the test file is
     not called 'test', pass the name to the function.  """
-    return json.load(open(f'{self.folder}/{fname}.json'))
+    test = json.load(open(f'{self.folder}/{fname}.json'))
+    for doc in test:
+      data, labels = self.prepare_data(doc)
+      yield data, labels
