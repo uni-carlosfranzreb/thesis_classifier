@@ -48,8 +48,7 @@ class ModelTrainer:
       for batch in loader:
         data, labels = [t.to(self.device) for t in batch]
         optimizer.zero_grad()
-        out = self.model(data)
-        loss = loss_fn(out, labels)
+        loss = loss_fn(self.model(data), labels)
         loss.backward()
         optimizer.step()
         self.cnt += 1
@@ -57,15 +56,16 @@ class ModelTrainer:
         if self.cnt % 100 == 0:
           self.log_loss()
       self.log_loss(epoch=epoch)
-      self.evaluate()
+      self.evaluate(loss_fn)
   
-  def evaluate(self):
+  def evaluate(self, loss_fn):
     """ Evaluate the accuracy of the model with the test set. """
-    test_set = self.dataset.test_set()
     self.model.eval()
     losses = []
-    for doc in test_set:
-      losses.append(self.model(doc['data']))
+    for doc in self.dataset.test_set():
+      data, labels = [t.unsqueeze(0).to(self.device) for t in doc]
+      loss = loss_fn(self.model(data), labels)
+      losses.append(loss)
     logging.info(f'Avg. testing loss: {sum(losses)/len(losses)}')
     self.model.train()
   
@@ -74,7 +74,7 @@ class ModelTrainer:
     the cnt and current_loss, add them to the totals for the epoch.
     Else: epoch has ended - log its avg. loss, set all counters to zero
     and call save_model(). """
-    self.epoch_loss -= self.current_loss
+    self.epoch_loss += self.current_loss
     self.epoch_cnt += self.cnt
     if epoch > 0:
       avg_loss = self.epoch_loss / self.epoch_cnt
