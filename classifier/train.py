@@ -14,6 +14,7 @@ import os
 
 import torch
 from torch.utils.data import DataLoader
+from torch.nn import BCELoss
 
 from classifier.load_data import Dataset
 from classifier.model import Classifier
@@ -56,9 +57,9 @@ class ModelTrainer:
         if self.cnt % 100 == 0:
           self.log_loss()
       self.log_loss(epoch=epoch)
-      self.evaluate(loss_fn)
+      self.evaluate()
   
-  def evaluate(self, loss_fn):
+  def evaluate(self, loss_fn=BCELoss()):
     """ Evaluate the accuracy of the model with the test set. """
     self.model.eval()
     losses = []
