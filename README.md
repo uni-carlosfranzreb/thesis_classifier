@@ -33,7 +33,7 @@ We will train it again with Ben-Baruch's assymetric loss, which accounts for the
 
 The fasttext file (`wiki-news-300d-1M-subword.vec`) includes 999,994 300-dimensional vectors for words without lemmatizing or even lower-casing. For instance, all these words are in the file: `machine, machines, learn, learning, learns, learned`, both lower- and upper-cased. Although Mikolov mentions training phrases as well, they were not published together with the words.
 
-Given that we are only interested in lower-cased words, we create a new file containing only lower-cased words. Removing all lower-cased words yields a file with 410,568 words.
+Given that we are only interested in lower-cased words, we create a new file containing only lower-cased words. Upper-cased words that don't have lower-cased equivalents are lower-cased and added to the file. This procedure yields a file with vectors for 000 words.
 
 ## Training
 
@@ -66,6 +66,18 @@ Here is an example:
 * Subjects are assigned to documents with proability scores. How can I include these scores? Gargulio's subjects are assigned by humans (no scores).
 * How are the scores of MAG's subject assignments computed? Are they probabilities?
 
-## TODO
+## Training diary
 
-Right now I'm implemented the training procedure. We want to evaluate the model after each epoch. I have just changed how subject assignments are returned by the dataset. They are a vector as long as the number of output neurons (= no. of subjects), so the BCELoss can be computed. I have to implement the loss calculation and the backward procedure in the train and eval functions next.
+Here I will document what happens in each training procedure.
+
+### 1643821400
+
+Here I implemented Giargulo's training. The test loss decreased slowly but steadily. I decided to stop the training after 10 epochs, as it had been already training for 10 epochs. There is still room for improvement. If the results are promising, I may train it further.
+
+### 1643876999
+
+Here I used the same parameters as above, only changing the loss function. I used Ben-Baruch's asymmetric loss. I have stopped the training in the middle of the fifth epoch because something weird was happening. The results were being exactly the same for every epoch except the first one. Model parameters were not being updated. Maybe it is because of exploding gradients?
+
+The test losses are exactly the same for all epochs, so maybe something weird happened while evaluating the model, like deactivating the backward pass of the loss function. Now I will use the BCE loss function for all tests, for the sake of comparison. I will let it run again with this loss function.
+
+Then, I will implement Ben-Baruch's training procedure, and consider introducing gradient clipping.
