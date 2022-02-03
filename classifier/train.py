@@ -99,7 +99,7 @@ class ModelTrainer:
 
 def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
     loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1, momentum=.5,
-    optimizer='SGD'):
+    optimizer='SGD', scheduler=None):
   """ Configure logging, log the parameters of this training procedure and
   initialize training. """
   logging.info(f'Training Run ID: {run_id}')
@@ -128,4 +128,8 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
   else:
     raise ValueError('Optimizer is not supported.')
-  trainer.train(loss, batch_size, n_epochs, optimizer)
+  if scheduler is not None:
+    sched = scheduler(optimizer, lr)
+  else:
+    sched = None
+  trainer.train(loss, batch_size, n_epochs, optimizer, sched)
