@@ -7,6 +7,7 @@ import logging
 from torch.nn import BCELoss
 
 from classifier.train import init_training
+from classifier.loss import AsymmetricLossOptimized
 
 
 if __name__ == '__main__':
@@ -15,9 +16,9 @@ if __name__ == '__main__':
   subjects_file = 'data/openalex/subjects.json'
   n_words = 400
   n_dims = 300
-  loss = BCELoss()
+  loss = AsymmetricLossOptimized()
   batch_size = 10
-  n_epochs = 20
+  n_epochs = 10
   lr = .1
   momentum = .5
   logging.basicConfig(
