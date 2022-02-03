@@ -6,6 +6,9 @@
 
 He does not mention clipping in the paper, so we will first try to train
 the model without.
+
+Ben-Baruch uses the asymmetric loss with learning rate 2e-4, the Adam optimizer
+and 1-cycle scheduler.
 """
 
 
@@ -37,10 +40,7 @@ class ModelTrainer:
     else:
       os.mkdir(self.dump_folder)
 
-  def train(self, loss_fn, batch_size, n_epochs, lr, momentum):
-    optimizer = torch.optim.SGD(
-      self.model.parameters(), lr=lr, momentum=momentum, nesterov=True
-    )
+  def train(self, loss_fn, batch_size, n_epochs, optimizer, scheduler=None):
     for epoch in range(1, n_epochs+1):
       loader = DataLoader(self.dataset, batch_size=batch_size)
       self.cnt, self.current_loss = 0, 0  # for last 100 batches
@@ -52,6 +52,8 @@ class ModelTrainer:
         loss = loss_fn(self.model(data), labels)
         loss.backward()
         optimizer.step()
+        if scheduler is not None:
+          scheduler.step()
         self.cnt += 1
         self.current_loss += loss
         if self.cnt % 100 == 0:
@@ -96,7 +98,8 @@ class ModelTrainer:
       
 
 def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
-    loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1, momentum=.5):
+    loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1, momentum=.5,
+    optimizer='SGD'):
   """ Configure logging, log the parameters of this training procedure and
   initialize training. """
   logging.info(f'Training Run ID: {run_id}')
@@ -106,6 +109,7 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   logging.info(f'No. of words kept per document: {n_words}')
   logging.info(f'No. of dimensions per word: {n_dims}')
   logging.info(f'Training loss function: {loss}')
+  logging.info(f'Optimizer: {optimizer}')
   logging.info(f'Batch size: {batch_size}')
   logging.info(f'No. of epochs: {n_epochs}')
   logging.info(f'Learning rate: {lr}')
@@ -116,4 +120,12 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   logging.info(f'There are {len(dataset.subjects)} subjects.\n')
   model = Classifier(n_subjects, n_dims)
   trainer = ModelTrainer(run_id, model, dataset)
-  trainer.train(loss, batch_size, n_epochs, lr, momentum)
+  if optimizer == 'SGD':
+    optimizer = torch.optim.SGD(
+      model.parameters(), lr=lr, momentum=momentum, nesterov=True
+    )
+  elif optimizer == 'Adam':
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+  else:
+    raise ValueError('Optimizer is not supported.')
+  trainer.train(loss, batch_size, n_epochs, optimizer)
