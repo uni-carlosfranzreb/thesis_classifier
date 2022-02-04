@@ -59,7 +59,7 @@ class ModelTrainer:
         if self.cnt % 100 == 0:
           self.log_loss()
       self.log_loss(epoch=epoch)
-      self.evaluate()
+      # self.evaluate()
   
   def evaluate(self, loss_fn=BCELoss()):
     """ Evaluate the accuracy of the model with the test set. """
@@ -120,7 +120,6 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   logging.info(f'Dataset has {len(dataset)} documents')
   logging.info(f'There are {len(dataset.subjects)} subjects.\n')
   model = Classifier(n_subjects, n_dims)
-  trainer = ModelTrainer(run_id, model, dataset)
   if optimizer == 'SGD':
     optimizer = torch.optim.SGD(
       model.parameters(), lr=lr, momentum=momentum, nesterov=True
@@ -133,4 +132,5 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
     sched = scheduler(optimizer, lr, total_steps=1000)
   else:
     sched = None
+  trainer = ModelTrainer(run_id, model, dataset)
   trainer.train(loss, batch_size, n_epochs, optimizer, sched)
