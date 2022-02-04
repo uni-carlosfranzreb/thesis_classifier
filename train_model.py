@@ -23,7 +23,7 @@ if __name__ == '__main__':
   batch_size = 10
   n_epochs = 10
   lr = .1
-  momentum = .5
+  momentum = None
   optimizer = 'Adam'
   scheduler = lr_scheduler.OneCycleLR
   logging.basicConfig(
