@@ -65,10 +65,11 @@ class ModelTrainer:
     """ Evaluate the accuracy of the model with the test set. """
     self.model.eval()
     losses = []
-    for doc in self.dataset.test_set():
-      data, labels = [t.unsqueeze(0).to(self.device) for t in doc]
-      loss = loss_fn(self.model(data), labels)
-      losses.append(loss)
+    with torch.no_grad():
+      for doc in self.dataset.test_set():
+        data, labels = [t.unsqueeze(0).to(self.device) for t in doc]
+        loss = loss_fn(self.model(data), labels)
+        losses.append(loss)
     logging.info(f'Avg. testing loss: {sum(losses)/len(losses)}')
     self.model.train()
   
