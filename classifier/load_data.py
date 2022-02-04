@@ -57,7 +57,7 @@ class Dataset(IterableDataset):
     for subject in doc['subjects']:
       if subject in self.subjects:
         subjects[self.subjects.index(subject)] = 1
-    return data, torch.tensor(subjects)
+    return data, subjects
 
   def test_set(self, fname='test'):
     """ Load the test set into a dictionary and return it. If the test file is
