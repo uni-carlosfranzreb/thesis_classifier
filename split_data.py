@@ -27,10 +27,21 @@ def split(docs_folder, dump_folder, test_pctg=.01):
   json.dump(ts_docs, open(f'{dump_folder}/test.json', 'w', encoding='utf-8'))
   logging.info(f'Test has {len(ts_docs)} files')
 
+
+def debug_data():
+  """ Create smaller training and test files for debugging. """
+  split_folder = 'data/openalex/split_docs'
+  dump_folder = 'data/openalex/debug_docs'
+  for file in listdir(split_folder):
+    docs = json.load(open(f'{split_folder}/{file}'))
+    json.dump(docs[:20], open(f'{dump_folder}/{file}', 'w'))
+
+
 if __name__ == '__main__':
-  logging.basicConfig(
-    level=logging.INFO,
-    filename='logs/split_data.log',
-    format='%(message)s'
-  )
-  split('data/openalex/doc_vecs', 'data/openalex/split_docs')
+  # logging.basicConfig(
+  #   level=logging.INFO,
+  #   filename='logs/split_data.log',
+  #   format='%(message)s'
+  # )
+  # split('data/openalex/doc_vecs', 'data/openalex/split_docs')
+  debug_data()
