@@ -52,14 +52,15 @@ class ModelTrainer:
         loss = loss_fn(self.model(data), labels)
         loss.backward()
         optimizer.step()
-        if scheduler is not None:
-          scheduler.step()
         self.cnt += 1
         self.current_loss += loss
         if self.cnt % 100 == 0:
           self.log_loss()
+          if scheduler is not None:
+            scheduler.step()
+            logging.info(f'New lr: {optimizer.param_groups[0]["lr"]}')
       self.log_loss(epoch=epoch)
-      # self.evaluate()
+      self.evaluate()
   
   def evaluate(self, loss_fn=BCELoss()):
     """ Evaluate the accuracy of the model with the test set. """
