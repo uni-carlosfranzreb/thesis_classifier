@@ -130,6 +130,7 @@ def vectorize_repos(data_file, dump_folder):
       )
       vecs = {}
       file_nr += 1
+  json.dump(vecs, open(f'{dump_folder}/{file_nr}.json', 'w', encoding='utf-8'))
 
 
 if __name__ == '__main__':
