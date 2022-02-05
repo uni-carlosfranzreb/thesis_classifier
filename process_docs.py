@@ -1,7 +1,5 @@
-""" Process the file 'relevant_data.json', created by running the script
-'retrieve_relevant_data.py' of the 'repository_analysis' repo. The processing
-procedure is the same as for the vocabulary, to enable the comparison among
-both sources. """
+""" Process the publications retrieved from OpenAlex, as was done with the
+documents of the repositories. """
 
 
 import json
