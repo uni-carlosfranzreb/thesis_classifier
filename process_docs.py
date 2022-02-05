@@ -123,6 +123,7 @@ def vectorize_repos(data_file, dump_folder):
       if w in pretrained:
         vecs[doc].append(pretrained[w])
     logging.info(f'Found {len(vecs[doc])} vecs for {len(texts)} words')
+    cnt += 1
     if cnt % 2000 == 0:
       json.dump(
         vecs, open(f'{dump_folder}/{file_nr}.json', 'w', encoding='utf-8')
