@@ -48,4 +48,4 @@ if __name__ == '__main__':
   gargiulo_dump = 'data/classifiers/1643821400/probabilities.json'
   baruch_dump = 'data/classifiers/1643982969/probabilities.json'
   compute(gargiulo_model, gargiulo_dump)
-  # compute(baruch_model, baruch_dump)
+  compute(baruch_model, baruch_dump)
