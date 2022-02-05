@@ -5,7 +5,6 @@ documents of the repositories. """
 import json
 from os import listdir
 import logging
-from collections import OrderedDict
 
 from flair.data import Sentence
 from flair.tokenization import SpacyTokenizer
