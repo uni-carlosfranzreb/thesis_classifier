@@ -102,13 +102,14 @@ def find_vec(token):
   logging.info(f'{token} not found')
 
 
-def vectorize_repos(data_file, dump_file):
+def vectorize_repos(data_file, dump_folder):
   """ Vectorize the documents of the repositories with the fasttext vectors. """
   data = json.load(open(data_file))
   fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
   fin = open(fname, encoding='utf-8', newline='\n', errors='ignore')
   pretrained, vecs = {}, {}
   fin.readline()  # skip first line
+  cnt, file_nr = 0, 1
   for line in fin:
     tokens = line.rstrip().split(' ')
     pretrained[tokens[0]] = list(map(float, tokens[1:]))
@@ -122,7 +123,11 @@ def vectorize_repos(data_file, dump_file):
       if w in pretrained:
         vecs[doc].append(pretrained[w])
     logging.info(f'Found {len(vecs[doc])} vecs for {len(texts)} words')
-  json.dump(vecs, open(dump_file, 'w', encoding='utf-8'))
+    if cnt % 2000 == 0:
+      json.dump(
+        vecs, open(f'{dump_folder}/{file_nr}.json', 'w', encoding='utf-8')
+      )
+      vecs = {}
 
 
 if __name__ == '__main__':
@@ -133,5 +138,5 @@ if __name__ == '__main__':
   )
   vectorize_repos(
     'data/json/dim/all/data_lemmas.json',
-    'data/json/dim/all/data_fasttext.json'
+    'data/pretrained_vecs/data'
   )
