@@ -81,3 +81,13 @@ Here I used the same parameters as above, only changing the loss function. I use
 The test losses are exactly the same for all epochs, so maybe something weird happened while evaluating the model, like deactivating the backward pass of the loss function. Now I will use the BCE loss function for all tests, for the sake of comparison. I will let it run again with this loss function.
 
 Then, I will implement Ben-Baruch's training procedure, and consider introducing gradient clipping.
+
+### 1643903291
+
+Again, all test losses remained the same throughout the six epochs.
+
+### 1643982969
+
+Now the model was trained correctly. However, it started overfitting very early. I have increased the dropout probability by one order of magnitude (from .001 to .01), to help the model generalize better.
+
+It also ran out of scheduler steps and stopped training during the fifth epoch. To prevent this, I have tripled the number of steps.
