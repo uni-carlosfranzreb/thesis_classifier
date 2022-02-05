@@ -4,7 +4,6 @@ fasttext file. This class is an argument for PyTorch's DataLoader."""
 
 from os import listdir
 import json
-import logging
 
 import torch
 from torch.utils.data import IterableDataset
