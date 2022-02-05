@@ -19,6 +19,7 @@ if __name__ == '__main__':
   subjects_file = 'data/openalex/subjects.json'
   n_words = 400
   n_dims = 300
+  dropout = .01
   loss = AsymmetricLossOptimized()
   batch_size = 10
   n_epochs = 10
@@ -31,5 +32,5 @@ if __name__ == '__main__':
     filename=f'logs/training_{run_id}.log'
   )
   init_training(run_id, docs_folder, subjects_file, n_words, n_dims, loss,
-    batch_size, n_epochs, lr, momentum, optimizer, scheduler
+    batch_size, n_epochs, lr, momentum, optimizer, scheduler, dropout
   )

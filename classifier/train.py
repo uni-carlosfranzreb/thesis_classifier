@@ -101,7 +101,7 @@ class ModelTrainer:
 
 def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
     loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1, momentum=.5,
-    optimizer='SGD', scheduler=None):
+    optimizer='SGD', scheduler=None, dropout=.001):
   """ Configure logging, log the parameters of this training procedure and
   initialize training. """
   logging.info(f'Training Run ID: {run_id}')
@@ -110,6 +110,7 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   logging.info(f'File with subject information: {subjects_file}')
   logging.info(f'No. of words kept per document: {n_words}')
   logging.info(f'No. of dimensions per word: {n_dims}')
+  logging.info(f'Dropout probability: {dropout}')
   logging.info(f'Training loss function: {loss}')
   logging.info(f'Optimizer: {optimizer}')
   logging.info(f'Batch size: {batch_size}')
@@ -120,7 +121,7 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   n_subjects = len(dataset.subjects)
   logging.info(f'Dataset has {len(dataset)} documents')
   logging.info(f'There are {len(dataset.subjects)} subjects.\n')
-  model = Classifier(n_subjects, n_dims)
+  model = Classifier(n_subjects, n_dims, dropout)
   if optimizer == 'SGD':
     optimizer = torch.optim.SGD(
       model.parameters(), lr=lr, momentum=momentum, nesterov=True
