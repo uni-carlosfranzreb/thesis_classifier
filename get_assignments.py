@@ -24,6 +24,8 @@ def compute(model_file, dump_file, n_words=400, n_dims=300):
     for doc, vecs in data.items():
       assigned[doc] = {}
       data = prepare_data(vecs, n_words, n_dims)
+      if data is None:
+        continue
       with torch.no_grad():
         out = model(data).squeeze()
       for i in range(len(subjects)):
@@ -34,6 +36,8 @@ def compute(model_file, dump_file, n_words=400, n_dims=300):
 def prepare_data(data, n_words, n_dims):
   """ Resize vectors to fit the number of words, as done in load_data.py. """
   all_data = torch.tensor(data)
+  if all_data.numel() == 0:
+    return None
   if all_data.shape[0] >= n_words:
     data = all_data[:n_words]
   else:
