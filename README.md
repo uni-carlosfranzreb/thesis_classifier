@@ -91,3 +91,8 @@ Again, all test losses remained the same throughout the six epochs.
 Now the model was trained correctly. However, it started overfitting very early. I have increased the dropout probability by one order of magnitude (from .001 to .01), to help the model generalize better.
 
 It also ran out of scheduler steps and stopped training during the fifth epoch. To prevent this, I have tripled the number of steps.
+
+## TODO
+
+1. Answer open questions
+2. Train models with less words I.e. look how many words we usually have. Medical data usually has more and 400 may be too much for our dataset.
