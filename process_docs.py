@@ -1,5 +1,7 @@
 """ Process the publications retrieved from OpenAlex, as was done with the
-documents of the repositories. """
+documents of the repositories. Then, vectorize them with the pretrained
+fasttext word vectors. This latter step is also done for the documents of the
+repositories. """
 
 
 import json
@@ -100,10 +102,45 @@ def find_vec(token):
   logging.info(f'{token} not found')
 
 
+def vectorize_repos(data_file, dump_file):
+  """ Vectorize the documents of the repositories with the fasttext vectors. """
+  data = json.load(open(data_file))
+  fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
+  fin = open(fname, encoding='utf-8', newline='\n', errors='ignore')
+  pretrained, vecs = {}, {}
+  fin.readline()  # skip first line
+  for line in fin:
+    tokens = line.rstrip().split(' ')
+    pretrained[tokens[0]] = list(map(float, tokens[1:]))
+  for doc, data in data.items():
+    texts = append_texts(data)
+    vecs[doc] = []
+    for w in texts:
+      if w in pretrained:
+        vecs[doc].append(pretrained[w])
+    logging.info(f'Found {len(vecs[doc])} vecs for {len(texts)} words')
+  json.dump(vecs, open(dump_file, 'w', encoding='utf-8'))
+
+
+def append_texts(doc):
+  """ Append the abstract to the title. If the title ends in a score, just add
+  them. If not, add the score first. This procedure was used when retrieving
+  publications from openalex. """
+  if doc['title'][-1] == '.':
+    return doc['title'] + ' ' + doc['abstract']
+  elif doc['title'][-2:] == '. ':
+    return doc['title'] + doc['abstract']
+  else:
+    return doc['title'] + '. ' + doc['abstract']
+
+
 if __name__ == '__main__':
   logging.basicConfig(
     level=logging.INFO, 
-    handlers=[logging.FileHandler('logs/get_vecs.log', 'w', 'utf-8')],
+    handlers=[logging.FileHandler('logs/get_repo_vecs.log', 'w', 'utf-8')],
     format='%(message)s'
   )
-  get_vecs()
+  vectorize_repos(
+    'data/json/dim/all/data_lemmas.json',
+    'data/pretrained_vecs/data/repo_vecs.json'
+  )
