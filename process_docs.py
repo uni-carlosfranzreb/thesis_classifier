@@ -113,25 +113,16 @@ def vectorize_repos(data_file, dump_file):
     tokens = line.rstrip().split(' ')
     pretrained[tokens[0]] = list(map(float, tokens[1:]))
   for doc, data in data.items():
-    texts = append_texts(data)
+    texts = []
+    for t in ('title', 'abstract'):
+      if data[t] is not None:
+        texts += data[t]
     vecs[doc] = []
     for w in texts:
       if w in pretrained:
         vecs[doc].append(pretrained[w])
     logging.info(f'Found {len(vecs[doc])} vecs for {len(texts)} words')
   json.dump(vecs, open(dump_file, 'w', encoding='utf-8'))
-
-
-def append_texts(doc):
-  """ Append the abstract to the title. If the title ends in a score, just add
-  them. If not, add the score first. This procedure was used when retrieving
-  publications from openalex. """
-  if doc['title'][-1] == '.':
-    return doc['title'] + ' ' + doc['abstract']
-  elif doc['title'][-2:] == '. ':
-    return doc['title'] + doc['abstract']
-  else:
-    return doc['title'] + '. ' + doc['abstract']
 
 
 if __name__ == '__main__':
@@ -142,5 +133,5 @@ if __name__ == '__main__':
   )
   vectorize_repos(
     'data/json/dim/all/data_lemmas.json',
-    'data/pretrained_vecs/data/repo_vecs.json'
+    'data/json/dim/all/data_fasttext.json'
   )
