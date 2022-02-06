@@ -92,7 +92,16 @@ Now the model was trained correctly. However, it started overfitting very early.
 
 It also ran out of scheduler steps and stopped training during the fifth epoch. To prevent this, I have tripled the number of steps.
 
+### 1644052071
+
+This model avoided overfitting much better. The training loss increased after the second epoch, whereas the testing loss steadily decreased. The dropout will be increased again in the next run.
+
+### 1644093287
+
+This model, with increased dropout rate (from 0.01 to 0.05), was extremely similar to the previous one. I have now increased the batch size to 32 and decreased the scheduler steps from 3,000 to 2,000, to account for the smaller number of batches.
+
 ## TODO
 
 1. Answer open questions
 2. Train models with less words I.e. look how many words we usually have. Medical data usually has more and 400 may be too much for our dataset.
+3. Sum vectors of words to represent each doc and train a model with that sum.
