@@ -48,8 +48,8 @@ def prepare_data(data, n_words, n_dims):
 
 if __name__ == '__main__':
   gargiulo_model = 'data/classifiers/1643821400/epoch_10.pt'
-  baruch_model = 'data/classifiers/1643982969/epoch_2.pt'
+  baruch_model = 'data/classifiers/1644093287/epoch_4.pt'
   gargiulo_dump = 'data/classifiers/1643821400/probabilities.json'
   baruch_dump = 'data/classifiers/1643982969/probabilities.json'
-  compute(gargiulo_model, gargiulo_dump)
+  # compute(gargiulo_model, gargiulo_dump)
   compute(baruch_model, baruch_dump)
