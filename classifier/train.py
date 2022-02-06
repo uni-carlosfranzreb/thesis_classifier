@@ -131,7 +131,7 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   else:
     raise ValueError('Optimizer is not supported.')
   if scheduler is not None:
-    sched = scheduler(optimizer, lr, total_steps=3000)
+    sched = scheduler(optimizer, lr, total_steps=2000)
   else:
     sched = None
   trainer = ModelTrainer(run_id, model, dataset)

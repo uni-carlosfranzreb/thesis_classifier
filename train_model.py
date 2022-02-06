@@ -21,7 +21,7 @@ if __name__ == '__main__':
   n_dims = 300
   dropout = .05
   loss = AsymmetricLossOptimized()
-  batch_size = 10
+  batch_size = 32
   n_epochs = 10
   lr = .1
   momentum = None
