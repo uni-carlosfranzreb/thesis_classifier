@@ -14,8 +14,8 @@ class Classifier(nn.Module):
     n_dims (int): no. of dimensions of each input word.
     """
     super(Classifier, self).__init__()
-    self.fc1 = nn.Linear(n_dims, 200)
-    self.fc2 = nn.Linear(200, n_labels)
+    self.fc1 = nn.Linear(n_dims, hidden_layer)
+    self.fc2 = nn.Linear(hidden_layer, n_labels)
 
   def forward(self, x):
     """ Computes the forward pass.
