@@ -10,7 +10,7 @@ class MaskedLinear(Linear):
   """ same as Linear except has a configurable mask on the weights """
   def __init__(self, mask, in_features, out_features, bias=True):
     super().__init__(in_features, out_features, bias)        
-    self.mask = mask
+    self.mask = mask.T
 
   def forward(self, input):
     return F.linear(input, self.mask * self.weight, self.bias)
