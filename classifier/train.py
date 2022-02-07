@@ -101,7 +101,7 @@ class ModelTrainer:
 
 def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
     loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1, momentum=.5,
-    optimizer='SGD', scheduler=None, dropout=.001):
+    optimizer='SGD', scheduler=None, dropout=.001, shuffle=True):
   """ Configure logging, log the parameters of this training procedure and
   initialize training. """
   logging.info(f'Training Run ID: {run_id}')
@@ -116,8 +116,9 @@ def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
   logging.info(f'Batch size: {batch_size}')
   logging.info(f'No. of epochs: {n_epochs}')
   logging.info(f'Learning rate: {lr}')
-  logging.info(f'Momentum: {momentum}\n')
-  dataset = Dataset(docs_folder, subjects_file, n_words, n_dims)
+  logging.info(f'Momentum: {momentum}')
+  logging.info(f'Data shuffling?: {shuffle}\n')
+  dataset = Dataset(docs_folder, subjects_file, n_words, n_dims, shuffle)
   n_subjects = len(dataset.subjects)
   logging.info(f'Dataset has {len(dataset)} documents')
   logging.info(f'There are {len(dataset.subjects)} subjects.\n')

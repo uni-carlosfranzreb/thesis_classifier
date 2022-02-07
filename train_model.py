@@ -27,10 +27,11 @@ if __name__ == '__main__':
   momentum = None
   optimizer = 'Adam'
   scheduler = lr_scheduler.OneCycleLR
+  shuffle = True
   logging.basicConfig(
     level=logging.INFO,
     filename=f'logs/training_{run_id}.log'
   )
   init_training(run_id, docs_folder, subjects_file, n_words, n_dims, loss,
-    batch_size, n_epochs, lr, momentum, optimizer, scheduler, dropout
+    batch_size, n_epochs, lr, momentum, optimizer, scheduler, dropout, shuffle
   )
