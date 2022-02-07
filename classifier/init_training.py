@@ -6,6 +6,7 @@ import logging
 
 import torch.optim
 
+from hierarchy_mask import create_mask
 from classifier.load_data import Dataset
 from classifier.train import ModelTrainer
 
@@ -13,6 +14,51 @@ from classifier.train import ModelTrainer
 def init(params):
   """ Configure logging, log the parameters of this training procedure and
   initialize training. """
+  log_params(params)
+  dataset = Dataset(params["docs_folder"], params["subjects_file"],
+      params["n_words"], params["n_dims"], params["shuffle"])
+  logging.info(f'Dataset has {len(dataset)} documents')
+  logging.info(f'There are {len(dataset.subjects)} subjects.\n')
+  model = init_model(len(dataset.subjects), params)
+  optimizer = init_optimizer(model, params)
+  scheduler = init_scheduler(optimizer, params)
+  trainer = ModelTrainer(params["run_id"], model, dataset)
+  trainer.train(params["loss"], params["batch_size"], params["n_epochs"],
+      optimizer, scheduler)
+
+
+def init_model(n_subjects, params):
+  """ Initialize the model. It can be ConvClassifier, SumClassifier or
+  HierarchyClassifier """
+  if 'hierarchy' in str(params["model"]):
+    hierarchy_mask = create_mask(params["subjects_file"])
+    return params["model"](params["n_dims"], hierarchy_mask, params["dropout"])
+  elif params["dropout"] is not None:
+    return params["model"](n_subjects, params["n_dims"], params["dropout"])
+  return params["model"](n_subjects, params["n_dims"])
+
+
+def init_optimizer(model, params):
+  """ Initialize the optimizer. It can be 'SGD' or 'Adam'. """
+  if params["optimizer"] == 'SGD':
+    return torch.optim.SGD(model.parameters(), lr=params["lr"],
+        momentum=params["momentum"], nesterov=True)
+  elif params["optimizer"] == 'Adam':
+    return torch.optim.Adam(model.parameters(), lr=params["lr"])
+  else:
+    raise ValueError('Optimizer is not supported.')
+
+
+def init_scheduler(optimizer, params):
+  """ Initialize the scheduler. Return None if the param is None. """
+  if params["scheduler"] is not None:
+    return params["scheduler"](
+      optimizer, params["lr"], total_steps=params["scheduler_steps"]
+    )
+  return None
+
+def log_params(params):
+  """ Log the model and training parameters. """
   logging.info(f'Training Run ID: {params["run_id"]}')
   logging.info(f'Classifier model: {params["model"]}')
   logging.info('Training classifier with the following parameters:')
@@ -30,28 +76,3 @@ def init(params):
   logging.info(f'Scheduler: {params["scheduler"]}')
   logging.info(f'Scheduler steps: {params["scheduler_steps"]}')
   logging.info(f'Data shuffling?: {params["shuffle"]}\n')
-  dataset = Dataset(params["docs_folder"], params["subjects_file"],
-      params["n_words"], params["n_dims"], params["shuffle"])
-  n_subjects = len(dataset.subjects)
-  logging.info(f'Dataset has {len(dataset)} documents')
-  logging.info(f'There are {len(dataset.subjects)} subjects.\n')
-  if params["dropout"] is not None:
-    model = params["model"](n_subjects, params["n_dims"], params["dropout"])
-  else:
-    model = params["model"](n_subjects, params["n_dims"])
-  if params["optimizer"] == 'SGD':
-    optimizer = torch.optim.SGD(model.parameters(), lr=params["lr"],
-        momentum=params["momentum"], nesterov=True)
-  elif params["optimizer"] == 'Adam':
-    optimizer = torch.optim.Adam(model.parameters(), lr=params["lr"])
-  else:
-    raise ValueError('Optimizer is not supported.')
-  if params["scheduler"] is not None:
-    scheduler = params["scheduler"](
-      optimizer, params["lr"], total_steps=params["scheduler_steps"]
-    )
-  else:
-    scheduler = None
-  trainer = ModelTrainer(params["run_id"], model, dataset)
-  trainer.train(params["loss"], params["batch_size"], params["n_epochs"],
-      optimizer, scheduler)
