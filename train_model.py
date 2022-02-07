@@ -7,10 +7,10 @@ import logging
 from torch.nn import BCELoss
 from torch.optim import lr_scheduler
 
-from classifier.train import init_training
+from classifier.init_training import init
 from classifier.loss import AsymmetricLossOptimized
-from classifier.convolutional_model import ConvClassifier
-from classifier.sum_model import SumClassifier
+from classifier.convolutional_model import Classifier as ConvClassifier
+from classifier.sum_model import Classifier as SumClassifier
 
 
 
@@ -20,7 +20,7 @@ if __name__ == '__main__':
   params = {
     "run_id": int(time()),
     "model": SumClassifier,
-    "docs_folder": 'data/openalex/split_docs',
+    "docs_folder": 'data/openalex/debug_docs',
     "subjects_file": 'data/openalex/subjects.json',
     "n_words": 400,
     "n_dims": 300,
@@ -40,4 +40,4 @@ if __name__ == '__main__':
     level=logging.INFO,
     filename=f'logs/training_{params["run_id"]}.log'
   )
-  init_training(params)
+  init(params)

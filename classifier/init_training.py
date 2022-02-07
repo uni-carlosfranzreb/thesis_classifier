@@ -10,10 +10,11 @@ from classifier.load_data import Dataset
 from classifier.train import ModelTrainer
 
 
-def init_training(params):
+def init(params):
   """ Configure logging, log the parameters of this training procedure and
   initialize training. """
   logging.info(f'Training Run ID: {params["run_id"]}')
+  logging.info(f'Classifier model: {params["model"]}')
   logging.info('Training classifier with the following parameters:')
   logging.info(f'Folder with documents: {params["docs_folder"]}')
   logging.info(f'File with subject information: {params["subjects_file"]}')
