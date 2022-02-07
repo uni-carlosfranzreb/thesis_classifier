@@ -4,13 +4,14 @@ fasttext file. This class is an argument for PyTorch's DataLoader."""
 
 from os import listdir
 import json
+from random import shuffle
 
 import torch
 from torch.utils.data import IterableDataset
 
 
 class Dataset(IterableDataset):
-  def __init__(self, folder, subjects_file, n_words, n_dims):
+  def __init__(self, folder, subjects_file, n_words, n_dims, shuffle=True):
     """ Initializes the Dataset.
     folder (str): location of the folder that contains the training files. The
       file structure is explained in the README.
@@ -22,6 +23,7 @@ class Dataset(IterableDataset):
     self.n_docs = 0
     self.n_words = n_words
     self.n_dims = n_dims
+    self.shuffle = shuffle
     for file in listdir(self.folder):
       docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
       self.n_docs += sum([len(doc) for doc in docs])
@@ -39,6 +41,8 @@ class Dataset(IterableDataset):
       if 'test' in file:
         continue
       docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
+      if self.shuffle is True:
+        docs = shuffle(docs)
       for doc in docs:
         data, labels = self.prepare_data(doc)
         yield data, labels
