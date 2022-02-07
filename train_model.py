@@ -11,16 +11,20 @@ from classifier.init_training import init
 from classifier.loss import AsymmetricLossOptimized
 from classifier.convolutional_model import Classifier as ConvClassifier
 from classifier.sum_model import Classifier as SumClassifier
-
+from classifier.hierarchy_model import Classifier as HierarchyClassifier
 
 
 if __name__ == '__main__':
-  """ Set the parameters for the training run. Optimizer can be 'SGD' or
-  'Adam'. """
+  """ Set the parameters for the training run.
+  - Models: ConvClassifier, SumClassifier, HierarchyClassifier.
+  - Losses: BCELoss, AsymmetricLossOptimized.
+  - Scheduler can also be None.
+  - Optimizer can be 'SGD' or 'Adam'. """
   params = {
     "run_id": int(time()),
-    "model": SumClassifier,
-    "docs_folder": 'data/openalex/split_docs',
+    "model": HierarchyClassifier,
+    "subjects_file": 'data/openalex/subjects.json',
+    "docs_folder": 'data/openalex/debug_docs',
     "subjects_file": 'data/openalex/subjects.json',
     "n_words": 400,
     "n_dims": 300,
