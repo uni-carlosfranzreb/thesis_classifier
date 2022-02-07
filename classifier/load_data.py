@@ -42,7 +42,7 @@ class Dataset(IterableDataset):
         continue
       docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
       if self.shuffle is True:
-        docs = shuffle(docs)
+        shuffle(docs)
       for doc in docs:
         data, labels = self.prepare_data(doc)
         yield data, labels
