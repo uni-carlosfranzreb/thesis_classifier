@@ -19,19 +19,20 @@ if __name__ == '__main__':
   'Adam'. """
   params = {
     "run_id": int(time()),
-    "model": ConvClassifier,
+    "model": SumClassifier,
     "docs_folder": 'data/openalex/split_docs',
     "subjects_file": 'data/openalex/subjects.json',
     "n_words": 400,
     "n_dims": 300,
     "dropout": .05,
-    "loss": BCELoss(),
-    "batch_size": 32,
+    "loss": AsymmetricLossOptimized(),
+    "batch_size": 10,
     "n_epochs": 10,
     "lr": .1,
     "momentum": None,
     "optimizer": 'Adam',
     "scheduler": lr_scheduler.OneCycleLR,
+    "scheduler_steps": 3000,
     "shuffle": True,
     "hidden_layer": 200
   }

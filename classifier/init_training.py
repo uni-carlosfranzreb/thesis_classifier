@@ -4,7 +4,7 @@ parameters available. """
 
 import logging
 
-import torch
+import torch.optim
 
 from classifier.load_data import Dataset
 from classifier.train import ModelTrainer
@@ -27,6 +27,7 @@ def init_training(params):
   logging.info(f'Learning rate: {params["lr"]}')
   logging.info(f'Momentum: {params["momentum"]}')
   logging.info(f'Scheduler: {params["scheduler"]}')
+  logging.info(f'Scheduler steps: {params["scheduler_steps"]}')
   logging.info(f'Data shuffling?: {params["shuffle"]}\n')
   dataset = Dataset(params["docs_folder"], params["subjects_file"],
       params["n_words"], params["n_dims"], params["shuffle"])
@@ -45,7 +46,9 @@ def init_training(params):
   else:
     raise ValueError('Optimizer is not supported.')
   if params["scheduler"] is not None:
-    scheduler = params["scheduler"](optimizer, params["lr"], total_steps=2000)
+    scheduler = params["scheduler"](
+      optimizer, params["lr"], total_steps=params["scheduler_steps"]
+    )
   else:
     scheduler = None
   trainer = ModelTrainer(params["run_id"], model, dataset)
