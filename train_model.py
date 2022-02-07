@@ -20,7 +20,7 @@ if __name__ == '__main__':
   n_words = 400
   n_dims = 300
   dropout = .05
-  loss = AsymmetricLossOptimized()
+  loss = BCELoss()
   batch_size = 32
   n_epochs = 10
   lr = .1
