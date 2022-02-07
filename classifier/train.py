@@ -19,9 +19,6 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn import BCELoss
 
-from classifier.load_data import Dataset
-from classifier.model import Classifier
-
 
 class ModelTrainer:
   def __init__(self, run_id, model, dataset):
@@ -36,7 +33,7 @@ class ModelTrainer:
     self.model.to(self.device)
     self.dump_folder = f'models/{self.run_id}'
     if os.path.exists(self.dump_folder):
-      raise ValueError('Folder {run_id} already exists. It should not')
+      raise ValueError(f'Folder {run_id} already exists. It should not')
     else:
       os.mkdir(self.dump_folder)
 
@@ -97,43 +94,3 @@ class ModelTrainer:
     """ Save the the model. The file should be named 'epoch_{epoch}', in the
     'run_id' folder. """
     torch.save(self.model.state_dict(), f'{self.dump_folder}/epoch_{epoch}.pt')
-      
-
-def init_training(run_id, docs_folder, subjects_file, n_words=400, n_dims=300,
-    loss=torch.nn.BCELoss, batch_size=10, n_epochs=10, lr=.1, momentum=.5,
-    optimizer='SGD', scheduler=None, dropout=.001, shuffle=True):
-  """ Configure logging, log the parameters of this training procedure and
-  initialize training. """
-  logging.info(f'Training Run ID: {run_id}')
-  logging.info('Training classifier with the following parameters:')
-  logging.info(f'Folder with documents: {docs_folder}')
-  logging.info(f'File with subject information: {subjects_file}')
-  logging.info(f'No. of words kept per document: {n_words}')
-  logging.info(f'No. of dimensions per word: {n_dims}')
-  logging.info(f'Dropout probability: {dropout}')
-  logging.info(f'Training loss function: {loss}')
-  logging.info(f'Optimizer: {optimizer}')
-  logging.info(f'Batch size: {batch_size}')
-  logging.info(f'No. of epochs: {n_epochs}')
-  logging.info(f'Learning rate: {lr}')
-  logging.info(f'Momentum: {momentum}')
-  logging.info(f'Data shuffling?: {shuffle}\n')
-  dataset = Dataset(docs_folder, subjects_file, n_words, n_dims, shuffle)
-  n_subjects = len(dataset.subjects)
-  logging.info(f'Dataset has {len(dataset)} documents')
-  logging.info(f'There are {len(dataset.subjects)} subjects.\n')
-  model = Classifier(n_subjects, n_dims, dropout)
-  if optimizer == 'SGD':
-    optimizer = torch.optim.SGD(
-      model.parameters(), lr=lr, momentum=momentum, nesterov=True
-    )
-  elif optimizer == 'Adam':
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
-  else:
-    raise ValueError('Optimizer is not supported.')
-  if scheduler is not None:
-    sched = scheduler(optimizer, lr, total_steps=2000)
-  else:
-    sched = None
-  trainer = ModelTrainer(run_id, model, dataset)
-  trainer.train(loss, batch_size, n_epochs, optimizer, sched)
