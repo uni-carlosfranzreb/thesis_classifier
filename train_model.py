@@ -24,7 +24,7 @@ if __name__ == '__main__':
     "run_id": int(time()),
     "model": ConvClassifier,
     "subjects_file": 'data/openalex/subjects.json',
-    "docs_folder": 'data/openalex/debug_docs',
+    "docs_folder": 'data/openalex/split_docs',
     "subjects_file": 'data/openalex/subjects.json',
     "n_words": 400,
     "n_dims": 300,
