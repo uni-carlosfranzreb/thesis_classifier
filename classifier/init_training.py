@@ -34,8 +34,9 @@ def init_model(n_subjects, params):
     hierarchy_mask = create_mask(params["subjects_file"])
     return params["model"](params["n_dims"], hierarchy_mask, params["dropout"])
   elif params["dropout"] is not None:
-    return params["model"](n_subjects, params["n_dims"], params["dropout"])
-  return params["model"](n_subjects, params["n_dims"])
+    return params["model"](n_subjects, params["n_dims"], params["n_dims"],
+        params["dropout"])
+  return params["model"](n_subjects, params["n_dims"], params["n_dims"])
 
 
 def init_optimizer(model, params):
@@ -61,6 +62,7 @@ def log_params(params):
   """ Log the model and training parameters. """
   logging.info(f'Training Run ID: {params["run_id"]}')
   logging.info(f'Classifier model: {params["model"]}')
+  logging.info(f'Hidden layer size: {params["hidden_layer"]}')
   logging.info('Training classifier with the following parameters:')
   logging.info(f'Folder with documents: {params["docs_folder"]}')
   logging.info(f'File with subject information: {params["subjects_file"]}')
