@@ -22,23 +22,23 @@ if __name__ == '__main__':
   - Optimizer can be 'SGD' or 'Adam'. """
   params = {
     "run_id": int(time()),
-    "model": HierarchyClassifier,
+    "model": ConvClassifier,
     "subjects_file": 'data/openalex/subjects.json',
-    "docs_folder": 'data/openalex/split_docs',
+    "docs_folder": 'data/openalex/debug_docs',
     "subjects_file": 'data/openalex/subjects.json',
     "n_words": 400,
     "n_dims": 300,
     "dropout": .05,
-    "loss": AsymmetricLossOptimized(),
+    "loss": BCELoss(),
     "batch_size": 10,
-    "n_epochs": 10,
+    "n_epochs": 30,
     "lr": .1,
-    "momentum": None,
-    "optimizer": 'Adam',
-    "scheduler": lr_scheduler.OneCycleLR,
-    "scheduler_steps": 3000,
+    "momentum": 0.5,
+    "optimizer": 'SGD',
+    "scheduler": None,
+    "scheduler_steps": None,
     "shuffle": True,
-    "hidden_layer": 200
+    "hidden_layer": 1024
   }
   logging.basicConfig(
     level=logging.INFO,
