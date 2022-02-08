@@ -8,7 +8,7 @@ import torch
 def create_mask(subjects_file):
   subjects = json.load(open(subjects_file))
   fields = [id for id, data in subjects.items() if data['level'] == 0]
-  mask = torch.zeros(len(fields), len(subjects)-len(fields))
+  mask = torch.zeros(len(fields), len(subjects)-len(fields), dtype=torch.uint8)
   for idx, data in enumerate(subjects.values()):
     if data['level'] == 0:
       continue
