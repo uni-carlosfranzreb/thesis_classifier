@@ -31,14 +31,14 @@ if __name__ == '__main__':
     "dropout": .1,
     "loss": BCELoss(),
     "batch_size": 10,
-    "n_epochs": 10,
+    "n_epochs": 30,
     "lr": .1,
-    "momentum": None,
-    "optimizer": 'Adam',
-    "scheduler": lr_scheduler.OneCycleLR,
-    "scheduler_steps": 3000,
+    "momentum": .5,
+    "optimizer": 'SGD',
+    "scheduler": None,
+    "scheduler_steps": None,
     "shuffle": True,
-    "hidden_layer": 1024
+    "hidden_layer": 200
   }
   logging.basicConfig(
     level=logging.INFO,
