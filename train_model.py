@@ -31,12 +31,12 @@ if __name__ == '__main__':
     "dropout": .05,
     "loss": BCELoss(),
     "batch_size": 10,
-    "n_epochs": 20,
+    "n_epochs": 10,
     "lr": .1,
     "momentum": None,
     "optimizer": 'Adam',
     "scheduler": lr_scheduler.OneCycleLR,
-    "scheduler_steps": 6000,
+    "scheduler_steps": 3000,
     "shuffle": True,
     "hidden_layer": 1024
   }
