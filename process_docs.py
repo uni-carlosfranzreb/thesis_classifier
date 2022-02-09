@@ -125,16 +125,6 @@ def get_vecs():
     json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
 
 
-def find_vec(token):
-  """ Return the vector for the given token or None if not found. """
-  fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
-  for line in open(fname, encoding='utf-8', newline='\n', errors='ignore'):
-    if line[:len(token)+1] == token + ' ':
-      tokens = line.rstrip().split(' ')
-      return list(map(float, tokens[1:]))
-  logging.info(f'{token} not found')
-
-
 def vectorize_repos(data_file, dump_folder):
   """ Vectorize the documents of the repositories with the fasttext vectors. """
   data = json.load(open(data_file))
