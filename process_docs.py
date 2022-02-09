@@ -101,8 +101,8 @@ def filter_text(text, stopwords):
 
 def get_vecs():
   """ Retrieve the vectors of the docs and dump them in another folder. """
-  docs_folder = 'data/openalex/processed_docs'
-  vecs_folder = 'data/openalex/doc_vecs'
+  docs_folder = 'data/openalex/filtered_docs'
+  vecs_folder = 'data/openalex/filtered_vecs'
   fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
   fin = open(fname, encoding='utf-8', newline='\n', errors='ignore')
   pretrained = {}
@@ -172,10 +172,11 @@ def vectorize_repos(data_file, dump_folder):
 if __name__ == '__main__':
   logging.basicConfig(
     level=logging.INFO, 
-    handlers=[logging.FileHandler('logs/get_repo_vecs.log', 'w', 'utf-8')],
+    handlers=[logging.FileHandler('logs/get_filtered_vecs.log', 'w', 'utf-8')],
     format='%(message)s'
   )
-  vectorize_repos(
-    'data/json/dim/all/data_lemmas.json',
-    'data/pretrained_vecs/data'
-  )
+  # vectorize_repos(
+  #   'data/json/dim/all/data_lemmas.json',
+  #   'data/pretrained_vecs/data'
+  # )
+  get_vecs()
