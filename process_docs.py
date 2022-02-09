@@ -7,12 +7,14 @@ repositories. """
 import json
 from os import listdir
 import logging
+from string import ascii_lowercase as letters
 
 from flair.data import Sentence
 from flair.tokenization import SpacyTokenizer
 from flair.models import SequenceTagger
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
+import spacy
 
 
 class DataProcessor:
@@ -64,6 +66,37 @@ def process_docs():
     docs = json.load(open(f'{doc_folder}/{file}', encoding='utf-8'))
     processed = processor.process_docs(docs)
     json.dump(processed, open(f'{dump_folder}/{file}', 'w', encoding='utf-8'))
+
+
+def filter_docs():
+  """ Remove stopwords, numbers, symbols and punctuation from the processed
+  texts. """
+  stopwords = spacy.load('en_core_web_sm').Defaults.stop_words
+  processed_folder = 'data/openalex/processed_docs'
+  dump_folder = 'data/openalex/filtered_docs'
+  for file in listdir(processed_folder):
+    processed = json.load(open(f'{processed_folder}/{file}', encoding='utf-8'))
+    filtered = {}
+    for subject, docs in processed.items():
+      filtered[subject] = []
+      for doc in docs:
+        filtered[subject].append({
+          'data': filter_text(doc['data'], stopwords),
+          'subjects': doc['subjects']
+        })
+    json.dump(filtered, open(f'{dump_folder}/{file}', 'w', encoding='utf-8'))
+
+
+def filter_text(text, stopwords):
+  """ A word is removed if it either has less than three letters or if it is
+  in the given stopwords list. Check only for lower-cased letters, as the
+  texts were lower-cased during processing. """
+  filtered = []
+  for token in text:
+    cnt_letters = sum([char in letters for char in token])
+    if cnt_letters > 2 and token not in stopwords:
+      filtered.append(token)
+  return filtered    
 
 
 def get_vecs():
