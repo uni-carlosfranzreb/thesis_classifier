@@ -7,11 +7,11 @@ import logging
 from torch.nn import BCELoss
 from torch.optim import lr_scheduler
 
-from classifier.init_training import init
-from classifier.loss import AsymmetricLossOptimized
-from classifier.convolutional_model import Classifier as ConvClassifier
-from classifier.sum_model import Classifier as SumClassifier
-from classifier.hierarchy_model import Classifier as HierarchyClassifier
+from cnn.init_training import init
+from cnn.loss import AsymmetricLossOptimized
+from cnn.convolutional_model import Classifier as ConvClassifier
+from cnn.sum_model import Classifier as SumClassifier
+from cnn.hierarchy_model import Classifier as HierarchyClassifier
 
 
 if __name__ == '__main__':

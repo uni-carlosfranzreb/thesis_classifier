@@ -7,8 +7,8 @@ import logging
 import torch.optim
 
 from hierarchy_mask import create_mask
-from classifier.load_data import Dataset
-from classifier.train import ModelTrainer
+from cnn.load_data import Dataset
+from cnn.train import ModelTrainer
 
 
 def init(params):

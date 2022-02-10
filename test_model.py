@@ -3,7 +3,7 @@
 
 import torch
 
-from classifier.model import Classifier
+from cnn.model import Classifier
 
 
 def test_forward(n_subjects, batch_size, n_words, n_dims):

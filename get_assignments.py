@@ -7,7 +7,7 @@ import json
 import torch
 from os import listdir
 
-from classifier.model import Classifier
+from cnn.model import Classifier
 
 
 def compute(model_file, dump_file, n_words=400, n_dims=300):

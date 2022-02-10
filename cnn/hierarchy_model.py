@@ -7,7 +7,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-from classifier.masked_linear import MaskedLinear
+from cnn.masked_linear import MaskedLinear
 
 
 class Classifier(nn.Module):
