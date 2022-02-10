@@ -28,7 +28,7 @@ if __name__ == '__main__':
     "subjects_file": 'data/openalex/subjects.json',
     "n_words": 250,
     "n_dims": 300,
-    "dropout": .4,
+    "dropout": .7,
     "loss": BCELoss(),
     "batch_size": 10,
     "n_epochs": 30,
