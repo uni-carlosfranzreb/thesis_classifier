@@ -451,3 +451,11 @@ INFO:root:Avg. loss in the last 100 batches: 0.3923128545284271
 INFO:root:New lr: 0.030737222101330855
 INFO:root:Avg. loss in the last 100 batches: 0.40343937277793884
 INFO:root:New lr: 0.030963213290278513
+INFO:root:Avg. loss in the last 100 batches: 0.366133451461792
+INFO:root:New lr: 0.031189783140619987
+INFO:root:Avg. loss in the last 100 batches: 0.38554710149765015
+INFO:root:New lr: 0.031416925420071434
+INFO:root:Avg. loss in the last 100 batches: 0.3354050815105438
+INFO:root:New lr: 0.03164463388060322
+INFO:root:Avg. loss in the last 100 batches: 0.3196425139904022
+INFO:root:New lr: 0.0318729022586116
