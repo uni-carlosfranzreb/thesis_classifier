@@ -38,10 +38,10 @@ def debug_data():
 
 
 if __name__ == '__main__':
-  # logging.basicConfig(
-  #   level=logging.INFO,
-  #   filename='logs/split_data.log',
-  #   format='%(message)s'
-  # )
-  # split('data/openalex/doc_vecs', 'data/openalex/split_docs')
-  debug_data()
+  logging.basicConfig(
+    level=logging.INFO,
+    filename='logs/split_filtered_data.log',
+    format='%(message)s'
+  )
+  split('data/openalex/filtered_vecs', 'data/openalex/split_filtered')
+  # debug_data()
