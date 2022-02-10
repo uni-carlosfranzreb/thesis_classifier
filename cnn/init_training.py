@@ -34,9 +34,10 @@ def init_model(n_subjects, params):
     hierarchy_mask = create_mask(params["subjects_file"])
     return params["model"](params["n_dims"], hierarchy_mask, params["dropout"])
   elif params["dropout"] is not None:
-    return params["model"](n_subjects, params["n_dims"], params["n_dims"],
-        params["dropout"])
-  return params["model"](n_subjects, params["n_dims"], params["n_dims"])
+    return params["model"](n_subjects, params["n_dims"], params["input_linear"],
+        params["hidden_layer"], params["dropout"])
+  return params["model"](n_subjects, params["n_dims"], params["input_linear"],
+        params["hidden_layer"])
 
 
 def init_optimizer(model, params):

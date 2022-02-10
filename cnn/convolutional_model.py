@@ -19,16 +19,19 @@ import torch.nn.functional as F
 
 
 class Classifier(nn.Module):
-  def __init__(self, n_labels, n_dims, hidden_layer=1024, dropout=.1):
+  def __init__(self, n_labels, n_dims, input_linear=10000, hidden_layer=1024,
+      dropout=.1):
     """ Initializes the model.
     n_labels (int): no. of subjects in the classification problem.
     n_dims (int): no. of dimensions of each input word.
+    input_linear (int): in_features of the first fully connected layer. Its
+      default value corresponds to 400 words. For 250 words, it should be 6,200
     """
     super(Classifier, self).__init__()
     self.conv1 = nn.Conv1d(n_dims, 200, 5, padding='same')
     self.conv2 = nn.Conv1d(200, 100, 3, padding='same')
     self.dropout = nn.Dropout(dropout)
-    self.fc1 = nn.Linear(10000, hidden_layer)
+    self.fc1 = nn.Linear(input_linear, hidden_layer)
     self.fc2 = nn.Linear(hidden_layer, n_labels)
 
   def forward(self, x):

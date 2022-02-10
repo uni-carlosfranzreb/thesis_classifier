@@ -38,7 +38,7 @@ if __name__ == '__main__':
     "scheduler": None,
     "scheduler_steps": None,
     "shuffle": True,
-    "hidden_layer": 200
+    "input_linear": 6200
   }
   logging.basicConfig(
     level=logging.INFO,
