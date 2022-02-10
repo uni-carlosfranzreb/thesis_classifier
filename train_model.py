@@ -32,7 +32,7 @@ if __name__ == '__main__':
     "loss": BCELoss(),
     "batch_size": 10,
     "n_epochs": 30,
-    "lr": .1,
+    "lr": .15,
     "momentum": .5,
     "optimizer": 'SGD',
     "scheduler": None,
