@@ -19,7 +19,7 @@ import torch.nn.functional as F
 
 
 class Classifier(nn.Module):
-  def __init__(self, n_labels, n_dims, hidden_layer=1024, dropout=.001):
+  def __init__(self, n_labels, n_dims, hidden_layer=1024, dropout=.1):
     """ Initializes the model.
     n_labels (int): no. of subjects in the classification problem.
     n_dims (int): no. of dimensions of each input word.
