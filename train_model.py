@@ -32,12 +32,13 @@ if __name__ == '__main__':
     "loss": BCELoss(),
     "batch_size": 10,
     "n_epochs": 30,
-    "lr": .15,
+    "lr": .25,
     "momentum": .5,
     "optimizer": 'SGD',
-    "scheduler": None,
-    "scheduler_steps": None,
+    "scheduler": lr_scheduler.OneCycleLR,
+    "scheduler_steps": 9000,
     "shuffle": True,
+    "hidden_layer": 200,
     "input_linear": 6200
   }
   logging.basicConfig(
