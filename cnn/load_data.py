@@ -44,6 +44,8 @@ class Dataset(IterableDataset):
       if self.shuffle is True:
         shuffle(docs)
       for doc in docs:
+        if doc['data'] == []:  # doc has no words
+          continue
         data, labels = self.prepare_data(doc)
         yield data, labels
   
