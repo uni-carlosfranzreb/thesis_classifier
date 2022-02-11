@@ -5,7 +5,7 @@ import json
 
 import torch
 
-folder = 'data/openalex/filtered_docs'
+folder = 'data/openalex/split_filtered'
 for file in listdir(folder):
   if 'test' in file:
     continue
