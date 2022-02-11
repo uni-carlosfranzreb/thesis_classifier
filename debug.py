@@ -9,6 +9,7 @@ folder = 'data/openalex/split_filtered'
 for file in listdir(folder):
   if 'test' in file:
     continue
+  print(file)
   docs = json.load(open(f'{folder}/{file}', encoding='utf-8'))
   for doc in docs:
     if doc['data'] == []:  # doc has no words
