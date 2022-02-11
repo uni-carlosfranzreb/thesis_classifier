@@ -54,12 +54,9 @@ class ModelTrainer:
         optimizer.step()
         self.cnt += 1
         self.current_loss += loss
-        if self.cnt % 100 == 0:
-          self.log_loss()
-          if scheduler is not None:
-            scheduler.step()
-            logging.info(f'New lr: {optimizer.param_groups[0]["lr"]}')
-      self.log_loss(epoch=epoch)
+        if self.cnt % 1 == 0:
+          self.update_lr(optimizer, scheduler)
+      self.update_lr(optimizer, scheduler, epoch=epoch)
       self.evaluate()
   
   def evaluate(self, loss_fn=BCELoss()):
@@ -76,6 +73,20 @@ class ModelTrainer:
         losses.append(loss)
     logging.info(f'Avg. testing loss: {sum(losses)/len(losses)}')
     self.model.train()
+
+  def update_lr(self, optimizer, scheduler, epoch=-1):
+    """Take a step in the LR scheduler. If the scheduler is StepLR, take only
+    a step if epoch > 0. Scheduler can be StepLR or OneCycleLR. Also, call the
+    log loss method with epoch as param. """
+    self.log_loss(epoch)
+    if scheduler is None:
+      return
+    elif 'OneCycleLR' in str(scheduler):
+      scheduler.step()
+      logging.info(f'New lr: {optimizer.param_groups[0]["lr"]}')
+    elif 'StepLR' in str(scheduler) and epoch > 0:
+      scheduler.step()
+      logging.info(f'New lr: {optimizer.param_groups[0]["lr"]}')
   
   def log_loss(self, epoch=-1):
     """ If epoch=-1: log avg. loss of the last 100 batches. Before resetting

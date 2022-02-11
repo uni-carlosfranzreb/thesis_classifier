@@ -35,8 +35,9 @@ if __name__ == '__main__':
     "lr": .25,
     "momentum": .5,
     "optimizer": 'SGD',
-    "scheduler": lr_scheduler.OneCycleLR,
-    "scheduler_steps": 9000,
+    "scheduler": lr_scheduler.StepLR,
+    "scheduler_steps": 2,
+    "scheduler_gamma": .9,
     "shuffle": True,
     "hidden_layer": 200,
     "input_linear": 6200

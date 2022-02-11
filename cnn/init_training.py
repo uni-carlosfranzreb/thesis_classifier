@@ -52,12 +52,19 @@ def init_optimizer(model, params):
 
 
 def init_scheduler(optimizer, params):
-  """ Initialize the scheduler. Return None if the param is None. """
+  """ Initialize the scheduler. Options are StepLR and OneCycleLR. """
   if params["scheduler"] is not None:
-    return params["scheduler"](
-      optimizer, params["lr"], total_steps=params["scheduler_steps"]
-    )
+    if 'StepLR' in str(params["scheduler"]):
+      return params["scheduler"](
+        optimizer, step_size=params["scheduler_steps"],
+        gamma=params["scheduler_gamma"]
+      )      
+    else:  # OneCycleLR
+      return params["scheduler"](
+        optimizer, params["lr"], total_steps=params["scheduler_steps"]
+      )
   return None
+
 
 def log_params(params):
   """ Log the model and training parameters. """
@@ -78,4 +85,5 @@ def log_params(params):
   logging.info(f'Momentum: {params["momentum"]}')
   logging.info(f'Scheduler: {params["scheduler"]}')
   logging.info(f'Scheduler steps: {params["scheduler_steps"]}')
+  logging.info(f'Scheduler gamma: {params["scheduler_gamma"]}')
   logging.info(f'Data shuffling?: {params["shuffle"]}\n')
