@@ -45,7 +45,7 @@ class Dataset(IterableDataset):
       if self.shuffle is True:
         shuffle(docs)
       for doc in docs:
-        if doc['data'] == []:  # doc has no words
+        if len(doc['data']) == 0:  # doc has no words
           continue
         data, labels = self.prepare_data(doc)
         yield data, labels
@@ -58,12 +58,7 @@ class Dataset(IterableDataset):
       data = all_data[:self.n_words]
     else:
       data = torch.zeros(self.n_words, self.n_dims)
-      try:
-        data[:all_data.shape[0]] = all_data
-      except RuntimeError as e:
-        logging.error(e)
-        logging.error(doc['data'])
-        import sys; sys.exit()
+      data[:all_data.shape[0]] = all_data
     subjects = torch.zeros(len(self.subjects))
     for subject in doc['subjects']:
       if subject in self.subjects:
@@ -75,5 +70,7 @@ class Dataset(IterableDataset):
     not called 'test', pass the name to the function.  """
     test = json.load(open(f'{self.folder}/{fname}.json'))
     for doc in test:
+      if len(doc['data']) == 0:  # doc has no words
+        continue
       data, labels = self.prepare_data(doc)
       yield data, labels
