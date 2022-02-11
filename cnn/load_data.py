@@ -5,6 +5,7 @@ fasttext file. This class is an argument for PyTorch's DataLoader."""
 from os import listdir
 import json
 from random import shuffle
+import logging
 
 import torch
 from torch.utils.data import IterableDataset
@@ -57,7 +58,12 @@ class Dataset(IterableDataset):
       data = all_data[:self.n_words]
     else:
       data = torch.zeros(self.n_words, self.n_dims)
-      data[:all_data.shape[0]] = all_data
+      try:
+        data[:all_data.shape[0]] = all_data
+      except RuntimeError as e:
+        logging.error(e)
+        logging.error(doc['data'])
+        import sys; sys.exit()
     subjects = torch.zeros(len(self.subjects))
     for subject in doc['subjects']:
       if subject in self.subjects:
