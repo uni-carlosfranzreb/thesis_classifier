@@ -54,7 +54,7 @@ class ModelTrainer:
         optimizer.step()
         self.cnt += 1
         self.current_loss += loss
-        if self.cnt % 1 == 0:
+        if self.cnt % 100 == 0:
           self.update_lr(optimizer, scheduler)
       self.update_lr(optimizer, scheduler, epoch=epoch)
       self.evaluate()
