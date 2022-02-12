@@ -1,0 +1,25 @@
+INFO:root:Training Run ID: 1644513854
+INFO:root:Classifier model: <class 'cnn.convolutional_model.Classifier'>
+INFO:root:Hidden layer size: 200
+INFO:root:Training classifier with the following parameters:
+INFO:root:Folder with documents: data/openalex/split_filtered
+INFO:root:File with subject information: data/openalex/subjects.json
+INFO:root:No. of words kept per document: 250
+INFO:root:No. of dimensions per word: 300
+INFO:root:Dropout probability: 0.7
+INFO:root:Training loss function: BCELoss()
+INFO:root:Optimizer: SGD
+INFO:root:Batch size: 10
+INFO:root:No. of epochs: 30
+INFO:root:Learning rate: 0.25
+INFO:root:Momentum: 0.5
+INFO:root:Scheduler: <class 'torch.optim.lr_scheduler.OneCycleLR'>
+INFO:root:Scheduler steps: 9000
+INFO:root:Data shuffling?: True
+
+INFO:root:Dataset has 427852 documents
+INFO:root:There are 2157 subjects.
+
+INFO:root:Starting epoch 1
+INFO:root:Avg. loss in the last 100 batches: 0.6924871802330017
+INFO:root:New lr: 0.010000081291507562
