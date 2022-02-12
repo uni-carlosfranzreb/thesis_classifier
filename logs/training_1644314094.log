@@ -1,6 +1,6 @@
 INFO:root:Training Run ID: 1644314094
 INFO:root:Classifier model: <class 'classifier.convolutional_model.Classifier'>
-INFO:root:Hidden layer size: 1024
+INFO:root:Hidden layer size: 300
 INFO:root:Training classifier with the following parameters:
 INFO:root:Folder with documents: data/openalex/split_docs
 INFO:root:File with subject information: data/openalex/subjects.json
