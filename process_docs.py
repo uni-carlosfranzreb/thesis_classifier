@@ -126,8 +126,11 @@ def get_vecs():
 
 
 def vectorize_repos(data_file, dump_folder):
-  """ Vectorize the documents of the repositories with the fasttext vectors. """
+  """ Vectorize the documents of the repositories with the fasttext vectors.
+  The docs should already be lemmatized, and are filtered here with the same
+  function used for the OpenAlex docs, filter_texts. """
   data = json.load(open(data_file))
+  stopwords = spacy.load('en_core_web_sm').Defaults.stop_words
   fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
   fin = open(fname, encoding='utf-8', newline='\n', errors='ignore')
   pretrained, vecs = {}, {}
@@ -137,15 +140,13 @@ def vectorize_repos(data_file, dump_folder):
     tokens = line.rstrip().split(' ')
     pretrained[tokens[0]] = list(map(float, tokens[1:]))
   for doc, data in data.items():
-    texts = []
-    for t in ('title', 'abstract'):
-      if data[t] is not None:
-        texts += data[t]
+    texts = append_texts(data['title'], data['abstract'])
+    filtered = filter_text(texts, stopwords)
     vecs[doc] = []
-    for w in texts:
+    for w in filtered:
       if w in pretrained:
         vecs[doc].append(pretrained[w])
-    logging.info(f'Found {len(vecs[doc])} vecs for {len(texts)} words')
+    logging.info(f'Found {len(vecs[doc])} vecs for {len(filtered)} words')
     cnt += 1
     if cnt % 2000 == 0:
       json.dump(
@@ -159,14 +160,24 @@ def vectorize_repos(data_file, dump_folder):
     )
 
 
+def append_texts(title, abstract):
+  """ Append the abstract to the text. If the title ends in a score,
+  just add them. If not, add the score first. """
+  if title[-1] == '.':
+    return title + ' ' + abstract
+  elif title[-2:] == '. ':
+    return title + abstract
+  else:
+    return title + '. ' + abstract
+
+
 if __name__ == '__main__':
   logging.basicConfig(
     level=logging.INFO, 
     handlers=[logging.FileHandler('logs/get_vecs.log', 'w', 'utf-8')],
     format='%(message)s'
   )
-  # vectorize_repos(
-  #   'data/json/dim/all/data_lemmas.json',
-  #   'data/pretrained_vecs/data'
-  # )
-  get_vecs()
+  vectorize_repos(
+    'data/json/dim/all/data_lemmas.json',
+    'data/pretrained_vecs/data'
+  )
