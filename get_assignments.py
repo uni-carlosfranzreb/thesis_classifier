@@ -51,4 +51,4 @@ if __name__ == '__main__':
   for run_id, epoch in runs:
     model_file = f'data/classifiers/{run_id}/epoch_{epoch}.pt'
     dump_file = f'data/classifiers/{run_id}/probabilities.json'
-    compute(model_file, dump_file)
+    compute(model_file, dump_file, n_words=250)
