@@ -140,9 +140,12 @@ def vectorize_repos(data_file, dump_folder):
     tokens = line.rstrip().split(' ')
     pretrained[tokens[0]] = list(map(float, tokens[1:]))
   for doc, data in data.items():
-    texts = append_texts(data['title'], data['abstract'])
-    if texts is None:
-      continue
+    texts = []
+    for t in ('title', 'abstract'):
+      if data[t] is not None:
+        texts += data[t]    
+      if len(texts) == 0:
+        continue
     filtered = filter_text(texts, stopwords)
     vecs[doc] = []
     for w in filtered:
@@ -160,23 +163,7 @@ def vectorize_repos(data_file, dump_folder):
     json.dump(
       vecs, open(f'{dump_folder}/{file_nr}.json', 'w', encoding='utf-8')
     )
-
-
-def append_texts(title, abstract):
-  """ Append the abstract to the text. If the title ends in a score,
-  just add them. If not, add the score first. If one of them is null,
-  return the other. If both are null, return null. """
-  if title is None:
-    return abstract
-  elif abstract is None:
-    return title
-  elif title[-1] == '.':
-    return title + ' ' + abstract
-  elif title[-2:] == '. ':
-    return title + abstract
-  else:
-    return title + '. ' + abstract
-
+  
 
 if __name__ == '__main__':
   logging.basicConfig(
