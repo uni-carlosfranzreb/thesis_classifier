@@ -101,8 +101,8 @@ def filter_text(text, stopwords):
 
 def get_vecs():
   """ Retrieve the vectors of the docs and dump them in another folder. """
-  docs_folder = 'data/openalex/filtered_docs'
-  vecs_folder = 'data/openalex/filtered_vecs'
+  docs_folder = 'data/openalex/docs'
+  vecs_folder = 'data/openalex/vecs'
   fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
   fin = open(fname, encoding='utf-8', newline='\n', errors='ignore')
   pretrained = {}
