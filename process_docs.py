@@ -181,7 +181,7 @@ def append_texts(title, abstract):
 if __name__ == '__main__':
   logging.basicConfig(
     level=logging.INFO, 
-    handlers=[logging.FileHandler('logs/get_vecs.log', 'w', 'utf-8')],
+    handlers=[logging.FileHandler('logs/get_repo_vecs.log', 'w', 'utf-8')],
     format='%(message)s'
   )
   vectorize_repos(
