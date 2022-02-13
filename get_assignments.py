@@ -13,7 +13,7 @@ from cnn.convolutional_model import Classifier
 def compute(model_file, dump_file, n_words=400, n_dims=300):
   data_folder = 'data/pretrained_vecs/data'
   subjects = list(json.load(open('data/openalex/subjects.json')).keys())
-  model = Classifier(len(subjects), n_dims)
+  model = Classifier(len(subjects), n_dims, 6200, 200)
   model.load_state_dict(
     torch.load(model_file, map_location=torch.device('cpu'))
   )
