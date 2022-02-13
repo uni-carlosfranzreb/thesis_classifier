@@ -39,7 +39,7 @@ if __name__ == '__main__':
     "scheduler_steps": 2,
     "scheduler_gamma": .9,
     "shuffle": True,
-    "hidden_layer": 200,
+    "hidden_layer": 100,
     "input_linear": 6200
   }
   logging.basicConfig(
