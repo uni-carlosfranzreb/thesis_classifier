@@ -7,7 +7,7 @@ import json
 import torch
 from os import listdir
 
-from cnn.model import Classifier
+from cnn.convolutional_model import Classifier
 
 
 def compute(model_file, dump_file, n_words=400, n_dims=300):
@@ -47,9 +47,8 @@ def prepare_data(data, n_words, n_dims):
   
 
 if __name__ == '__main__':
-  gargiulo_model = 'data/classifiers/1643821400/epoch_10.pt'
-  baruch_model = 'data/classifiers/1644093287/epoch_4.pt'
-  gargiulo_dump = 'data/classifiers/1643821400/probabilities.json'
-  baruch_dump = 'data/classifiers/1644093287/probabilities.json'
-  # compute(gargiulo_model, gargiulo_dump)
-  compute(baruch_model, baruch_dump)
+  runs = [(1644599055, 19), (1644599121, 19)]
+  for run_id, epoch in runs:
+    model_file = f'data/classifiers/{run_id}/epoch_{epoch}.pt'
+    dump_file = f'data/classifiers/{run_id}/probabilities.json'
+    compute(model_file, dump_file)
