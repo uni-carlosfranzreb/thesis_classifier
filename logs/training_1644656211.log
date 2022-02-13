@@ -1,0 +1,2968 @@
+INFO:root:Training Run ID: 1644656211
+INFO:root:Classifier model: <class 'cnn.convolutional_model.Classifier'>
+INFO:root:Hidden layer size: 200
+INFO:root:Training classifier with the following parameters:
+INFO:root:Folder with documents: data/openalex/split_filtered
+INFO:root:File with subject information: data/openalex/subjects.json
+INFO:root:No. of words kept per document: 250
+INFO:root:No. of dimensions per word: 300
+INFO:root:Dropout probability: 0.7
+INFO:root:Training loss function: BCELoss()
+INFO:root:Optimizer: SGD
+INFO:root:Batch size: 10
+INFO:root:No. of epochs: 30
+INFO:root:Learning rate: 0.25
+INFO:root:Momentum: 0.5
+INFO:root:Scheduler: <class 'torch.optim.lr_scheduler.OneCycleLR'>
+INFO:root:Scheduler steps: 9000
+INFO:root:Scheduler gamma: 0.9
+INFO:root:Data shuffling?: True
+
+INFO:root:Dataset has 427852 documents
+INFO:root:There are 2157 subjects.
+
+INFO:root:Starting epoch 1
+INFO:root:Avg. loss in the last 100 batches: 0.6925151944160461
+INFO:root:New lr: 0.010000081291507562
+INFO:root:Avg. loss in the last 100 batches: 0.6889482140541077
+INFO:root:New lr: 0.01000032516592006
+INFO:root:Avg. loss in the last 100 batches: 0.6796252131462097
+INFO:root:New lr: 0.010000731622907155
+INFO:root:Avg. loss in the last 100 batches: 0.5505525469779968
+INFO:root:New lr: 0.010001300661918067
+INFO:root:Avg. loss in the last 100 batches: 0.037133652716875076
+INFO:root:New lr: 0.01000203228218191
+INFO:root:Avg. loss in the last 100 batches: 0.012883277609944344
+INFO:root:New lr: 0.01000292648270737
+INFO:root:Avg. loss in the last 100 batches: 0.013758699409663677
+INFO:root:New lr: 0.010003983262282967
+INFO:root:Avg. loss in the last 100 batches: 0.01143980585038662
+INFO:root:New lr: 0.010005202619476905
+INFO:root:Avg. loss in the last 100 batches: 0.011253414675593376
+INFO:root:New lr: 0.010006584552637171
+INFO:root:Avg. loss in the last 100 batches: 0.012415457516908646
+INFO:root:New lr: 0.010008129059891374
+INFO:root:Avg. loss in the last 100 batches: 0.011150884442031384
+INFO:root:New lr: 0.010009836139146938
+INFO:root:Avg. loss in the last 100 batches: 0.011466244235634804
+INFO:root:New lr: 0.010011705788091074
+INFO:root:Avg. loss in the last 100 batches: 0.012313935905694962
+INFO:root:New lr: 0.010013738004190587
+INFO:root:Avg. loss in the last 100 batches: 0.010457413271069527
+INFO:root:New lr: 0.010015932784692178
+INFO:root:Avg. loss in the last 100 batches: 0.011406012810766697
+INFO:root:New lr: 0.010018290126622226
+INFO:root:Avg. loss in the last 100 batches: 0.01560606062412262
+INFO:root:New lr: 0.010020810026786786
+INFO:root:Avg. loss in the last 100 batches: 0.01382998563349247
+INFO:root:New lr: 0.010023492481771867
+INFO:root:Avg. loss in the last 100 batches: 0.013487870804965496
+INFO:root:New lr: 0.010026337487943043
+INFO:root:Avg. loss in the last 100 batches: 0.011814212426543236
+INFO:root:New lr: 0.010029345041445759
+INFO:root:Avg. loss in the last 100 batches: 0.010772641748189926
+INFO:root:New lr: 0.01003251513820519
+INFO:root:Avg. loss in the last 100 batches: 0.01250841747969389
+INFO:root:New lr: 0.010035847773926299
+INFO:root:Avg. loss in the last 100 batches: 0.015877842903137207
+INFO:root:New lr: 0.010039342944093893
+INFO:root:Avg. loss in the last 100 batches: 0.013582047075033188
+INFO:root:New lr: 0.010043000643972455
+INFO:root:Avg. loss in the last 100 batches: 0.014180436730384827
+INFO:root:New lr: 0.010046820868606338
+INFO:root:Avg. loss in the last 100 batches: 0.01521025225520134
+INFO:root:New lr: 0.010050803612819653
+INFO:root:Avg. loss in the last 100 batches: 0.013553381897509098
+INFO:root:New lr: 0.010054948871216385
+INFO:root:Avg. loss in the last 100 batches: 0.014741935767233372
+INFO:root:New lr: 0.010059256638180303
+INFO:root:Avg. loss in the last 100 batches: 0.012410118244588375
+INFO:root:New lr: 0.010063726907874937
+INFO:root:Avg. loss in the last 100 batches: 0.010842646472156048
+INFO:root:New lr: 0.010068359674243743
+INFO:root:Avg. loss in the last 100 batches: 0.012503250502049923
+INFO:root:New lr: 0.010073154931009937
+INFO:root:Avg. loss in the last 100 batches: 0.012966402806341648
+INFO:root:New lr: 0.010078112671676714
+INFO:root:Avg. loss in the last 100 batches: 0.01199309527873993
+INFO:root:New lr: 0.01008323288952695
+INFO:root:Avg. loss in the last 100 batches: 0.013010073453187943
+INFO:root:New lr: 0.010088515577623525
+INFO:root:Avg. loss in the last 100 batches: 0.012571132741868496
+INFO:root:New lr: 0.01009396072880911
+INFO:root:Avg. loss in the last 100 batches: 0.011364051140844822
+INFO:root:New lr: 0.0100995683357063
+INFO:root:Avg. loss in the last 100 batches: 0.013483772985637188
+INFO:root:New lr: 0.010105338390717616
+INFO:root:Avg. loss in the last 100 batches: 0.013902286998927593
+INFO:root:New lr: 0.010111270886025425
+INFO:root:Avg. loss in the last 100 batches: 0.013188025914132595
+INFO:root:New lr: 0.010117365813592016
+INFO:root:Avg. loss in the last 100 batches: 0.014170163311064243
+INFO:root:New lr: 0.010123623165159662
+INFO:root:Avg. loss in the last 100 batches: 0.013024680316448212
+INFO:root:New lr: 0.010130042932250505
+INFO:root:Avg. loss in the last 100 batches: 0.012399882078170776
+INFO:root:New lr: 0.010136625106166725
+INFO:root:Avg. loss in the last 100 batches: 0.014868886210024357
+INFO:root:New lr: 0.010143369677990316
+INFO:root:Avg. loss in the last 100 batches: 0.01366411428898573
+INFO:root:New lr: 0.010150276638583422
+INFO:root:Avg. loss in the last 100 batches: 0.014362388290464878
+INFO:root:New lr: 0.010157345978588056
+INFO:root:Avg. loss in the last 100 batches: 0.012305423617362976
+INFO:root:New lr: 0.01016457768842624
+INFO:root:Avg. loss in the last 100 batches: 0.011419334448873997
+INFO:root:New lr: 0.010171971758300091
+INFO:root:Avg. loss in the last 100 batches: 0.013654288835823536
+INFO:root:New lr: 0.010179528178191621
+INFO:root:Avg. loss in the last 100 batches: 0.012875928543508053
+INFO:root:New lr: 0.010187246937862993
+INFO:root:Avg. loss in the last 100 batches: 0.012488126754760742
+INFO:root:New lr: 0.010195128026856404
+INFO:root:Avg. loss in the last 100 batches: 0.013081065379083157
+INFO:root:New lr: 0.010203171434494035
+INFO:root:Avg. loss in the last 100 batches: 0.011517612263560295
+INFO:root:New lr: 0.010211377149878242
+INFO:root:Avg. loss in the last 100 batches: 0.010943161323666573
+INFO:root:New lr: 0.01021974516189142
+INFO:root:Avg. loss in the last 100 batches: 0.014535810798406601
+INFO:root:New lr: 0.010228275459196107
+INFO:root:Avg. loss in the last 100 batches: 0.013106473721563816
+INFO:root:New lr: 0.010236968030234966
+INFO:root:Avg. loss in the last 100 batches: 0.012230489403009415
+INFO:root:New lr: 0.010245822863230836
+INFO:root:Avg. loss in the last 100 batches: 0.014007752761244774
+INFO:root:New lr: 0.010254839946186534
+INFO:root:Avg. loss in the last 100 batches: 0.011255481280386448
+INFO:root:New lr: 0.01026401926688536
+INFO:root:Avg. loss in the last 100 batches: 0.010197031311690807
+INFO:root:New lr: 0.010273360812890514
+INFO:root:Avg. loss in the last 100 batches: 0.011528216302394867
+INFO:root:New lr: 0.010282864571545564
+INFO:root:Avg. loss in the last 100 batches: 0.01122785173356533
+INFO:root:New lr: 0.01029253052997428
+INFO:root:Avg. loss in the last 100 batches: 0.010835560038685799
+INFO:root:New lr: 0.010302358675080642
+INFO:root:Avg. loss in the last 100 batches: 0.013785087503492832
+INFO:root:New lr: 0.010312348993548853
+INFO:root:Avg. loss in the last 100 batches: 0.012109857983887196
+INFO:root:New lr: 0.01032250147184352
+INFO:root:Avg. loss in the last 100 batches: 0.011556554585695267
+INFO:root:New lr: 0.010332816096209452
+INFO:root:Avg. loss in the last 100 batches: 0.01304937805980444
+INFO:root:New lr: 0.01034329285267177
+INFO:root:Avg. loss in the last 100 batches: 0.011948153376579285
+INFO:root:New lr: 0.010353931727035998
+INFO:root:Avg. loss in the last 100 batches: 0.01157254446297884
+INFO:root:New lr: 0.010364732704887913
+INFO:root:Avg. loss in the last 100 batches: 0.015308471396565437
+INFO:root:New lr: 0.010375695771593724
+INFO:root:Avg. loss in the last 100 batches: 0.013171032071113586
+INFO:root:New lr: 0.010386820912300088
+INFO:root:Avg. loss in the last 100 batches: 0.01222933828830719
+INFO:root:New lr: 0.010398108111933924
+INFO:root:Avg. loss in the last 100 batches: 0.014327160082757473
+INFO:root:New lr: 0.010409557355202742
+INFO:root:Avg. loss in the last 100 batches: 0.012841276824474335
+INFO:root:New lr: 0.010421168626594424
+INFO:root:Avg. loss in the last 100 batches: 0.01222241297364235
+INFO:root:New lr: 0.01043294191037733
+INFO:root:Avg. loss in the last 100 batches: 0.014705684967339039
+INFO:root:New lr: 0.010444877190600332
+INFO:root:Avg. loss in the last 100 batches: 0.012697055004537106
+INFO:root:New lr: 0.010456974451092782
+INFO:root:Avg. loss in the last 100 batches: 0.012498605996370316
+INFO:root:New lr: 0.010469233675464706
+INFO:root:Avg. loss in the last 100 batches: 0.013725490309298038
+INFO:root:New lr: 0.010481654847106447
+INFO:root:Avg. loss in the last 100 batches: 0.011327800340950489
+INFO:root:New lr: 0.010494237949189189
+INFO:root:Avg. loss in the last 100 batches: 0.0114510552957654
+INFO:root:New lr: 0.010506982964664568
+INFO:root:Avg. loss in the last 100 batches: 0.012955094687640667
+INFO:root:New lr: 0.01051988987626487
+INFO:root:Avg. loss in the last 100 batches: 0.011221532709896564
+INFO:root:New lr: 0.010532958666503112
+INFO:root:Avg. loss in the last 100 batches: 0.011636572889983654
+INFO:root:New lr: 0.010546189317672872
+INFO:root:Avg. loss in the last 100 batches: 0.014821729622781277
+INFO:root:New lr: 0.010559581811848545
+INFO:root:Avg. loss in the last 100 batches: 0.012675964273512363
+INFO:root:New lr: 0.010573136130885119
+INFO:root:Avg. loss in the last 100 batches: 0.013005290180444717
+INFO:root:New lr: 0.010586852256418505
+INFO:root:Avg. loss in the last 100 batches: 0.012595735490322113
+INFO:root:New lr: 0.010600730169865263
+INFO:root:Avg. loss in the last 100 batches: 0.011194119229912758
+INFO:root:New lr: 0.01061476985242274
+INFO:root:Avg. loss in the last 100 batches: 0.0114995576441288
+INFO:root:New lr: 0.010628971285069205
+INFO:root:Avg. loss in the last 100 batches: 0.01210850290954113
+INFO:root:New lr: 0.010643334448563718
+INFO:root:Avg. loss in the last 100 batches: 0.0104732196778059
+INFO:root:New lr: 0.010657859323446178
+INFO:root:Avg. loss in the last 100 batches: 0.013937347568571568
+INFO:root:New lr: 0.010672545890037494
+INFO:root:Avg. loss in the last 100 batches: 0.015611969865858555
+INFO:root:New lr: 0.010687394128439442
+INFO:root:Avg. loss in the last 100 batches: 0.013618879951536655
+INFO:root:New lr: 0.0107024040185347
+INFO:root:Avg. loss in the last 100 batches: 0.013833907432854176
+INFO:root:New lr: 0.010717575539987062
+INFO:root:Avg. loss in the last 100 batches: 0.012161028571426868
+INFO:root:New lr: 0.010732908672241276
+INFO:root:Avg. loss in the last 100 batches: 0.011318213306367397
+INFO:root:New lr: 0.010748403394523015
+INFO:root:Avg. loss in the last 100 batches: 0.011890396475791931
+INFO:root:New lr: 0.010764059685839239
+INFO:root:Avg. loss in the last 100 batches: 0.012190240435302258
+INFO:root:New lr: 0.010779877524977832
+INFO:root:Avg. loss in the last 100 batches: 0.011540514416992664
+INFO:root:New lr: 0.010795856890507854
+INFO:root:Avg. loss in the last 100 batches: 0.013056546449661255
+INFO:root:New lr: 0.010811997760779513
+INFO:root:Avg. loss in the last 100 batches: 0.013255588710308075
+INFO:root:New lr: 0.010828300113924272
+INFO:root:Avg. loss in the last 100 batches: 0.012303818017244339
+INFO:root:New lr: 0.010844763927854717
+INFO:root:Avg. loss in the last 100 batches: 0.012855665758252144
+INFO:root:New lr: 0.010861389180264747
+INFO:root:Avg. loss in the last 100 batches: 0.011256982572376728
+INFO:root:New lr: 0.010878175848629407
+INFO:root:Avg. loss in the last 100 batches: 0.010618084110319614
+INFO:root:New lr: 0.010895123910205223
+INFO:root:Avg. loss in the last 100 batches: 0.01347986701875925
+INFO:root:New lr: 0.010912233342029926
+INFO:root:Avg. loss in the last 100 batches: 0.013287214562296867
+INFO:root:New lr: 0.01092950412092264
+INFO:root:Avg. loss in the last 100 batches: 0.012380318716168404
+INFO:root:New lr: 0.010946936223484
+INFO:root:Avg. loss in the last 100 batches: 0.015507864765822887
+INFO:root:New lr: 0.010964529626095898
+INFO:root:Avg. loss in the last 100 batches: 0.014749472960829735
+INFO:root:New lr: 0.010982284304921791
+INFO:root:Avg. loss in the last 100 batches: 0.014043912291526794
+INFO:root:New lr: 0.011000200235906532
+INFO:root:Avg. loss in the last 100 batches: 0.015976151451468468
+INFO:root:New lr: 0.011018277394776649
+INFO:root:Avg. loss in the last 100 batches: 0.014129504561424255
+INFO:root:New lr: 0.01103651575704015
+INFO:root:Avg. loss in the last 100 batches: 0.0132400868460536
+INFO:root:New lr: 0.011054915297986606
+INFO:root:Avg. loss in the last 100 batches: 0.01580176129937172
+INFO:root:New lr: 0.011073475992687265
+INFO:root:Avg. loss in the last 100 batches: 0.014172689989209175
+INFO:root:New lr: 0.011092197815994964
+INFO:root:Avg. loss in the last 100 batches: 0.013381605967879295
+INFO:root:New lr: 0.011111080742544355
+INFO:root:Avg. loss in the last 100 batches: 0.01733880490064621
+INFO:root:New lr: 0.01113012474675168
+INFO:root:Avg. loss in the last 100 batches: 0.014899511821568012
+INFO:root:New lr: 0.011149329802815022
+INFO:root:Avg. loss in the last 100 batches: 0.014490951783955097
+INFO:root:New lr: 0.01116869588471428
+INFO:root:Avg. loss in the last 100 batches: 0.015301664359867573
+INFO:root:New lr: 0.011188222966211164
+INFO:root:Avg. loss in the last 100 batches: 0.012179264798760414
+INFO:root:New lr: 0.011207911020849198
+INFO:root:Avg. loss in the last 100 batches: 0.011491392739117146
+INFO:root:New lr: 0.011227760021953859
+INFO:root:Avg. loss in the last 100 batches: 0.013201313093304634
+INFO:root:New lr: 0.011247769942632574
+INFO:root:Avg. loss in the last 100 batches: 0.01145200151950121
+INFO:root:New lr: 0.011267940755774752
+INFO:root:Avg. loss in the last 100 batches: 0.010807126760482788
+INFO:root:New lr: 0.011288272434051755
+INFO:root:Avg. loss in the last 100 batches: 0.013786761090159416
+INFO:root:New lr: 0.01130876494991706
+INFO:root:Avg. loss in the last 100 batches: 0.012471770867705345
+INFO:root:New lr: 0.011329418275606212
+INFO:root:Avg. loss in the last 100 batches: 0.011617920361459255
+INFO:root:New lr: 0.011350232383136843
+INFO:root:Avg. loss in the last 100 batches: 0.015378204174339771
+INFO:root:New lr: 0.011371207244308845
+INFO:root:Avg. loss in the last 100 batches: 0.013887443579733372
+INFO:root:New lr: 0.011392342830704227
+INFO:root:Avg. loss in the last 100 batches: 0.013409116305410862
+INFO:root:New lr: 0.01141363911368723
+INFO:root:Avg. loss in the last 100 batches: 0.013883881270885468
+INFO:root:New lr: 0.011435096064404432
+INFO:root:Avg. loss in the last 100 batches: 0.012190936133265495
+INFO:root:New lr: 0.011456713653784673
+INFO:root:Avg. loss in the last 100 batches: 0.01196941826492548
+INFO:root:New lr: 0.011478491852539213
+INFO:root:Avg. loss in the last 100 batches: 0.015389631502330303
+INFO:root:New lr: 0.011500430631161684
+INFO:root:Avg. loss in the last 100 batches: 0.013346663676202297
+INFO:root:New lr: 0.011522529959928113
+INFO:root:Avg. loss in the last 100 batches: 0.013269588351249695
+INFO:root:New lr: 0.01154478980889706
+INFO:root:Avg. loss in the last 100 batches: 0.016780752688646317
+INFO:root:New lr: 0.01156721014790954
+INFO:root:Avg. loss in the last 100 batches: 0.014255623333156109
+INFO:root:New lr: 0.01158979094658924
+INFO:root:Avg. loss in the last 100 batches: 0.014230580069124699
+INFO:root:New lr: 0.011612532174342327
+INFO:root:Avg. loss in the last 100 batches: 0.012691780924797058
+INFO:root:New lr: 0.011635433800357642
+INFO:root:Avg. loss in the last 100 batches: 0.010255149565637112
+INFO:root:New lr: 0.011658495793606727
+INFO:root:Avg. loss in the last 100 batches: 0.011122013442218304
+INFO:root:New lr: 0.011681718122843882
+INFO:root:Avg. loss in the last 100 batches: 0.013582801446318626
+INFO:root:New lr: 0.011705100756606107
+INFO:root:Avg. loss in the last 100 batches: 0.012306798249483109
+INFO:root:New lr: 0.011728643663213273
+INFO:root:Avg. loss in the last 100 batches: 0.012920181266963482
+INFO:root:New lr: 0.011752346810768033
+INFO:root:Avg. loss in the last 100 batches: 0.015039040707051754
+INFO:root:New lr: 0.01177621016715602
+INFO:root:Avg. loss in the last 100 batches: 0.013650311157107353
+INFO:root:New lr: 0.011800233700045737
+INFO:root:Avg. loss in the last 100 batches: 0.014043894596397877
+INFO:root:New lr: 0.011824417376888663
+INFO:root:Avg. loss in the last 100 batches: 0.013377970084547997
+INFO:root:New lr: 0.011848761164919425
+INFO:root:Avg. loss in the last 100 batches: 0.01195311639457941
+INFO:root:New lr: 0.011873265031155572
+INFO:root:Avg. loss in the last 100 batches: 0.012415551580488682
+INFO:root:New lr: 0.011897928942397829
+INFO:root:Avg. loss in the last 100 batches: 0.010950688272714615
+INFO:root:New lr: 0.011922752865230118
+INFO:root:Avg. loss in the last 100 batches: 0.009706384502351284
+INFO:root:New lr: 0.011947736766019568
+INFO:root:Avg. loss in the last 100 batches: 0.011909900233149529
+INFO:root:New lr: 0.01197288061091642
+INFO:root:Avg. loss in the last 100 batches: 0.013220004737377167
+INFO:root:New lr: 0.011998184365854425
+INFO:root:Avg. loss in the last 100 batches: 0.011624692007899284
+INFO:root:New lr: 0.012023647996550563
+INFO:root:Avg. loss in the last 100 batches: 0.012605416588485241
+INFO:root:New lr: 0.01204927146850518
+INFO:root:Avg. loss in the last 100 batches: 0.012433324940502644
+INFO:root:New lr: 0.012075054747002129
+INFO:root:Avg. loss in the last 100 batches: 0.011493650265038013
+INFO:root:New lr: 0.012100997797108659
+INFO:root:Avg. loss in the last 100 batches: 0.014031867496669292
+INFO:root:New lr: 0.012127100583675693
+INFO:root:Avg. loss in the last 100 batches: 0.015383977442979813
+INFO:root:New lr: 0.012153363071337603
+INFO:root:Avg. loss in the last 100 batches: 0.014481200836598873
+INFO:root:New lr: 0.012179785224512463
+INFO:root:Avg. loss in the last 100 batches: 0.014950310811400414
+INFO:root:New lr: 0.012206367007401964
+INFO:root:Avg. loss in the last 100 batches: 0.01241112407296896
+INFO:root:New lr: 0.012233108383991553
+INFO:root:Avg. loss in the last 100 batches: 0.011043830774724483
+INFO:root:New lr: 0.012260009318050463
+INFO:root:Avg. loss in the last 100 batches: 0.013746563345193863
+INFO:root:New lr: 0.012287069773131737
+INFO:root:Avg. loss in the last 100 batches: 0.013792048208415508
+INFO:root:New lr: 0.012314289712572313
+INFO:root:Avg. loss in the last 100 batches: 0.013356334529817104
+INFO:root:New lr: 0.012341669099492969
+INFO:root:Avg. loss in the last 100 batches: 0.012976246885955334
+INFO:root:New lr: 0.012369207896798545
+INFO:root:Avg. loss in the last 100 batches: 0.011630714870989323
+INFO:root:New lr: 0.01239690606717786
+INFO:root:Avg. loss in the last 100 batches: 0.011010924354195595
+INFO:root:New lr: 0.012424763573103847
+INFO:root:Avg. loss in the last 100 batches: 0.013667219318449497
+INFO:root:New lr: 0.012452780376833478
+INFO:root:Avg. loss in the last 100 batches: 0.013238120824098587
+INFO:root:New lr: 0.012480956440408003
+INFO:root:Avg. loss in the last 100 batches: 0.012681561522185802
+INFO:root:New lr: 0.012509291725652766
+INFO:root:Avg. loss in the last 100 batches: 0.014884669333696365
+INFO:root:New lr: 0.01253778619417753
+INFO:root:Avg. loss in the last 100 batches: 0.013223844580352306
+INFO:root:New lr: 0.012566439807376317
+INFO:root:Avg. loss in the last 100 batches: 0.012943929992616177
+INFO:root:New lr: 0.012595252526427486
+INFO:root:Avg. loss in the last 100 batches: 0.013759634457528591
+INFO:root:New lr: 0.012624224312293958
+INFO:root:Avg. loss in the last 100 batches: 0.012025379575788975
+INFO:root:New lr: 0.012653355125722993
+INFO:root:Avg. loss in the last 100 batches: 0.012056883424520493
+INFO:root:New lr: 0.012682644927246522
+INFO:root:Avg. loss in the last 100 batches: 0.014739624224603176
+INFO:root:New lr: 0.012712093677180986
+INFO:root:Avg. loss in the last 100 batches: 0.012232075445353985
+INFO:root:New lr: 0.012741701335627464
+INFO:root:Avg. loss in the last 100 batches: 0.01114687044173479
+INFO:root:New lr: 0.012771467862471853
+INFO:root:Avg. loss in the last 100 batches: 0.014437541365623474
+INFO:root:New lr: 0.012801393217384632
+INFO:root:Avg. loss in the last 100 batches: 0.012442138977348804
+INFO:root:New lr: 0.012831477359821208
+INFO:root:Avg. loss in the last 100 batches: 0.01166592538356781
+INFO:root:New lr: 0.012861720249021852
+INFO:root:Avg. loss in the last 100 batches: 0.012532035820186138
+INFO:root:New lr: 0.012892121844011728
+INFO:root:Avg. loss in the last 100 batches: 0.01096433773636818
+INFO:root:New lr: 0.012922682103600924
+INFO:root:Avg. loss in the last 100 batches: 0.010446330532431602
+INFO:root:New lr: 0.012953400986384672
+INFO:root:Avg. loss in the last 100 batches: 0.015310973860323429
+INFO:root:New lr: 0.012984278450743209
+INFO:root:Avg. loss in the last 100 batches: 0.013169699348509312
+INFO:root:New lr: 0.01301531445484197
+INFO:root:Avg. loss in the last 100 batches: 0.012742310762405396
+INFO:root:New lr: 0.013046508956631536
+INFO:root:Avg. loss in the last 100 batches: 0.01499983761459589
+INFO:root:New lr: 0.013077861913847744
+INFO:root:Avg. loss in the last 100 batches: 0.012491898611187935
+INFO:root:New lr: 0.013109373284011822
+INFO:root:Avg. loss in the last 100 batches: 0.011904658749699593
+INFO:root:New lr: 0.01314104302443031
+INFO:root:Avg. loss in the last 100 batches: 0.014542875811457634
+INFO:root:New lr: 0.01317287109219517
+INFO:root:Avg. loss in the last 100 batches: 0.012697930447757244
+INFO:root:New lr: 0.013204857444183926
+INFO:root:Avg. loss in the last 100 batches: 0.01215491071343422
+INFO:root:New lr: 0.013237002037059575
+INFO:root:Avg. loss in the last 100 batches: 0.013586646877229214
+INFO:root:New lr: 0.013269304827270706
+INFO:root:Avg. loss in the last 100 batches: 0.01243626605719328
+INFO:root:New lr: 0.01330176577105166
+INFO:root:Avg. loss in the last 100 batches: 0.013192939572036266
+INFO:root:New lr: 0.013334384824422396
+INFO:root:Avg. loss in the last 100 batches: 0.012765508145093918
+INFO:root:New lr: 0.013367161943188821
+INFO:root:Avg. loss in the last 100 batches: 0.01087756734341383
+INFO:root:New lr: 0.01340009708294243
+INFO:root:Avg. loss in the last 100 batches: 0.01274983212351799
+INFO:root:New lr: 0.013433190199060918
+INFO:root:Avg. loss in the last 100 batches: 0.015586929395794868
+INFO:root:New lr: 0.013466441246707678
+INFO:root:Avg. loss in the last 100 batches: 0.013431983068585396
+INFO:root:New lr: 0.013499850180832274
+INFO:root:Avg. loss in the last 100 batches: 0.014220929704606533
+INFO:root:New lr: 0.013533416956170413
+INFO:root:Avg. loss in the last 100 batches: 0.014553386718034744
+INFO:root:New lr: 0.013567141527243809
+INFO:root:Avg. loss in the last 100 batches: 0.013205748051404953
+INFO:root:New lr: 0.013601023848360372
+INFO:root:Avg. loss of epoch 1: 0.025141749531030655
+INFO:root:New lr: 0.013635063873614461
+INFO:root:Avg. testing loss: 0.0168959628790617
+INFO:root:Starting epoch 2
+INFO:root:Avg. loss in the last 100 batches: 0.013852924108505249
+INFO:root:New lr: 0.01366926155688658
+INFO:root:Avg. loss in the last 100 batches: 0.011815515346825123
+INFO:root:New lr: 0.013703616851843792
+INFO:root:Avg. loss in the last 100 batches: 0.011111848056316376
+INFO:root:New lr: 0.013738129711939467
+INFO:root:Avg. loss in the last 100 batches: 0.012499162927269936
+INFO:root:New lr: 0.013772800090413567
+INFO:root:Avg. loss in the last 100 batches: 0.01158810593187809
+INFO:root:New lr: 0.013807627940292666
+INFO:root:Avg. loss in the last 100 batches: 0.011419479735195637
+INFO:root:New lr: 0.013842613214389954
+INFO:root:Avg. loss in the last 100 batches: 0.01395599078387022
+INFO:root:New lr: 0.013877755865305291
+INFO:root:Avg. loss in the last 100 batches: 0.01110000442713499
+INFO:root:New lr: 0.013913055845425432
+INFO:root:Avg. loss in the last 100 batches: 0.010963534004986286
+INFO:root:New lr: 0.013948513106923854
+INFO:root:Avg. loss in the last 100 batches: 0.012054601684212685
+INFO:root:New lr: 0.013984127601760987
+INFO:root:Avg. loss in the last 100 batches: 0.011027401313185692
+INFO:root:New lr: 0.01401989928168429
+INFO:root:Avg. loss in the last 100 batches: 0.011401904746890068
+INFO:root:New lr: 0.014055828098228085
+INFO:root:Avg. loss in the last 100 batches: 0.012003951705992222
+INFO:root:New lr: 0.014091914002714034
+INFO:root:Avg. loss in the last 100 batches: 0.010137321427464485
+INFO:root:New lr: 0.014128156946250747
+INFO:root:Avg. loss in the last 100 batches: 0.011442333459854126
+INFO:root:New lr: 0.014164556879734197
+INFO:root:Avg. loss in the last 100 batches: 0.015107931569218636
+INFO:root:New lr: 0.014201113753847666
+INFO:root:Avg. loss in the last 100 batches: 0.013520007021725178
+INFO:root:New lr: 0.014237827519061691
+INFO:root:Avg. loss in the last 100 batches: 0.013415435329079628
+INFO:root:New lr: 0.014274698125634394
+INFO:root:Avg. loss in the last 100 batches: 0.012387760914862156
+INFO:root:New lr: 0.014311725523611263
+INFO:root:Avg. loss in the last 100 batches: 0.010488792322576046
+INFO:root:New lr: 0.014348909662825454
+INFO:root:Avg. loss in the last 100 batches: 0.012480217963457108
+INFO:root:New lr: 0.014386250492897684
+INFO:root:Avg. loss in the last 100 batches: 0.01499205082654953
+INFO:root:New lr: 0.01442374796323645
+INFO:root:Avg. loss in the last 100 batches: 0.013217172585427761
+INFO:root:New lr: 0.014461402023037945
+INFO:root:Avg. loss in the last 100 batches: 0.014205532148480415
+INFO:root:New lr: 0.014499212621286311
+INFO:root:Avg. loss in the last 100 batches: 0.014932410791516304
+INFO:root:New lr: 0.0145371797067535
+INFO:root:Avg. loss in the last 100 batches: 0.013447929173707962
+INFO:root:New lr: 0.014575303227999464
+INFO:root:Avg. loss in the last 100 batches: 0.014527657069265842
+INFO:root:New lr: 0.014613583133372271
+INFO:root:Avg. loss in the last 100 batches: 0.012492448091506958
+INFO:root:New lr: 0.014652019371008018
+INFO:root:Avg. loss in the last 100 batches: 0.010962549597024918
+INFO:root:New lr: 0.014690611888831112
+INFO:root:Avg. loss in the last 100 batches: 0.011936563067138195
+INFO:root:New lr: 0.0147293606345541
+INFO:root:Avg. loss in the last 100 batches: 0.012934431433677673
+INFO:root:New lr: 0.014768265555677895
+INFO:root:Avg. loss in the last 100 batches: 0.011911061592400074
+INFO:root:New lr: 0.01480732659949191
+INFO:root:Avg. loss in the last 100 batches: 0.013118339702486992
+INFO:root:New lr: 0.014846543713073923
+INFO:root:Avg. loss in the last 100 batches: 0.012616397812962532
+INFO:root:New lr: 0.01488591684329027
+INFO:root:Avg. loss in the last 100 batches: 0.011294620111584663
+INFO:root:New lr: 0.014925445936795956
+INFO:root:Avg. loss in the last 100 batches: 0.013148531317710876
+INFO:root:New lr: 0.014965130940034654
+INFO:root:Avg. loss in the last 100 batches: 0.013940651901066303
+INFO:root:New lr: 0.015004971799238792
+INFO:root:Avg. loss in the last 100 batches: 0.013166135177016258
+INFO:root:New lr: 0.015044968460429686
+INFO:root:Avg. loss in the last 100 batches: 0.014230378903448582
+INFO:root:New lr: 0.015085120869417462
+INFO:root:Avg. loss in the last 100 batches: 0.0130999144166708
+INFO:root:New lr: 0.01512542897180133
+INFO:root:Avg. loss in the last 100 batches: 0.012243916280567646
+INFO:root:New lr: 0.015165892712969503
+INFO:root:Avg. loss in the last 100 batches: 0.014585653319954872
+INFO:root:New lr: 0.015206512038099335
+INFO:root:Avg. loss in the last 100 batches: 0.013433771207928658
+INFO:root:New lr: 0.015247286892157375
+INFO:root:Avg. loss in the last 100 batches: 0.01427270844578743
+INFO:root:New lr: 0.015288217219899508
+INFO:root:Avg. loss in the last 100 batches: 0.01239641010761261
+INFO:root:New lr: 0.0153293029658709
+INFO:root:Avg. loss in the last 100 batches: 0.01125180721282959
+INFO:root:New lr: 0.01537054407440619
+INFO:root:Avg. loss in the last 100 batches: 0.013676384463906288
+INFO:root:New lr: 0.015411940489629516
+INFO:root:Avg. loss in the last 100 batches: 0.013025043532252312
+INFO:root:New lr: 0.015453492155454635
+INFO:root:Avg. loss in the last 100 batches: 0.01197738666087389
+INFO:root:New lr: 0.015495199015584826
+INFO:root:Avg. loss in the last 100 batches: 0.01285326573997736
+INFO:root:New lr: 0.015537061013513265
+INFO:root:Avg. loss in the last 100 batches: 0.011534073390066624
+INFO:root:New lr: 0.015579078092522874
+INFO:root:Avg. loss in the last 100 batches: 0.010847109369933605
+INFO:root:New lr: 0.015621250195686387
+INFO:root:Avg. loss in the last 100 batches: 0.014167187735438347
+INFO:root:New lr: 0.015663577265866674
+INFO:root:Avg. loss in the last 100 batches: 0.013285721652209759
+INFO:root:New lr: 0.01570605924571647
+INFO:root:Avg. loss in the last 100 batches: 0.012308088131248951
+INFO:root:New lr: 0.01574869607767876
+INFO:root:Avg. loss in the last 100 batches: 0.013820545747876167
+INFO:root:New lr: 0.01579148770398664
+INFO:root:Avg. loss in the last 100 batches: 0.011088311672210693
+INFO:root:New lr: 0.01583443406666349
+INFO:root:Avg. loss in the last 100 batches: 0.010104985907673836
+INFO:root:New lr: 0.015877535107523127
+INFO:root:Avg. loss in the last 100 batches: 0.011353311128914356
+INFO:root:New lr: 0.015920790768169685
+INFO:root:Avg. loss in the last 100 batches: 0.011099482886493206
+INFO:root:New lr: 0.0159642009899979
+INFO:root:Avg. loss in the last 100 batches: 0.011035216972231865
+INFO:root:New lr: 0.016007765714193073
+INFO:root:Avg. loss in the last 100 batches: 0.013566706329584122
+INFO:root:New lr: 0.01605148488173111
+INFO:root:Avg. loss in the last 100 batches: 0.011786947026848793
+INFO:root:New lr: 0.01609535843337881
+INFO:root:Avg. loss in the last 100 batches: 0.01146963331848383
+INFO:root:New lr: 0.016139386309693637
+INFO:root:Avg. loss in the last 100 batches: 0.012780653312802315
+INFO:root:New lr: 0.016183568451024144
+INFO:root:Avg. loss in the last 100 batches: 0.011860729195177555
+INFO:root:New lr: 0.016227904797509685
+INFO:root:Avg. loss in the last 100 batches: 0.011698913760483265
+INFO:root:New lr: 0.016272395289080838
+INFO:root:Avg. loss in the last 100 batches: 0.015352053567767143
+INFO:root:New lr: 0.01631703986545932
+INFO:root:Avg. loss in the last 100 batches: 0.012827347964048386
+INFO:root:New lr: 0.01636183846615799
+INFO:root:Avg. loss in the last 100 batches: 0.012277711182832718
+INFO:root:New lr: 0.016406791030481038
+INFO:root:Avg. loss in the last 100 batches: 0.014350887387990952
+INFO:root:New lr: 0.016451897497524237
+INFO:root:Avg. loss in the last 100 batches: 0.012637321837246418
+INFO:root:New lr: 0.01649715780617464
+INFO:root:Avg. loss in the last 100 batches: 0.012287138029932976
+INFO:root:New lr: 0.01654257189511088
+INFO:root:Avg. loss in the last 100 batches: 0.014640380628407001
+INFO:root:New lr: 0.0165881397028034
+INFO:root:Avg. loss in the last 100 batches: 0.01242100540548563
+INFO:root:New lr: 0.016633861167514197
+INFO:root:Avg. loss in the last 100 batches: 0.012495736591517925
+INFO:root:New lr: 0.016679736227297154
+INFO:root:Avg. loss in the last 100 batches: 0.013585501350462437
+INFO:root:New lr: 0.01672576481999813
+INFO:root:Avg. loss in the last 100 batches: 0.011280197650194168
+INFO:root:New lr: 0.016771946883254812
+INFO:root:Avg. loss in the last 100 batches: 0.011312522925436497
+INFO:root:New lr: 0.01681828235449709
+INFO:root:Avg. loss in the last 100 batches: 0.012818329967558384
+INFO:root:New lr: 0.01686477117094695
+INFO:root:Avg. loss in the last 100 batches: 0.010893353261053562
+INFO:root:New lr: 0.016911413269618647
+INFO:root:Avg. loss in the last 100 batches: 0.011921615339815617
+INFO:root:New lr: 0.01695820858731867
+INFO:root:Avg. loss in the last 100 batches: 0.014546569436788559
+INFO:root:New lr: 0.017005157060646064
+INFO:root:Avg. loss in the last 100 batches: 0.01260671392083168
+INFO:root:New lr: 0.017052258625992245
+INFO:root:Avg. loss in the last 100 batches: 0.013196097686886787
+INFO:root:New lr: 0.017099513219541285
+INFO:root:Avg. loss in the last 100 batches: 0.012533735483884811
+INFO:root:New lr: 0.01714692077726987
+INFO:root:Avg. loss in the last 100 batches: 0.011051592417061329
+INFO:root:New lr: 0.01719448123494749
+INFO:root:Avg. loss in the last 100 batches: 0.011545219458639622
+INFO:root:New lr: 0.01724219452813644
+INFO:root:Avg. loss in the last 100 batches: 0.011819488368928432
+INFO:root:New lr: 0.01729006059219204
+INFO:root:Avg. loss in the last 100 batches: 0.01044968981295824
+INFO:root:New lr: 0.01733807936226242
+INFO:root:Avg. loss in the last 100 batches: 0.013539698906242847
+INFO:root:New lr: 0.017386250773289036
+INFO:root:Avg. loss in the last 100 batches: 0.015507593750953674
+INFO:root:New lr: 0.01743457476000637
+INFO:root:Avg. loss in the last 100 batches: 0.013349750079214573
+INFO:root:New lr: 0.017483051256942356
+INFO:root:Avg. loss in the last 100 batches: 0.013854245655238628
+INFO:root:New lr: 0.01753168019841811
+INFO:root:Avg. loss in the last 100 batches: 0.012077614665031433
+INFO:root:New lr: 0.017580461518548363
+INFO:root:Avg. loss in the last 100 batches: 0.011241855099797249
+INFO:root:New lr: 0.01762939515124129
+INFO:root:Avg. loss in the last 100 batches: 0.011827505193650723
+INFO:root:New lr: 0.017678481030198784
+INFO:root:Avg. loss in the last 100 batches: 0.012122602201998234
+INFO:root:New lr: 0.017727719088916377
+INFO:root:Avg. loss in the last 100 batches: 0.011454788967967033
+INFO:root:New lr: 0.017777109260683543
+INFO:root:Avg. loss in the last 100 batches: 0.013009056448936462
+INFO:root:New lr: 0.017826651478583533
+INFO:root:Avg. loss in the last 100 batches: 0.013080606237053871
+INFO:root:New lr: 0.01787634567549365
+INFO:root:Avg. loss in the last 100 batches: 0.012275044806301594
+INFO:root:New lr: 0.017926191784085277
+INFO:root:Avg. loss in the last 100 batches: 0.012659941799938679
+INFO:root:New lr: 0.01797618973682405
+INFO:root:Avg. loss in the last 100 batches: 0.011373988352715969
+INFO:root:New lr: 0.018026339465969765
+INFO:root:Avg. loss in the last 100 batches: 0.010471226647496223
+INFO:root:New lr: 0.01807664090357672
+INFO:root:Avg. loss in the last 100 batches: 0.0128835653886199
+INFO:root:New lr: 0.01812709398149348
+INFO:root:Avg. loss in the last 100 batches: 0.01299230195581913
+INFO:root:New lr: 0.018177698631363315
+INFO:root:Avg. loss in the last 100 batches: 0.012469296343624592
+INFO:root:New lr: 0.01822845478462412
+INFO:root:Avg. loss in the last 100 batches: 0.015507540665566921
+INFO:root:New lr: 0.018279362372508462
+INFO:root:Avg. loss in the last 100 batches: 0.014811169356107712
+INFO:root:New lr: 0.018330421326043705
+INFO:root:Avg. loss in the last 100 batches: 0.013650953769683838
+INFO:root:New lr: 0.01838163157605227
+INFO:root:Avg. loss in the last 100 batches: 0.01551463920623064
+INFO:root:New lr: 0.018432993053151547
+INFO:root:Avg. loss in the last 100 batches: 0.01420887466520071
+INFO:root:New lr: 0.018484505687753894
+INFO:root:Avg. loss in the last 100 batches: 0.01327952928841114
+INFO:root:New lr: 0.018536169410067083
+INFO:root:Avg. loss in the last 100 batches: 0.015864886343479156
+INFO:root:New lr: 0.018587984150093995
+INFO:root:Avg. loss in the last 100 batches: 0.013980554416775703
+INFO:root:New lr: 0.018639949837633063
+INFO:root:Avg. loss in the last 100 batches: 0.013175423257052898
+INFO:root:New lr: 0.018692066402278107
+INFO:root:Avg. loss in the last 100 batches: 0.017124949023127556
+INFO:root:New lr: 0.018744333773418553
+INFO:root:Avg. loss in the last 100 batches: 0.014763275161385536
+INFO:root:New lr: 0.01879675188023955
+INFO:root:Avg. loss in the last 100 batches: 0.014197015203535557
+INFO:root:New lr: 0.018849320651721957
+INFO:root:Avg. loss in the last 100 batches: 0.015492073260247707
+INFO:root:New lr: 0.018902040016642502
+INFO:root:Avg. loss in the last 100 batches: 0.011890464462339878
+INFO:root:New lr: 0.01895490990357393
+INFO:root:Avg. loss in the last 100 batches: 0.011284262873232365
+INFO:root:New lr: 0.019007930240885013
+INFO:root:Avg. loss in the last 100 batches: 0.012842412106692791
+INFO:root:New lr: 0.019061100956740767
+INFO:root:Avg. loss in the last 100 batches: 0.01144176721572876
+INFO:root:New lr: 0.019114421979102292
+INFO:root:Avg. loss in the last 100 batches: 0.010810843668878078
+INFO:root:New lr: 0.019167893235727235
+INFO:root:Avg. loss in the last 100 batches: 0.013480073772370815
+INFO:root:New lr: 0.019221514654169547
+INFO:root:Avg. loss in the last 100 batches: 0.012217089533805847
+INFO:root:New lr: 0.019275286161779842
+INFO:root:Avg. loss in the last 100 batches: 0.011906552128493786
+INFO:root:New lr: 0.01932920768570534
+INFO:root:Avg. loss in the last 100 batches: 0.015160201117396355
+INFO:root:New lr: 0.019383279152889954
+INFO:root:Avg. loss in the last 100 batches: 0.013716351240873337
+INFO:root:New lr: 0.01943750049007456
+INFO:root:Avg. loss in the last 100 batches: 0.013401070609688759
+INFO:root:New lr: 0.019491871623796897
+INFO:root:Avg. loss in the last 100 batches: 0.013669844716787338
+INFO:root:New lr: 0.019546392480391805
+INFO:root:Avg. loss in the last 100 batches: 0.01222151517868042
+INFO:root:New lr: 0.01960106298599118
+INFO:root:Avg. loss in the last 100 batches: 0.011722089722752571
+INFO:root:New lr: 0.019655883066524243
+INFO:root:Avg. loss in the last 100 batches: 0.015027168206870556
+INFO:root:New lr: 0.019710852647717575
+INFO:root:Avg. loss in the last 100 batches: 0.013375193811953068
+INFO:root:New lr: 0.019765971655095138
+INFO:root:Avg. loss in the last 100 batches: 0.013197790831327438
+INFO:root:New lr: 0.019821240013978503
+INFO:root:Avg. loss in the last 100 batches: 0.016740528866648674
+INFO:root:New lr: 0.019876657649486873
+INFO:root:Avg. loss in the last 100 batches: 0.01397586427628994
+INFO:root:New lr: 0.01993222448653717
+INFO:root:Avg. loss in the last 100 batches: 0.014068937860429287
+INFO:root:New lr: 0.0199879404498442
+INFO:root:Avg. loss in the last 100 batches: 0.012204715050756931
+INFO:root:New lr: 0.02004380546392076
+INFO:root:Avg. loss in the last 100 batches: 0.010188060812652111
+INFO:root:New lr: 0.020099819453077622
+INFO:root:Avg. loss in the last 100 batches: 0.011088930070400238
+INFO:root:New lr: 0.02015598234142374
+INFO:root:Avg. loss in the last 100 batches: 0.01379932090640068
+INFO:root:New lr: 0.02021229405286637
+INFO:root:Avg. loss in the last 100 batches: 0.011997449211776257
+INFO:root:New lr: 0.020268754511111126
+INFO:root:Avg. loss in the last 100 batches: 0.012746123597025871
+INFO:root:New lr: 0.020325363639662086
+INFO:root:Avg. loss in the last 100 batches: 0.014743363484740257
+INFO:root:New lr: 0.02038212136182191
+INFO:root:Avg. loss in the last 100 batches: 0.013598429970443249
+INFO:root:New lr: 0.0204390276006918
+INFO:root:Avg. loss in the last 100 batches: 0.013921716250479221
+INFO:root:New lr: 0.020496082279172018
+INFO:root:Avg. loss in the last 100 batches: 0.013401446864008904
+INFO:root:New lr: 0.02055328531996145
+INFO:root:Avg. loss in the last 100 batches: 0.011843877844512463
+INFO:root:New lr: 0.020610636645558095
+INFO:root:Avg. loss in the last 100 batches: 0.012279375456273556
+INFO:root:New lr: 0.020668136178259022
+INFO:root:Avg. loss in the last 100 batches: 0.010636192746460438
+INFO:root:New lr: 0.020725783840160522
+INFO:root:Avg. loss in the last 100 batches: 0.00944079551845789
+INFO:root:New lr: 0.020783579553158182
+INFO:root:Avg. loss in the last 100 batches: 0.012042181566357613
+INFO:root:New lr: 0.02084152323894692
+INFO:root:Avg. loss in the last 100 batches: 0.012950873002409935
+INFO:root:New lr: 0.020899614819021334
+INFO:root:Avg. loss in the last 100 batches: 0.011334598995745182
+INFO:root:New lr: 0.020957854214675442
+INFO:root:Avg. loss in the last 100 batches: 0.012627856805920601
+INFO:root:New lr: 0.02101624134700325
+INFO:root:Avg. loss in the last 100 batches: 0.012237107381224632
+INFO:root:New lr: 0.021074776136898343
+INFO:root:Avg. loss in the last 100 batches: 0.010942775756120682
+INFO:root:New lr: 0.02113345850505441
+INFO:root:Avg. loss in the last 100 batches: 0.014457086101174355
+INFO:root:New lr: 0.021192288371965184
+INFO:root:Avg. loss in the last 100 batches: 0.015032349154353142
+INFO:root:New lr: 0.021251265657924456
+INFO:root:Avg. loss in the last 100 batches: 0.014434597454965115
+INFO:root:New lr: 0.021310390283026392
+INFO:root:Avg. loss in the last 100 batches: 0.014873548410832882
+INFO:root:New lr: 0.02136966216716546
+INFO:root:Avg. loss in the last 100 batches: 0.012158425524830818
+INFO:root:New lr: 0.021429081230036673
+INFO:root:Avg. loss in the last 100 batches: 0.010935078375041485
+INFO:root:New lr: 0.021488647391135596
+INFO:root:Avg. loss in the last 100 batches: 0.013579456135630608
+INFO:root:New lr: 0.021548360569758562
+INFO:root:Avg. loss in the last 100 batches: 0.013835253193974495
+INFO:root:New lr: 0.021608220685002594
+INFO:root:Avg. loss in the last 100 batches: 0.013139264658093452
+INFO:root:New lr: 0.02166822765576573
+INFO:root:Avg. loss in the last 100 batches: 0.01288758497685194
+INFO:root:New lr: 0.021728381400747038
+INFO:root:Avg. loss in the last 100 batches: 0.01135108433663845
+INFO:root:New lr: 0.021788681838446705
+INFO:root:Avg. loss in the last 100 batches: 0.01113861333578825
+INFO:root:New lr: 0.02184912888716617
+INFO:root:Avg. loss in the last 100 batches: 0.01362861692905426
+INFO:root:New lr: 0.02190972246500819
+INFO:root:Avg. loss in the last 100 batches: 0.01285720057785511
+INFO:root:New lr: 0.021970462489877163
+INFO:root:Avg. loss in the last 100 batches: 0.01274234987795353
+INFO:root:New lr: 0.022031348879478774
+INFO:root:Avg. loss in the last 100 batches: 0.014735772274434566
+INFO:root:New lr: 0.02209238155132076
+INFO:root:Avg. loss in the last 100 batches: 0.013231303542852402
+INFO:root:New lr: 0.02215356042271238
+INFO:root:Avg. loss in the last 100 batches: 0.012845009565353394
+INFO:root:New lr: 0.022214885410764995
+INFO:root:Avg. loss in the last 100 batches: 0.013348673470318317
+INFO:root:New lr: 0.02227635643239184
+INFO:root:Avg. loss in the last 100 batches: 0.01221804041415453
+INFO:root:New lr: 0.02233797340430846
+INFO:root:Avg. loss in the last 100 batches: 0.01187165081501007
+INFO:root:New lr: 0.022399736243032514
+INFO:root:Avg. loss in the last 100 batches: 0.014330542646348476
+INFO:root:New lr: 0.022461644864884167
+INFO:root:Avg. loss in the last 100 batches: 0.011784103699028492
+INFO:root:New lr: 0.022523699185985957
+INFO:root:Avg. loss in the last 100 batches: 0.011498136445879936
+INFO:root:New lr: 0.022585899122263053
+INFO:root:Avg. loss in the last 100 batches: 0.014295454137027264
+INFO:root:New lr: 0.022648244589443367
+INFO:root:Avg. loss in the last 100 batches: 0.012072504498064518
+INFO:root:New lr: 0.022710735503057605
+INFO:root:Avg. loss in the last 100 batches: 0.011592410504817963
+INFO:root:New lr: 0.02277337177843944
+INFO:root:Avg. loss in the last 100 batches: 0.012621266767382622
+INFO:root:New lr: 0.022836153330725556
+INFO:root:Avg. loss in the last 100 batches: 0.010691042989492416
+INFO:root:New lr: 0.022899080074855888
+INFO:root:Avg. loss in the last 100 batches: 0.01029301155358553
+INFO:root:New lr: 0.02296215192557355
+INFO:root:Avg. loss in the last 100 batches: 0.01499132625758648
+INFO:root:New lr: 0.023025368797425116
+INFO:root:Avg. loss in the last 100 batches: 0.012990198098123074
+INFO:root:New lr: 0.023088730604760688
+INFO:root:Avg. loss in the last 100 batches: 0.012756642885506153
+INFO:root:New lr: 0.023152237261733988
+INFO:root:Avg. loss in the last 100 batches: 0.014619098976254463
+INFO:root:New lr: 0.023215888682302482
+INFO:root:Avg. loss in the last 100 batches: 0.012329618446528912
+INFO:root:New lr: 0.023279684780227516
+INFO:root:Avg. loss in the last 100 batches: 0.012165897525846958
+INFO:root:New lr: 0.023343625469074397
+INFO:root:Avg. loss in the last 100 batches: 0.01451028697192669
+INFO:root:New lr: 0.023407710662212533
+INFO:root:Avg. loss in the last 100 batches: 0.012222188524901867
+INFO:root:New lr: 0.023471940272815545
+INFO:root:Avg. loss in the last 100 batches: 0.01229084562510252
+INFO:root:New lr: 0.02353631421386146
+INFO:root:Avg. loss in the last 100 batches: 0.013513290323317051
+INFO:root:New lr: 0.0236008323981326
+INFO:root:Avg. loss in the last 100 batches: 0.012377960607409477
+INFO:root:New lr: 0.023665494738216053
+INFO:root:Avg. loss in the last 100 batches: 0.01304094772785902
+INFO:root:New lr: 0.023730301146503457
+INFO:root:Avg. loss in the last 100 batches: 0.01264449767768383
+INFO:root:New lr: 0.023795251535191325
+INFO:root:Avg. loss in the last 100 batches: 0.011056330986320972
+INFO:root:New lr: 0.023860345816281048
+INFO:root:Avg. loss in the last 100 batches: 0.012119426392018795
+INFO:root:New lr: 0.023925583901579117
+INFO:root:Avg. loss in the last 100 batches: 0.01522339042276144
+INFO:root:New lr: 0.023990965702697126
+INFO:root:Avg. loss in the last 100 batches: 0.013356957584619522
+INFO:root:New lr: 0.024056491131051988
+INFO:root:Avg. loss in the last 100 batches: 0.014218030497431755
+INFO:root:New lr: 0.02412216009786608
+INFO:root:Avg. loss in the last 100 batches: 0.014637637883424759
+INFO:root:New lr: 0.024187972514167155
+INFO:root:Avg. loss in the last 100 batches: 0.013003511354327202
+INFO:root:New lr: 0.024253928290788762
+INFO:root:Avg. loss of epoch 2: 0.012788859196007252
+INFO:root:New lr: 0.024320027338370187
+INFO:root:Avg. testing loss: 0.017060458660125732
+INFO:root:Starting epoch 3
+INFO:root:Avg. loss in the last 100 batches: 0.013800551183521748
+INFO:root:New lr: 0.02438626956735654
+INFO:root:Avg. loss in the last 100 batches: 0.011563751846551895
+INFO:root:New lr: 0.024452654887998942
+INFO:root:Avg. loss in the last 100 batches: 0.011122802272439003
+INFO:root:New lr: 0.024519183210354734
+INFO:root:Avg. loss in the last 100 batches: 0.012665271759033203
+INFO:root:New lr: 0.024585854444287403
+INFO:root:Avg. loss in the last 100 batches: 0.011110971681773663
+INFO:root:New lr: 0.024652668499466956
+INFO:root:Avg. loss in the last 100 batches: 0.011509365402162075
+INFO:root:New lr: 0.024719625285369723
+INFO:root:Avg. loss in the last 100 batches: 0.013708350248634815
+INFO:root:New lr: 0.024786724711278768
+INFO:root:Avg. loss in the last 100 batches: 0.011003164574503899
+INFO:root:New lr: 0.02485396668628384
+INFO:root:Avg. loss in the last 100 batches: 0.010742036625742912
+INFO:root:New lr: 0.024921351119281593
+INFO:root:Avg. loss in the last 100 batches: 0.012166211381554604
+INFO:root:New lr: 0.024988877918975694
+INFO:root:Avg. loss in the last 100 batches: 0.010871867649257183
+INFO:root:New lr: 0.025056546993876827
+INFO:root:Avg. loss in the last 100 batches: 0.011199216358363628
+INFO:root:New lr: 0.025124358252303025
+INFO:root:Avg. loss in the last 100 batches: 0.011949442327022552
+INFO:root:New lr: 0.025192311602379613
+INFO:root:Avg. loss in the last 100 batches: 0.010021375492215157
+INFO:root:New lr: 0.025260406952039377
+INFO:root:Avg. loss in the last 100 batches: 0.01113696675747633
+INFO:root:New lr: 0.025328644209022838
+INFO:root:Avg. loss in the last 100 batches: 0.015184634365141392
+INFO:root:New lr: 0.02539702328087809
+INFO:root:Avg. loss in the last 100 batches: 0.013053493574261665
+INFO:root:New lr: 0.025465544074961266
+INFO:root:Avg. loss in the last 100 batches: 0.01341779064387083
+INFO:root:New lr: 0.025534206498436296
+INFO:root:Avg. loss in the last 100 batches: 0.012229175306856632
+INFO:root:New lr: 0.025603010458275344
+INFO:root:Avg. loss in the last 100 batches: 0.010248372331261635
+INFO:root:New lr: 0.025671955861258783
+INFO:root:Avg. loss in the last 100 batches: 0.012166139669716358
+INFO:root:New lr: 0.025741042613975362
+INFO:root:Avg. loss in the last 100 batches: 0.01511417143046856
+INFO:root:New lr: 0.025810270622822318
+INFO:root:Avg. loss in the last 100 batches: 0.013075382448732853
+INFO:root:New lr: 0.025879639794005455
+INFO:root:Avg. loss in the last 100 batches: 0.014033237472176552
+INFO:root:New lr: 0.025949150033539425
+INFO:root:Avg. loss in the last 100 batches: 0.014830551110208035
+INFO:root:New lr: 0.02601880124724762
+INFO:root:Avg. loss in the last 100 batches: 0.013158638030290604
+INFO:root:New lr: 0.026088593340762578
+INFO:root:Avg. loss in the last 100 batches: 0.014518117532134056
+INFO:root:New lr: 0.026158526219525857
+INFO:root:Avg. loss in the last 100 batches: 0.012171171605587006
+INFO:root:New lr: 0.026228599788788276
+INFO:root:Avg. loss in the last 100 batches: 0.010845117270946503
+INFO:root:New lr: 0.026298813953610084
+INFO:root:Avg. loss in the last 100 batches: 0.012233010493218899
+INFO:root:New lr: 0.026369168618861044
+INFO:root:Avg. loss in the last 100 batches: 0.012657791376113892
+INFO:root:New lr: 0.02643966368922057
+INFO:root:Avg. loss in the last 100 batches: 0.011845623143017292
+INFO:root:New lr: 0.02651029906917779
+INFO:root:Avg. loss in the last 100 batches: 0.012812905013561249
+INFO:root:New lr: 0.026581074663031695
+INFO:root:Avg. loss in the last 100 batches: 0.012085429392755032
+INFO:root:New lr: 0.026651990374891493
+INFO:root:Avg. loss in the last 100 batches: 0.011352007277309895
+INFO:root:New lr: 0.026723046108676374
+INFO:root:Avg. loss in the last 100 batches: 0.013286450877785683
+INFO:root:New lr: 0.026794241768115817
+INFO:root:Avg. loss in the last 100 batches: 0.013912785798311234
+INFO:root:New lr: 0.026865577256749873
+INFO:root:Avg. loss in the last 100 batches: 0.012912806123495102
+INFO:root:New lr: 0.02693705247792902
+INFO:root:Avg. loss in the last 100 batches: 0.014025641605257988
+INFO:root:New lr: 0.02700866733481444
+INFO:root:Avg. loss in the last 100 batches: 0.01298395823687315
+INFO:root:New lr: 0.027080421730378196
+INFO:root:Avg. loss in the last 100 batches: 0.012136322446167469
+INFO:root:New lr: 0.027152315567403135
+INFO:root:Avg. loss in the last 100 batches: 0.014461490325629711
+INFO:root:New lr: 0.02722434874848334
+INFO:root:Avg. loss in the last 100 batches: 0.013265520334243774
+INFO:root:New lr: 0.027296521176024047
+INFO:root:Avg. loss in the last 100 batches: 0.014356101863086224
+INFO:root:New lr: 0.027368832752241806
+INFO:root:Avg. loss in the last 100 batches: 0.011882997117936611
+INFO:root:New lr: 0.027441283379164738
+INFO:root:Avg. loss in the last 100 batches: 0.011200036853551865
+INFO:root:New lr: 0.027513872958632418
+INFO:root:Avg. loss in the last 100 batches: 0.013592117466032505
+INFO:root:New lr: 0.027586601392296295
+INFO:root:Avg. loss in the last 100 batches: 0.01287985872477293
+INFO:root:New lr: 0.02765946858161955
+INFO:root:Avg. loss in the last 100 batches: 0.012194497510790825
+INFO:root:New lr: 0.027732474427877574
+INFO:root:Avg. loss in the last 100 batches: 0.012893100269138813
+INFO:root:New lr: 0.027805618832157708
+INFO:root:Avg. loss in the last 100 batches: 0.011283310130238533
+INFO:root:New lr: 0.027878901695359642
+INFO:root:Avg. loss in the last 100 batches: 0.010407266207039356
+INFO:root:New lr: 0.027952322918195494
+INFO:root:Avg. loss in the last 100 batches: 0.014450027607381344
+INFO:root:New lr: 0.02802588240118986
+INFO:root:Avg. loss in the last 100 batches: 0.012916583567857742
+INFO:root:New lr: 0.028099580044680106
+INFO:root:Avg. loss in the last 100 batches: 0.012242557480931282
+INFO:root:New lr: 0.028173415748816294
+INFO:root:Avg. loss in the last 100 batches: 0.013722083531320095
+INFO:root:New lr: 0.028247389413561558
+INFO:root:Avg. loss in the last 100 batches: 0.0106546301394701
+INFO:root:New lr: 0.028321500938691957
+INFO:root:Avg. loss in the last 100 batches: 0.009964734315872192
+INFO:root:New lr: 0.028395750223797006
+INFO:root:Avg. loss in the last 100 batches: 0.011596490629017353
+INFO:root:New lr: 0.028470137168279314
+INFO:root:Avg. loss in the last 100 batches: 0.010778428055346012
+INFO:root:New lr: 0.028544661671355137
+INFO:root:Avg. loss in the last 100 batches: 0.011054436676204205
+INFO:root:New lr: 0.028619323632054355
+INFO:root:Avg. loss in the last 100 batches: 0.013250445015728474
+INFO:root:New lr: 0.028694122949220524
+INFO:root:Avg. loss in the last 100 batches: 0.01169171929359436
+INFO:root:New lr: 0.02876905952151118
+INFO:root:Avg. loss in the last 100 batches: 0.011505842208862305
+INFO:root:New lr: 0.028844133247397902
+INFO:root:Avg. loss in the last 100 batches: 0.012844959273934364
+INFO:root:New lr: 0.028919344025166355
+INFO:root:Avg. loss in the last 100 batches: 0.011673301458358765
+INFO:root:New lr: 0.028994691752916663
+INFO:root:Avg. loss in the last 100 batches: 0.01156995166093111
+INFO:root:New lr: 0.029070176328563235
+INFO:root:Avg. loss in the last 100 batches: 0.015275108627974987
+INFO:root:New lr: 0.029145797649835214
+INFO:root:Avg. loss in the last 100 batches: 0.012569338083267212
+INFO:root:New lr: 0.02922155561427639
+INFO:root:Avg. loss in the last 100 batches: 0.012262518517673016
+INFO:root:New lr: 0.02929745011924545
+INFO:root:Avg. loss in the last 100 batches: 0.014364751987159252
+INFO:root:New lr: 0.029373481061916062
+INFO:root:Avg. loss in the last 100 batches: 0.012623258866369724
+INFO:root:New lr: 0.029449648339277074
+INFO:root:Avg. loss in the last 100 batches: 0.011887765489518642
+INFO:root:New lr: 0.029525951848132642
+INFO:root:Avg. loss in the last 100 batches: 0.014596957713365555
+INFO:root:New lr: 0.029602391485102242
+INFO:root:Avg. loss in the last 100 batches: 0.012106436304748058
+INFO:root:New lr: 0.02967896714662105
+INFO:root:Avg. loss in the last 100 batches: 0.012538552284240723
+INFO:root:New lr: 0.029755678728939833
+INFO:root:Avg. loss in the last 100 batches: 0.013355073519051075
+INFO:root:New lr: 0.029832526128125286
+INFO:root:Avg. loss in the last 100 batches: 0.011222179979085922
+INFO:root:New lr: 0.029909509240060084
+INFO:root:Avg. loss in the last 100 batches: 0.011475767008960247
+INFO:root:New lr: 0.029986627960442935
+INFO:root:Avg. loss in the last 100 batches: 0.012597347609698772
+INFO:root:New lr: 0.030063882184788948
+INFO:root:Avg. loss in the last 100 batches: 0.011027490720152855
+INFO:root:New lr: 0.03014127180842957
+INFO:root:Avg. loss in the last 100 batches: 0.011545472778379917
+INFO:root:New lr: 0.03021879672651273
+INFO:root:Avg. loss in the last 100 batches: 0.01402836013585329
+INFO:root:New lr: 0.03029645683400331
+INFO:root:Avg. loss in the last 100 batches: 0.01277998462319374
+INFO:root:New lr: 0.030374252025682724
+INFO:root:Avg. loss in the last 100 batches: 0.013110348023474216
+INFO:root:New lr: 0.030452182196149535
+INFO:root:Avg. loss in the last 100 batches: 0.012406198307871819
+INFO:root:New lr: 0.030530247239819397
+INFO:root:Avg. loss in the last 100 batches: 0.010944554582238197
+INFO:root:New lr: 0.03060844705092522
+INFO:root:Avg. loss in the last 100 batches: 0.011292535811662674
+INFO:root:New lr: 0.03068678152351731
+INFO:root:Avg. loss in the last 100 batches: 0.011813441291451454
+INFO:root:New lr: 0.03076525055146359
+INFO:root:Avg. loss in the last 100 batches: 0.010464034043252468
+INFO:root:New lr: 0.030843854028449608
+INFO:root:Avg. loss in the last 100 batches: 0.013330615125596523
+INFO:root:New lr: 0.03092259184797877
+INFO:root:Avg. loss in the last 100 batches: 0.014984669163823128
+INFO:root:New lr: 0.031001463903372467
+INFO:root:Avg. loss in the last 100 batches: 0.013398800045251846
+INFO:root:New lr: 0.031080470087770262
+INFO:root:Avg. loss in the last 100 batches: 0.013959608040750027
+INFO:root:New lr: 0.031159610294129947
+INFO:root:Avg. loss in the last 100 batches: 0.012275232002139091
+INFO:root:New lr: 0.03123888441522768
+INFO:root:Avg. loss in the last 100 batches: 0.010784323327243328
+INFO:root:New lr: 0.03131829234365838
+INFO:root:Avg. loss in the last 100 batches: 0.011518808081746101
+INFO:root:New lr: 0.03139783397183543
+INFO:root:Avg. loss in the last 100 batches: 0.01184401847422123
+INFO:root:New lr: 0.03147750919199124
+INFO:root:Avg. loss in the last 100 batches: 0.01165621168911457
+INFO:root:New lr: 0.031557317896177106
+INFO:root:Avg. loss in the last 100 batches: 0.012937675230205059
+INFO:root:New lr: 0.0316372599762636
+INFO:root:Avg. loss in the last 100 batches: 0.01313347090035677
+INFO:root:New lr: 0.03171733532394044
+INFO:root:Avg. loss in the last 100 batches: 0.012338311411440372
+INFO:root:New lr: 0.03179754383071695
+INFO:root:Avg. loss in the last 100 batches: 0.012381364591419697
+INFO:root:New lr: 0.03187788538792191
+INFO:root:Avg. loss in the last 100 batches: 0.011091508902609348
+INFO:root:New lr: 0.03195835988670387
+INFO:root:Avg. loss in the last 100 batches: 0.01058924663811922
+INFO:root:New lr: 0.03203896721803129
+INFO:root:Avg. loss in the last 100 batches: 0.012789079919457436
+INFO:root:New lr: 0.03211970727269267
+INFO:root:Avg. loss in the last 100 batches: 0.012659193947911263
+INFO:root:New lr: 0.03220057994129666
+INFO:root:Avg. loss in the last 100 batches: 0.012394021265208721
+INFO:root:New lr: 0.03228158511427218
+INFO:root:Avg. loss in the last 100 batches: 0.015188907273113728
+INFO:root:New lr: 0.03236272268186874
+INFO:root:Avg. loss in the last 100 batches: 0.014399698935449123
+INFO:root:New lr: 0.03244399253415639
+INFO:root:Avg. loss in the last 100 batches: 0.013941160403192043
+INFO:root:New lr: 0.032525394561026016
+INFO:root:Avg. loss in the last 100 batches: 0.015918880701065063
+INFO:root:New lr: 0.03260692865218939
+INFO:root:Avg. loss in the last 100 batches: 0.014007283374667168
+INFO:root:New lr: 0.03268859469717936
+INFO:root:Avg. loss in the last 100 batches: 0.012842065654695034
+INFO:root:New lr: 0.032770392585349944
+INFO:root:Avg. loss in the last 100 batches: 0.015877235680818558
+INFO:root:New lr: 0.03285232220587661
+INFO:root:Avg. loss in the last 100 batches: 0.01370107289403677
+INFO:root:New lr: 0.03293438344775637
+INFO:root:Avg. loss in the last 100 batches: 0.013267803005874157
+INFO:root:New lr: 0.0330165761998078
+INFO:root:Avg. loss in the last 100 batches: 0.01668524742126465
+INFO:root:New lr: 0.03309890035067137
+INFO:root:Avg. loss in the last 100 batches: 0.014730102382600307
+INFO:root:New lr: 0.033181355788809486
+INFO:root:Avg. loss in the last 100 batches: 0.014238491654396057
+INFO:root:New lr: 0.03326394240250671
+INFO:root:Avg. loss in the last 100 batches: 0.015056098811328411
+INFO:root:New lr: 0.033346660079869916
+INFO:root:Avg. loss in the last 100 batches: 0.012172163464128971
+INFO:root:New lr: 0.033429508708828326
+INFO:root:Avg. loss in the last 100 batches: 0.011006957851350307
+INFO:root:New lr: 0.03351248817713373
+INFO:root:Avg. loss in the last 100 batches: 0.012748957611620426
+INFO:root:New lr: 0.033595598372360785
+INFO:root:Avg. loss in the last 100 batches: 0.011277575045824051
+INFO:root:New lr: 0.03367883918190684
+INFO:root:Avg. loss in the last 100 batches: 0.010696543380618095
+INFO:root:New lr: 0.033762210492992495
+INFO:root:Avg. loss in the last 100 batches: 0.013360543176531792
+INFO:root:New lr: 0.033845712192661304
+INFO:root:Avg. loss in the last 100 batches: 0.012333103455603123
+INFO:root:New lr: 0.033929344167780345
+INFO:root:Avg. loss in the last 100 batches: 0.011619803495705128
+INFO:root:New lr: 0.03401310630504012
+INFO:root:Avg. loss in the last 100 batches: 0.015257496386766434
+INFO:root:New lr: 0.034096998490954794
+INFO:root:Avg. loss in the last 100 batches: 0.013568724505603313
+INFO:root:New lr: 0.034181020611862345
+INFO:root:Avg. loss in the last 100 batches: 0.013340632431209087
+INFO:root:New lr: 0.03426517255392464
+INFO:root:Avg. loss in the last 100 batches: 0.013560599647462368
+INFO:root:New lr: 0.034349454203127766
+INFO:root:Avg. loss in the last 100 batches: 0.011923614889383316
+INFO:root:New lr: 0.034433865445281986
+INFO:root:Avg. loss in the last 100 batches: 0.011869481764733791
+INFO:root:New lr: 0.034518406166022
+INFO:root:Avg. loss in the last 100 batches: 0.015491955913603306
+INFO:root:New lr: 0.03460307625080716
+INFO:root:Avg. loss in the last 100 batches: 0.012930330820381641
+INFO:root:New lr: 0.034687875584921396
+INFO:root:Avg. loss in the last 100 batches: 0.013033528812229633
+INFO:root:New lr: 0.03477280405347369
+INFO:root:Avg. loss in the last 100 batches: 0.01640806905925274
+INFO:root:New lr: 0.03485786154139797
+INFO:root:Avg. loss in the last 100 batches: 0.013945262879133224
+INFO:root:New lr: 0.03494304793345335
+INFO:root:Avg. loss in the last 100 batches: 0.014043353497982025
+INFO:root:New lr: 0.03502836311422433
+INFO:root:Avg. loss in the last 100 batches: 0.012293562293052673
+INFO:root:New lr: 0.03511380696812097
+INFO:root:Avg. loss in the last 100 batches: 0.010012809187173843
+INFO:root:New lr: 0.03519937937937884
+INFO:root:Avg. loss in the last 100 batches: 0.010698974132537842
+INFO:root:New lr: 0.035285080232059535
+INFO:root:Avg. loss in the last 100 batches: 0.013646719977259636
+INFO:root:New lr: 0.03537090941005047
+INFO:root:Avg. loss in the last 100 batches: 0.011915645562112331
+INFO:root:New lr: 0.035456866797065306
+INFO:root:Avg. loss in the last 100 batches: 0.01296296902000904
+INFO:root:New lr: 0.03554295227664389
+INFO:root:Avg. loss in the last 100 batches: 0.014566891826689243
+INFO:root:New lr: 0.035629165732152634
+INFO:root:Avg. loss in the last 100 batches: 0.013449550606310368
+INFO:root:New lr: 0.0357155070467845
+INFO:root:Avg. loss in the last 100 batches: 0.014150417409837246
+INFO:root:New lr: 0.035801976103559174
+INFO:root:Avg. loss in the last 100 batches: 0.013153836131095886
+INFO:root:New lr: 0.0358885727853234
+INFO:root:Avg. loss in the last 100 batches: 0.011813280172646046
+INFO:root:New lr: 0.03597529697475088
+INFO:root:Avg. loss in the last 100 batches: 0.012013343162834644
+INFO:root:New lr: 0.03606214855434264
+INFO:root:Avg. loss in the last 100 batches: 0.010735011659562588
+INFO:root:New lr: 0.03614912740642706
+INFO:root:Avg. loss in the last 100 batches: 0.009508511982858181
+INFO:root:New lr: 0.036236233413160124
+INFO:root:Avg. loss in the last 100 batches: 0.011890016496181488
+INFO:root:New lr: 0.03632346645652548
+INFO:root:Avg. loss in the last 100 batches: 0.01237973291426897
+INFO:root:New lr: 0.03641082641833476
+INFO:root:Avg. loss in the last 100 batches: 0.011446588672697544
+INFO:root:New lr: 0.03649831318022759
+INFO:root:Avg. loss in the last 100 batches: 0.012643896043300629
+INFO:root:New lr: 0.036585926623671744
+INFO:root:Avg. loss in the last 100 batches: 0.011908398941159248
+INFO:root:New lr: 0.03667366662996338
+INFO:root:Avg. loss in the last 100 batches: 0.01121548842638731
+INFO:root:New lr: 0.03676153308022728
+INFO:root:Avg. loss in the last 100 batches: 0.014230716042220592
+INFO:root:New lr: 0.036849525855416815
+INFO:root:Avg. loss in the last 100 batches: 0.015096854418516159
+INFO:root:New lr: 0.036937644836314204
+INFO:root:Avg. loss in the last 100 batches: 0.0142905842512846
+INFO:root:New lr: 0.03702588990353073
+INFO:root:Avg. loss in the last 100 batches: 0.014644560404121876
+INFO:root:New lr: 0.03711426093750683
+INFO:root:Avg. loss in the last 100 batches: 0.011921845376491547
+INFO:root:New lr: 0.03720275781851218
+INFO:root:Avg. loss in the last 100 batches: 0.011161944828927517
+INFO:root:New lr: 0.03729138042664615
+INFO:root:Avg. loss in the last 100 batches: 0.013565785251557827
+INFO:root:New lr: 0.03738012864183757
+INFO:root:Avg. loss in the last 100 batches: 0.01357901468873024
+INFO:root:New lr: 0.037469002343845176
+INFO:root:Avg. loss in the last 100 batches: 0.013105538673698902
+INFO:root:New lr: 0.03755800141225768
+INFO:root:Avg. loss in the last 100 batches: 0.013089246116578579
+INFO:root:New lr: 0.03764712572649398
+INFO:root:Avg. loss in the last 100 batches: 0.011191321536898613
+INFO:root:New lr: 0.03773637516580322
+INFO:root:Avg. loss in the last 100 batches: 0.010847184807062149
+INFO:root:New lr: 0.03782574960926505
+INFO:root:Avg. loss in the last 100 batches: 0.01358352042734623
+INFO:root:New lr: 0.037915248935789736
+INFO:root:Avg. loss in the last 100 batches: 0.012780447490513325
+INFO:root:New lr: 0.03800487302411837
+INFO:root:Avg. loss in the last 100 batches: 0.012757024727761745
+INFO:root:New lr: 0.038094621752822966
+INFO:root:Avg. loss in the last 100 batches: 0.014591789804399014
+INFO:root:New lr: 0.03818449500030677
+INFO:root:Avg. loss in the last 100 batches: 0.013041467405855656
+INFO:root:New lr: 0.038274492644804176
+INFO:root:Avg. loss in the last 100 batches: 0.012712539173662663
+INFO:root:New lr: 0.038364614564381144
+INFO:root:Avg. loss in the last 100 batches: 0.013272170908749104
+INFO:root:New lr: 0.03845486063693526
+INFO:root:Avg. loss in the last 100 batches: 0.01220761053264141
+INFO:root:New lr: 0.03854523074019581
+INFO:root:Avg. loss in the last 100 batches: 0.011931565590202808
+INFO:root:New lr: 0.038635724751724165
+INFO:root:Avg. loss in the last 100 batches: 0.014056507498025894
+INFO:root:New lr: 0.03872634254891369
+INFO:root:Avg. loss in the last 100 batches: 0.011969192884862423
+INFO:root:New lr: 0.03881708400899009
+INFO:root:Avg. loss in the last 100 batches: 0.01135935913771391
+INFO:root:New lr: 0.038907949009011566
+INFO:root:Avg. loss in the last 100 batches: 0.014294875785708427
+INFO:root:New lr: 0.038998937425868935
+INFO:root:Avg. loss in the last 100 batches: 0.011993481777608395
+INFO:root:New lr: 0.039090049136285665
+INFO:root:Avg. loss in the last 100 batches: 0.01149284653365612
+INFO:root:New lr: 0.03918128401681839
+INFO:root:Avg. loss in the last 100 batches: 0.012421156279742718
+INFO:root:New lr: 0.03927264194385671
+INFO:root:Avg. loss in the last 100 batches: 0.010622384026646614
+INFO:root:New lr: 0.039364122793623585
+INFO:root:Avg. loss in the last 100 batches: 0.010314704850316048
+INFO:root:New lr: 0.039455726442175376
+INFO:root:Avg. loss in the last 100 batches: 0.01508032064884901
+INFO:root:New lr: 0.03954745276540214
+INFO:root:Avg. loss in the last 100 batches: 0.012982910498976707
+INFO:root:New lr: 0.03963930163902768
+INFO:root:Avg. loss in the last 100 batches: 0.012531444430351257
+INFO:root:New lr: 0.03973127293860976
+INFO:root:Avg. loss in the last 100 batches: 0.014446132816374302
+INFO:root:New lr: 0.03982336653954033
+INFO:root:Avg. loss in the last 100 batches: 0.012180304154753685
+INFO:root:New lr: 0.03991558231704556
+INFO:root:Avg. loss in the last 100 batches: 0.012140003964304924
+INFO:root:New lr: 0.04000792014618612
+INFO:root:Avg. loss in the last 100 batches: 0.014309368096292019
+INFO:root:New lr: 0.04010037990185736
+INFO:root:Avg. loss in the last 100 batches: 0.01228712685406208
+INFO:root:New lr: 0.04019296145878931
+INFO:root:Avg. loss in the last 100 batches: 0.012140292674303055
+INFO:root:New lr: 0.04028566469154718
+INFO:root:Avg. loss in the last 100 batches: 0.013498309999704361
+INFO:root:New lr: 0.040378489474531126
+INFO:root:Avg. loss in the last 100 batches: 0.012583994306623936
+INFO:root:New lr: 0.040471435681976725
+INFO:root:Avg. loss in the last 100 batches: 0.012621616944670677
+INFO:root:New lr: 0.04056450318795507
+INFO:root:Avg. loss in the last 100 batches: 0.012759074568748474
+INFO:root:New lr: 0.040657691866372775
+INFO:root:Avg. loss in the last 100 batches: 0.010735786519944668
+INFO:root:New lr: 0.04075100159097245
+INFO:root:Avg. loss in the last 100 batches: 0.012300004251301289
+INFO:root:New lr: 0.0408444322353326
+INFO:root:Avg. loss in the last 100 batches: 0.015047396533191204
+INFO:root:New lr: 0.04093798367286791
+INFO:root:Avg. loss in the last 100 batches: 0.013455518521368504
+INFO:root:New lr: 0.04103165577682941
+INFO:root:Avg. loss in the last 100 batches: 0.014154142700135708
+INFO:root:New lr: 0.04112544842030469
+INFO:root:Avg. loss in the last 100 batches: 0.014399712905287743
+INFO:root:New lr: 0.04121936147621799
+INFO:root:Avg. loss in the last 100 batches: 0.01294681429862976
+INFO:root:New lr: 0.04131339481733046
+INFO:root:Avg. loss of epoch 3: 0.012686739675700665
+INFO:root:New lr: 0.041407548316240134
+INFO:root:Avg. testing loss: 0.01711365208029747
+INFO:root:Starting epoch 4
+INFO:root:Avg. loss in the last 100 batches: 0.01343326922506094
+INFO:root:New lr: 0.04150182184538237
+INFO:root:Avg. loss in the last 100 batches: 0.011494951322674751
+INFO:root:New lr: 0.04159621527702992
+INFO:root:Avg. loss in the last 100 batches: 0.011333702132105827
+INFO:root:New lr: 0.041690728483293055
+INFO:root:Avg. loss in the last 100 batches: 0.012681830674409866
+INFO:root:New lr: 0.04178536133611971
+INFO:root:Avg. loss in the last 100 batches: 0.010962607339024544
+INFO:root:New lr: 0.0418801137072958
+INFO:root:Avg. loss in the last 100 batches: 0.011453361250460148
+INFO:root:New lr: 0.04197498546844525
+INFO:root:Avg. loss in the last 100 batches: 0.01360592246055603
+INFO:root:New lr: 0.042069976491030225
+INFO:root:Avg. loss in the last 100 batches: 0.01103823073208332
+INFO:root:New lr: 0.04216508664635141
+INFO:root:Avg. loss in the last 100 batches: 0.01065775379538536
+INFO:root:New lr: 0.042260315805547954
+INFO:root:Avg. loss in the last 100 batches: 0.011918743140995502
+INFO:root:New lr: 0.042355663839597824
+INFO:root:Avg. loss in the last 100 batches: 0.010929716750979424
+INFO:root:New lr: 0.04245113061931796
+INFO:root:Avg. loss in the last 100 batches: 0.011203042231500149
+INFO:root:New lr: 0.04254671601536436
+INFO:root:Avg. loss in the last 100 batches: 0.011713365092873573
+INFO:root:New lr: 0.04264241989823234
+INFO:root:Avg. loss in the last 100 batches: 0.010130654089152813
+INFO:root:New lr: 0.04273824213825675
+INFO:root:Avg. loss in the last 100 batches: 0.011119423434138298
+INFO:root:New lr: 0.04283418260561192
+INFO:root:Avg. loss in the last 100 batches: 0.01460262294858694
+INFO:root:New lr: 0.042930241170312106
+INFO:root:Avg. loss in the last 100 batches: 0.013422306627035141
+INFO:root:New lr: 0.04302641770221166
+INFO:root:Avg. loss in the last 100 batches: 0.013400412164628506
+INFO:root:New lr: 0.043122712071004876
+INFO:root:Avg. loss in the last 100 batches: 0.012098950333893299
+INFO:root:New lr: 0.043219124146226556
+INFO:root:Avg. loss in the last 100 batches: 0.010279187932610512
+INFO:root:New lr: 0.04331565379725197
+INFO:root:Avg. loss in the last 100 batches: 0.012264631688594818
+INFO:root:New lr: 0.043412300893297145
+INFO:root:Avg. loss in the last 100 batches: 0.014851367101073265
+INFO:root:New lr: 0.04350906530341889
+INFO:root:Avg. loss in the last 100 batches: 0.01284724473953247
+INFO:root:New lr: 0.043605946896515174
+INFO:root:Avg. loss in the last 100 batches: 0.014058019034564495
+INFO:root:New lr: 0.043702945541325144
+INFO:root:Avg. loss in the last 100 batches: 0.014449366368353367
+INFO:root:New lr: 0.04380006110642931
+INFO:root:Avg. loss in the last 100 batches: 0.013464580290019512
+INFO:root:New lr: 0.0438972934602499
+INFO:root:Avg. loss in the last 100 batches: 0.01427341066300869
+INFO:root:New lr: 0.04399464247105078
+INFO:root:Avg. loss in the last 100 batches: 0.012046478688716888
+INFO:root:New lr: 0.04409210800693786
+INFO:root:Avg. loss in the last 100 batches: 0.010888461954891682
+INFO:root:New lr: 0.044189689935859144
+INFO:root:Avg. loss in the last 100 batches: 0.012312890961766243
+INFO:root:New lr: 0.04428738812560487
+INFO:root:Avg. loss in the last 100 batches: 0.01260421797633171
+INFO:root:New lr: 0.044385202443807864
+INFO:root:Avg. loss in the last 100 batches: 0.011666336096823215
+INFO:root:New lr: 0.04448313275794355
+INFO:root:Avg. loss in the last 100 batches: 0.013037373311817646
+INFO:root:New lr: 0.04458117893533026
+INFO:root:Avg. loss in the last 100 batches: 0.011915210634469986
+INFO:root:New lr: 0.044679340843129245
+INFO:root:Avg. loss in the last 100 batches: 0.0113052474334836
+INFO:root:New lr: 0.04477761834834501
+INFO:root:Avg. loss in the last 100 batches: 0.013289733789861202
+INFO:root:New lr: 0.04487601131782548
+INFO:root:Avg. loss in the last 100 batches: 0.013710616156458855
+INFO:root:New lr: 0.0449745196182621
+INFO:root:Avg. loss in the last 100 batches: 0.012916665524244308
+INFO:root:New lr: 0.04507314311619007
+INFO:root:Avg. loss in the last 100 batches: 0.01410557609051466
+INFO:root:New lr: 0.045171881677988496
+INFO:root:Avg. loss in the last 100 batches: 0.012814948335289955
+INFO:root:New lr: 0.045270735169880616
+INFO:root:Avg. loss in the last 100 batches: 0.012138419784605503
+INFO:root:New lr: 0.04536970345793395
+INFO:root:Avg. loss in the last 100 batches: 0.01427528914064169
+INFO:root:New lr: 0.04546878640806043
+INFO:root:Avg. loss in the last 100 batches: 0.013237932696938515
+INFO:root:New lr: 0.04556798388601671
+INFO:root:Avg. loss in the last 100 batches: 0.014100424945354462
+INFO:root:New lr: 0.045667295757404275
+INFO:root:Avg. loss in the last 100 batches: 0.011910226196050644
+INFO:root:New lr: 0.04576672188766953
+INFO:root:Avg. loss in the last 100 batches: 0.011206550523638725
+INFO:root:New lr: 0.045866262142104236
+INFO:root:Avg. loss in the last 100 batches: 0.013463026843965054
+INFO:root:New lr: 0.04596591638584532
+INFO:root:Avg. loss in the last 100 batches: 0.012751936912536621
+INFO:root:New lr: 0.04606568448387552
+INFO:root:Avg. loss in the last 100 batches: 0.012190386652946472
+INFO:root:New lr: 0.04616556630102306
+INFO:root:Avg. loss in the last 100 batches: 0.012894651852548122
+INFO:root:New lr: 0.046265561701962304
+INFO:root:Avg. loss in the last 100 batches: 0.011317302472889423
+INFO:root:New lr: 0.04636567055121357
+INFO:root:Avg. loss in the last 100 batches: 0.010419591329991817
+INFO:root:New lr: 0.04646589271314358
+INFO:root:Avg. loss in the last 100 batches: 0.014219067059457302
+INFO:root:New lr: 0.0465662280519655
+INFO:root:Avg. loss in the last 100 batches: 0.012972272001206875
+INFO:root:New lr: 0.04666667643173911
+INFO:root:Avg. loss in the last 100 batches: 0.012172989547252655
+INFO:root:New lr: 0.04676723771637109
+INFO:root:Avg. loss in the last 100 batches: 0.013519976288080215
+INFO:root:New lr: 0.046867911769615134
+INFO:root:Avg. loss in the last 100 batches: 0.010655170306563377
+INFO:root:New lr: 0.04696869845507215
+INFO:root:Avg. loss in the last 100 batches: 0.010184317827224731
+INFO:root:New lr: 0.047069597636190424
+INFO:root:Avg. loss in the last 100 batches: 0.011263813823461533
+INFO:root:New lr: 0.04717060917626589
+INFO:root:Avg. loss in the last 100 batches: 0.011149321682751179
+INFO:root:New lr: 0.04727173293844217
+INFO:root:Avg. loss in the last 100 batches: 0.01077292300760746
+INFO:root:New lr: 0.04737296878571093
+INFO:root:Avg. loss in the last 100 batches: 0.013230870477855206
+INFO:root:New lr: 0.047474316580911835
+INFO:root:Avg. loss in the last 100 batches: 0.011781786568462849
+INFO:root:New lr: 0.04757577618673306
+INFO:root:Avg. loss in the last 100 batches: 0.01140719186514616
+INFO:root:New lr: 0.047677347465711145
+INFO:root:Avg. loss in the last 100 batches: 0.012987939640879631
+INFO:root:New lr: 0.04777903028023142
+INFO:root:Avg. loss in the last 100 batches: 0.011652831919491291
+INFO:root:New lr: 0.04788082449252801
+INFO:root:Avg. loss in the last 100 batches: 0.011266534216701984
+INFO:root:New lr: 0.04798272996468422
+INFO:root:Avg. loss in the last 100 batches: 0.015107742510735989
+INFO:root:New lr: 0.04808474655863254
+INFO:root:Avg. loss in the last 100 batches: 0.012682576663792133
+INFO:root:New lr: 0.04818687413615491
+INFO:root:Avg. loss in the last 100 batches: 0.012272827327251434
+INFO:root:New lr: 0.048289112558882935
+INFO:root:Avg. loss in the last 100 batches: 0.014290484599769115
+INFO:root:New lr: 0.048391461688298026
+INFO:root:Avg. loss in the last 100 batches: 0.012663356959819794
+INFO:root:New lr: 0.04849392138573158
+INFO:root:Avg. loss in the last 100 batches: 0.011911827139556408
+INFO:root:New lr: 0.048596491512365225
+INFO:root:Avg. loss in the last 100 batches: 0.014453507028520107
+INFO:root:New lr: 0.048699171929230956
+INFO:root:Avg. loss in the last 100 batches: 0.01218549907207489
+INFO:root:New lr: 0.04880196249721136
+INFO:root:Avg. loss in the last 100 batches: 0.012424967251718044
+INFO:root:New lr: 0.04890486307703973
+INFO:root:Avg. loss in the last 100 batches: 0.013324987143278122
+INFO:root:New lr: 0.04900787352930036
+INFO:root:Avg. loss in the last 100 batches: 0.011086278595030308
+INFO:root:New lr: 0.04911099371442865
+INFO:root:Avg. loss in the last 100 batches: 0.011454008519649506
+INFO:root:New lr: 0.04921422349271137
+INFO:root:Avg. loss in the last 100 batches: 0.012608811259269714
+INFO:root:New lr: 0.04931756272428678
+INFO:root:Avg. loss in the last 100 batches: 0.010738382115960121
+INFO:root:New lr: 0.04942101126914483
+INFO:root:Avg. loss in the last 100 batches: 0.011703272350132465
+INFO:root:New lr: 0.0495245689871274
+INFO:root:Avg. loss in the last 100 batches: 0.014296438544988632
+INFO:root:New lr: 0.04962823573792843
+INFO:root:Avg. loss in the last 100 batches: 0.012610001489520073
+INFO:root:New lr: 0.04973201138109418
+INFO:root:Avg. loss in the last 100 batches: 0.012978262268006802
+INFO:root:New lr: 0.04983589577602332
+INFO:root:Avg. loss in the last 100 batches: 0.012407087720930576
+INFO:root:New lr: 0.049939888781967146
+INFO:root:Avg. loss in the last 100 batches: 0.010837750509381294
+INFO:root:New lr: 0.05004399025802994
+INFO:root:Avg. loss in the last 100 batches: 0.011500243097543716
+INFO:root:New lr: 0.05014820006316886
+INFO:root:Avg. loss in the last 100 batches: 0.011777342297136784
+INFO:root:New lr: 0.050252518056194434
+INFO:root:Avg. loss in the last 100 batches: 0.010336167179048061
+INFO:root:New lr: 0.05035694409577052
+INFO:root:Avg. loss in the last 100 batches: 0.013136168010532856
+INFO:root:New lr: 0.05046147804041459
+INFO:root:Avg. loss in the last 100 batches: 0.014971277676522732
+INFO:root:New lr: 0.050566119748498006
+INFO:root:Avg. loss in the last 100 batches: 0.013513791374862194
+INFO:root:New lr: 0.050670869078246
+INFO:root:Avg. loss in the last 100 batches: 0.013650733046233654
+INFO:root:New lr: 0.0507757258877381
+INFO:root:Avg. loss in the last 100 batches: 0.012096392922103405
+INFO:root:New lr: 0.050880690034908166
+INFO:root:Avg. loss in the last 100 batches: 0.010901975445449352
+INFO:root:New lr: 0.0509857613775446
+INFO:root:Avg. loss in the last 100 batches: 0.011780514381825924
+INFO:root:New lr: 0.05109093977329063
+INFO:root:Avg. loss in the last 100 batches: 0.012126758694648743
+INFO:root:New lr: 0.051196225079644414
+INFO:root:Avg. loss in the last 100 batches: 0.011257622390985489
+INFO:root:New lr: 0.051301617153959284
+INFO:root:Avg. loss in the last 100 batches: 0.013121407479047775
+INFO:root:New lr: 0.05140711585344385
+INFO:root:Avg. loss in the last 100 batches: 0.013165967538952827
+INFO:root:New lr: 0.05151272103516236
+INFO:root:Avg. loss in the last 100 batches: 0.011761137284338474
+INFO:root:New lr: 0.05161843255603471
+INFO:root:Avg. loss in the last 100 batches: 0.012621289119124413
+INFO:root:New lr: 0.05172425027283678
+INFO:root:Avg. loss in the last 100 batches: 0.011082399636507034
+INFO:root:New lr: 0.05183017404220047
+INFO:root:Avg. loss in the last 100 batches: 0.010412613861262798
+INFO:root:New lr: 0.051936203720614166
+INFO:root:Avg. loss in the last 100 batches: 0.012841681949794292
+INFO:root:New lr: 0.05204233916442255
+INFO:root:Avg. loss in the last 100 batches: 0.012825146317481995
+INFO:root:New lr: 0.05214858022982721
+INFO:root:Avg. loss in the last 100 batches: 0.012262039817869663
+INFO:root:New lr: 0.05225492677288651
+INFO:root:Avg. loss in the last 100 batches: 0.015240592882037163
+INFO:root:New lr: 0.05236137864951593
+INFO:root:Avg. loss in the last 100 batches: 0.014425649307668209
+INFO:root:New lr: 0.05246793571548822
+INFO:root:Avg. loss in the last 100 batches: 0.013760043308138847
+INFO:root:New lr: 0.0525745978264337
+INFO:root:Avg. loss in the last 100 batches: 0.015622641891241074
+INFO:root:New lr: 0.05268136483784025
+INFO:root:Avg. loss in the last 100 batches: 0.013898227363824844
+INFO:root:New lr: 0.05278823660505372
+INFO:root:Avg. loss in the last 100 batches: 0.013235975056886673
+INFO:root:New lr: 0.052895212983277984
+INFO:root:Avg. loss in the last 100 batches: 0.015378127805888653
+INFO:root:New lr: 0.05300229382757515
+INFO:root:Avg. loss in the last 100 batches: 0.01397339440882206
+INFO:root:New lr: 0.05310947899286589
+INFO:root:Avg. loss in the last 100 batches: 0.013286637142300606
+INFO:root:New lr: 0.053216768333929465
+INFO:root:Avg. loss in the last 100 batches: 0.016502249985933304
+INFO:root:New lr: 0.053324161705403966
+INFO:root:Avg. loss in the last 100 batches: 0.01478850468993187
+INFO:root:New lr: 0.05343165896178656
+INFO:root:Avg. loss in the last 100 batches: 0.014017174020409584
+INFO:root:New lr: 0.05353925995743378
+INFO:root:Avg. loss in the last 100 batches: 0.015021434985101223
+INFO:root:New lr: 0.0536469645465614
+INFO:root:Avg. loss in the last 100 batches: 0.011817621067166328
+INFO:root:New lr: 0.053754772583245014
+INFO:root:Avg. loss in the last 100 batches: 0.011622203513979912
+INFO:root:New lr: 0.053862683921419935
+INFO:root:Avg. loss in the last 100 batches: 0.012624256312847137
+INFO:root:New lr: 0.05397069841488164
+INFO:root:Avg. loss in the last 100 batches: 0.011366304941475391
+INFO:root:New lr: 0.05407881591728572
+INFO:root:Avg. loss in the last 100 batches: 0.010562862269580364
+INFO:root:New lr: 0.0541870362821483
+INFO:root:Avg. loss in the last 100 batches: 0.01341271586716175
+INFO:root:New lr: 0.0542953593628461
+INFO:root:Avg. loss in the last 100 batches: 0.01233725156635046
+INFO:root:New lr: 0.054403785012616696
+INFO:root:Avg. loss in the last 100 batches: 0.011644301004707813
+INFO:root:New lr: 0.05451231308455856
+INFO:root:Avg. loss in the last 100 batches: 0.014989331364631653
+INFO:root:New lr: 0.05462094343163168
+INFO:root:Avg. loss in the last 100 batches: 0.01358051411807537
+INFO:root:New lr: 0.05472967590665723
+INFO:root:Avg. loss in the last 100 batches: 0.01348002441227436
+INFO:root:New lr: 0.05483851036231807
+INFO:root:Avg. loss in the last 100 batches: 0.01368248276412487
+INFO:root:New lr: 0.054947446651159
+INFO:root:Avg. loss in the last 100 batches: 0.011846533976495266
+INFO:root:New lr: 0.05505648462558671
+INFO:root:Avg. loss in the last 100 batches: 0.011745752766728401
+INFO:root:New lr: 0.05516562413787013
+INFO:root:Avg. loss in the last 100 batches: 0.015108322724699974
+INFO:root:New lr: 0.055274865040140786
+INFO:root:Avg. loss in the last 100 batches: 0.013166280463337898
+INFO:root:New lr: 0.05538420718439266
+INFO:root:Avg. loss in the last 100 batches: 0.013054857961833477
+INFO:root:New lr: 0.05549365042248258
+INFO:root:Avg. loss in the last 100 batches: 0.01668728142976761
+INFO:root:New lr: 0.0556031946061305
+INFO:root:Avg. loss in the last 100 batches: 0.013826712034642696
+INFO:root:New lr: 0.055712839586919555
+INFO:root:Avg. loss in the last 100 batches: 0.013919967226684093
+INFO:root:New lr: 0.05582258521629635
+INFO:root:Avg. loss in the last 100 batches: 0.012098908424377441
+INFO:root:New lr: 0.055932431345570965
+INFO:root:Avg. loss in the last 100 batches: 0.009980441071093082
+INFO:root:New lr: 0.05604237782591756
+INFO:root:Avg. loss in the last 100 batches: 0.011070837266743183
+INFO:root:New lr: 0.05615242450837421
+INFO:root:Avg. loss in the last 100 batches: 0.013458139263093472
+INFO:root:New lr: 0.05626257124384315
+INFO:root:Avg. loss in the last 100 batches: 0.012002304196357727
+INFO:root:New lr: 0.0563728178830912
+INFO:root:Avg. loss in the last 100 batches: 0.012834805063903332
+INFO:root:New lr: 0.05648316427674985
+INFO:root:Avg. loss in the last 100 batches: 0.014383736066520214
+INFO:root:New lr: 0.056593610275315204
+INFO:root:Avg. loss in the last 100 batches: 0.013495667837560177
+INFO:root:New lr: 0.056704155729148636
+INFO:root:Avg. loss in the last 100 batches: 0.014096925035119057
+INFO:root:New lr: 0.05681480048847673
+INFO:root:Avg. loss in the last 100 batches: 0.012990586459636688
+INFO:root:New lr: 0.056925544403391454
+INFO:root:Avg. loss in the last 100 batches: 0.011810306459665298
+INFO:root:New lr: 0.057036387323850496
+INFO:root:Avg. loss in the last 100 batches: 0.012352829799056053
+INFO:root:New lr: 0.0571473290996774
+INFO:root:Avg. loss in the last 100 batches: 0.010766062885522842
+INFO:root:New lr: 0.05725836958056174
+INFO:root:Avg. loss in the last 100 batches: 0.009516113437712193
+INFO:root:New lr: 0.057369508616059384
+INFO:root:Avg. loss in the last 100 batches: 0.01155934389680624
+INFO:root:New lr: 0.05748074605559267
+INFO:root:Avg. loss in the last 100 batches: 0.012785559520125389
+INFO:root:New lr: 0.05759208174845065
+INFO:root:Avg. loss in the last 100 batches: 0.011316015385091305
+INFO:root:New lr: 0.057703515543789136
+INFO:root:Avg. loss in the last 100 batches: 0.012611248530447483
+INFO:root:New lr: 0.057815047290631194
+INFO:root:Avg. loss in the last 100 batches: 0.01183389313519001
+INFO:root:New lr: 0.057926676837867064
+INFO:root:Avg. loss in the last 100 batches: 0.01135098747909069
+INFO:root:New lr: 0.058038404034254476
+INFO:root:Avg. loss in the last 100 batches: 0.0139279430732131
+INFO:root:New lr: 0.058150228728418935
+INFO:root:Avg. loss in the last 100 batches: 0.015198331326246262
+INFO:root:New lr: 0.05826215076885377
+INFO:root:Avg. loss in the last 100 batches: 0.01432228647172451
+INFO:root:New lr: 0.058374170003920534
+INFO:root:Avg. loss in the last 100 batches: 0.014773653820157051
+INFO:root:New lr: 0.05848628628184893
+INFO:root:Avg. loss in the last 100 batches: 0.011884288862347603
+INFO:root:New lr: 0.058598499450737335
+INFO:root:Avg. loss in the last 100 batches: 0.010717554949223995
+INFO:root:New lr: 0.05871080935855272
+INFO:root:Avg. loss in the last 100 batches: 0.01385470386594534
+INFO:root:New lr: 0.05882321585313108
+INFO:root:Avg. loss in the last 100 batches: 0.01360324677079916
+INFO:root:New lr: 0.05893571878217757
+INFO:root:Avg. loss in the last 100 batches: 0.013008875772356987
+INFO:root:New lr: 0.05904831799326665
+INFO:root:Avg. loss in the last 100 batches: 0.013035286217927933
+INFO:root:New lr: 0.059161013333842244
+INFO:root:Avg. loss in the last 100 batches: 0.011110758408904076
+INFO:root:New lr: 0.05927380465121815
+INFO:root:Avg. loss in the last 100 batches: 0.010921516455709934
+INFO:root:New lr: 0.05938669179257813
+INFO:root:Avg. loss in the last 100 batches: 0.01353295985609293
+INFO:root:New lr: 0.05949967460497607
+INFO:root:Avg. loss in the last 100 batches: 0.012914410792291164
+INFO:root:New lr: 0.05961275293533627
+INFO:root:Avg. loss in the last 100 batches: 0.012817076407372952
+INFO:root:New lr: 0.05972592663045356
+INFO:root:Avg. loss in the last 100 batches: 0.014396478421986103
+INFO:root:New lr: 0.0598391955369936
+INFO:root:Avg. loss in the last 100 batches: 0.013018657453358173
+INFO:root:New lr: 0.05995255950149311
+INFO:root:Avg. loss in the last 100 batches: 0.012822232209146023
+INFO:root:New lr: 0.06006601837035991
+INFO:root:Avg. loss in the last 100 batches: 0.013802837580442429
+INFO:root:New lr: 0.06017957198987328
+INFO:root:Avg. loss in the last 100 batches: 0.012075449340045452
+INFO:root:New lr: 0.06029322020618419
+INFO:root:Avg. loss in the last 100 batches: 0.011585087515413761
+INFO:root:New lr: 0.060406962865315356
+INFO:root:Avg. loss in the last 100 batches: 0.01420623529702425
+INFO:root:New lr: 0.06052079981316158
+INFO:root:Avg. loss in the last 100 batches: 0.011665246449410915
+INFO:root:New lr: 0.06063473089548993
+INFO:root:Avg. loss in the last 100 batches: 0.011426785960793495
+INFO:root:New lr: 0.06074875595793991
+INFO:root:Avg. loss in the last 100 batches: 0.014260583557188511
+INFO:root:New lr: 0.06086287484602365
+INFO:root:Avg. loss in the last 100 batches: 0.012024229392409325
+INFO:root:New lr: 0.06097708740512631
+INFO:root:Avg. loss in the last 100 batches: 0.011585686355829239
+INFO:root:New lr: 0.06109139348050591
+INFO:root:Avg. loss in the last 100 batches: 0.012275904417037964
+INFO:root:New lr: 0.061205792917294
+INFO:root:Avg. loss in the last 100 batches: 0.010872317478060722
+INFO:root:New lr: 0.06132028556049551
+INFO:root:Avg. loss in the last 100 batches: 0.01019098237156868
+INFO:root:New lr: 0.06143487125498909
+INFO:root:Avg. loss in the last 100 batches: 0.015118506737053394
+INFO:root:New lr: 0.06154954984552735
+INFO:root:Avg. loss in the last 100 batches: 0.012711774557828903
+INFO:root:New lr: 0.061664321176737064
+INFO:root:Avg. loss in the last 100 batches: 0.012721982784569263
+INFO:root:New lr: 0.061779185093119277
+INFO:root:Avg. loss in the last 100 batches: 0.01463016215711832
+INFO:root:New lr: 0.061894141439049644
+INFO:root:Avg. loss in the last 100 batches: 0.012174504809081554
+INFO:root:New lr: 0.06200919005877864
+INFO:root:Avg. loss in the last 100 batches: 0.011946415528655052
+INFO:root:New lr: 0.06212433079643162
+INFO:root:Avg. loss in the last 100 batches: 0.014543837867677212
+INFO:root:New lr: 0.062239563496009176
+INFO:root:Avg. loss in the last 100 batches: 0.012123131193220615
+INFO:root:New lr: 0.06235488800138736
+INFO:root:Avg. loss in the last 100 batches: 0.012111855670809746
+INFO:root:New lr: 0.06247030415631777
+INFO:root:Avg. loss in the last 100 batches: 0.01375659555196762
+INFO:root:New lr: 0.0625858118044278
+INFO:root:Avg. loss in the last 100 batches: 0.012365649454295635
+INFO:root:New lr: 0.06270141078922095
+INFO:root:Avg. loss in the last 100 batches: 0.012674816884100437
+INFO:root:New lr: 0.06281710095407703
+INFO:root:Avg. loss in the last 100 batches: 0.012677926570177078
+INFO:root:New lr: 0.0629328821422522
+INFO:root:Avg. loss in the last 100 batches: 0.010979406535625458
+INFO:root:New lr: 0.06304875419687933
+INFO:root:Avg. loss in the last 100 batches: 0.012225674465298653
+INFO:root:New lr: 0.06316471696096818
+INFO:root:Avg. loss in the last 100 batches: 0.01501297578215599
+INFO:root:New lr: 0.06328077027740564
+INFO:root:Avg. loss in the last 100 batches: 0.013312550261616707
+INFO:root:New lr: 0.06339691398895586
+INFO:root:Avg. loss in the last 100 batches: 0.014139534905552864
+INFO:root:New lr: 0.06351314793826057
+INFO:root:Avg. loss in the last 100 batches: 0.014420690014958382
+INFO:root:New lr: 0.06362947196783927
+INFO:root:Avg. loss in the last 100 batches: 0.012750091031193733
+INFO:root:New lr: 0.06374588592008928
+INFO:root:Avg. loss of epoch 4: 0.012657104060053825
+INFO:root:New lr: 0.06386238963728619
+INFO:root:Avg. testing loss: 0.017266053706407547
+INFO:root:Starting epoch 5
+INFO:root:Avg. loss in the last 100 batches: 0.013711833395063877
+INFO:root:New lr: 0.06397898296158402
+INFO:root:Avg. loss in the last 100 batches: 0.011450625024735928
+INFO:root:New lr: 0.06409566573501524
+INFO:root:Avg. loss in the last 100 batches: 0.011208322830498219
+INFO:root:New lr: 0.06421243779949126
+INFO:root:Avg. loss in the last 100 batches: 0.012299088761210442
+INFO:root:New lr: 0.06432929899680237
+INFO:root:Avg. loss in the last 100 batches: 0.01125417836010456
+INFO:root:New lr: 0.06444624916861835
+INFO:root:Avg. loss in the last 100 batches: 0.011543508619070053
+INFO:root:New lr: 0.0645632881564881
+INFO:root:Avg. loss in the last 100 batches: 0.013554398901760578
+INFO:root:New lr: 0.06468041580184045
+INFO:root:Avg. loss in the last 100 batches: 0.010961977764964104
+INFO:root:New lr: 0.06479763194598404
+INFO:root:Avg. loss in the last 100 batches: 0.010851699858903885
+INFO:root:New lr: 0.06491493643010754
+INFO:root:Avg. loss in the last 100 batches: 0.011617347598075867
+INFO:root:New lr: 0.06503232909527995
+INFO:root:Avg. loss in the last 100 batches: 0.01093093492090702
+INFO:root:New lr: 0.06514980978245086
+INFO:root:Avg. loss in the last 100 batches: 0.01138282660394907
+INFO:root:New lr: 0.06526737833245058
+INFO:root:Avg. loss in the last 100 batches: 0.011798936873674393
+INFO:root:New lr: 0.06538503458599035
+INFO:root:Avg. loss in the last 100 batches: 0.009931349195539951
+INFO:root:New lr: 0.06550277838366264
+INFO:root:Avg. loss in the last 100 batches: 0.011312446556985378
+INFO:root:New lr: 0.06562060956594121
+INFO:root:Avg. loss in the last 100 batches: 0.014706254936754704
+INFO:root:New lr: 0.06573852797318147
+INFO:root:Avg. loss in the last 100 batches: 0.01318189688026905
+INFO:root:New lr: 0.06585653344562076
+INFO:root:Avg. loss in the last 100 batches: 0.013388454914093018
+INFO:root:New lr: 0.06597462582337829
+INFO:root:Avg. loss in the last 100 batches: 0.011958962306380272
+INFO:root:New lr: 0.06609280494645561
+INFO:root:Avg. loss in the last 100 batches: 0.010490990243852139
+INFO:root:New lr: 0.06621107065473678
+INFO:root:Avg. loss in the last 100 batches: 0.012099036946892738
+INFO:root:New lr: 0.06632942278798845
+INFO:root:Avg. loss in the last 100 batches: 0.014835781417787075
+INFO:root:New lr: 0.06644786118586027
+INFO:root:Avg. loss in the last 100 batches: 0.013068397529423237
+INFO:root:New lr: 0.06656638568788498
+INFO:root:Avg. loss in the last 100 batches: 0.014011530205607414
+INFO:root:New lr: 0.06668499613347861
+INFO:root:Avg. loss in the last 100 batches: 0.014591444283723831
+INFO:root:New lr: 0.06680369236194089
+INFO:root:Avg. loss in the last 100 batches: 0.013426163233816624
+INFO:root:New lr: 0.06692247421245509
+INFO:root:Avg. loss in the last 100 batches: 0.014261637814342976
+INFO:root:New lr: 0.0670413415240887
+INFO:root:Avg. loss in the last 100 batches: 0.011987542733550072
+INFO:root:New lr: 0.06716029413579336
+INFO:root:Avg. loss in the last 100 batches: 0.010867214761674404
+INFO:root:New lr: 0.06727933188640506
+INFO:root:Avg. loss in the last 100 batches: 0.012345558032393456
+INFO:root:New lr: 0.0673984546146445
+INFO:root:Avg. loss in the last 100 batches: 0.0123011264950037
+INFO:root:New lr: 0.06751766215911728
+INFO:root:Avg. loss in the last 100 batches: 0.012091142125427723
+INFO:root:New lr: 0.06763695435831404
+INFO:root:Avg. loss in the last 100 batches: 0.01280572172254324
+INFO:root:New lr: 0.06775633105061071
+INFO:root:Avg. loss in the last 100 batches: 0.012316442094743252
+INFO:root:New lr: 0.06787579207426886
+INFO:root:Avg. loss in the last 100 batches: 0.011087275110185146
+INFO:root:New lr: 0.06799533726743559
+INFO:root:Avg. loss in the last 100 batches: 0.013147572986781597
+INFO:root:New lr: 0.06811496646814408
+INFO:root:Avg. loss in the last 100 batches: 0.01387399435043335
+INFO:root:New lr: 0.06823467951431383
+INFO:root:Avg. loss in the last 100 batches: 0.012898820452392101
+INFO:root:New lr: 0.06835447624375052
+INFO:root:Avg. loss in the last 100 batches: 0.014011581428349018
+INFO:root:New lr: 0.06847435649414649
+INFO:root:Avg. loss in the last 100 batches: 0.012679343111813068
+INFO:root:New lr: 0.06859432010308106
+INFO:root:Avg. loss in the last 100 batches: 0.012282249517738819
+INFO:root:New lr: 0.06871436690802044
+INFO:root:Avg. loss in the last 100 batches: 0.014418830163776875
+INFO:root:New lr: 0.06883449674631831
+INFO:root:Avg. loss in the last 100 batches: 0.013334370218217373
+INFO:root:New lr: 0.06895470945521562
+INFO:root:Avg. loss in the last 100 batches: 0.013916173949837685
+INFO:root:New lr: 0.0690750048718412
+INFO:root:Avg. loss in the last 100 batches: 0.011789396405220032
+INFO:root:New lr: 0.06919538283321189
+INFO:root:Avg. loss in the last 100 batches: 0.011210983619093895
+INFO:root:New lr: 0.06931584317623246
+INFO:root:Avg. loss in the last 100 batches: 0.013712028972804546
+INFO:root:New lr: 0.06943638573769623
+INFO:root:Avg. loss in the last 100 batches: 0.012605298310518265
+INFO:root:New lr: 0.06955701035428513
+INFO:root:Avg. loss in the last 100 batches: 0.012248130515217781
+INFO:root:New lr: 0.06967771686256982
+INFO:root:Avg. loss in the last 100 batches: 0.012740734964609146
+INFO:root:New lr: 0.06979850509901009
+INFO:root:Avg. loss in the last 100 batches: 0.011272354982793331
+INFO:root:New lr: 0.06991937489995503
+INFO:root:Avg. loss in the last 100 batches: 0.010632914490997791
+INFO:root:New lr: 0.0700403261016431
+INFO:root:Avg. loss in the last 100 batches: 0.014196636155247688
+INFO:root:New lr: 0.07016135854020256
+INFO:root:Avg. loss in the last 100 batches: 0.012846688739955425
+INFO:root:New lr: 0.07028247205165158
+INFO:root:Avg. loss in the last 100 batches: 0.012226525694131851
+INFO:root:New lr: 0.07040366647189852
+INFO:root:Avg. loss in the last 100 batches: 0.013773050159215927
+INFO:root:New lr: 0.07052494163674208
+INFO:root:Avg. loss in the last 100 batches: 0.010728346183896065
+INFO:root:New lr: 0.07064629738187156
+INFO:root:Avg. loss in the last 100 batches: 0.009854067116975784
+INFO:root:New lr: 0.07076773354286714
+INFO:root:Avg. loss in the last 100 batches: 0.011219706386327744
+INFO:root:New lr: 0.07088924995519993
+INFO:root:Avg. loss in the last 100 batches: 0.011131848208606243
+INFO:root:New lr: 0.0710108464542325
+INFO:root:Avg. loss in the last 100 batches: 0.011013946495950222
+INFO:root:New lr: 0.07113252287521873
+INFO:root:Avg. loss in the last 100 batches: 0.012745283544063568
+INFO:root:New lr: 0.07125427905330434
+INFO:root:Avg. loss in the last 100 batches: 0.011839349754154682
+INFO:root:New lr: 0.0713761148235269
+INFO:root:Avg. loss in the last 100 batches: 0.011848323978483677
+INFO:root:New lr: 0.0714980300208162
+INFO:root:Avg. loss in the last 100 batches: 0.01280757412314415
+INFO:root:New lr: 0.07162002447999441
+INFO:root:Avg. loss in the last 100 batches: 0.011746472679078579
+INFO:root:New lr: 0.0717420980357763
+INFO:root:Avg. loss in the last 100 batches: 0.011387685313820839
+INFO:root:New lr: 0.07186425052276948
+INFO:root:Avg. loss in the last 100 batches: 0.015074280090630054
+INFO:root:New lr: 0.07198648177547462
+INFO:root:Avg. loss in the last 100 batches: 0.012742806226015091
+INFO:root:New lr: 0.0721087916282857
+INFO:root:Avg. loss in the last 100 batches: 0.012230444699525833
+INFO:root:New lr: 0.07223117991549013
+INFO:root:Avg. loss in the last 100 batches: 0.014118901453912258
+INFO:root:New lr: 0.0723536464712691
+INFO:root:Avg. loss in the last 100 batches: 0.01258527860045433
+INFO:root:New lr: 0.07247619112969786
+INFO:root:Avg. loss in the last 100 batches: 0.012171091511845589
+INFO:root:New lr: 0.07259881372474564
+INFO:root:Avg. loss in the last 100 batches: 0.014497670345008373
+INFO:root:New lr: 0.07272151409027619
+INFO:root:Avg. loss in the last 100 batches: 0.012179745361208916
+INFO:root:New lr: 0.07284429206004794
+INFO:root:Avg. loss in the last 100 batches: 0.012407628819346428
+INFO:root:New lr: 0.07296714746771407
+INFO:root:Avg. loss in the last 100 batches: 0.013422319665551186
+INFO:root:New lr: 0.07309008014682289
+INFO:root:Avg. loss in the last 100 batches: 0.011262144893407822
+INFO:root:New lr: 0.07321308993081807
+INFO:root:Avg. loss in the last 100 batches: 0.011252784170210361
+INFO:root:New lr: 0.07333617665303871
+INFO:root:Avg. loss in the last 100 batches: 0.012557337060570717
+INFO:root:New lr: 0.07345934014671973
+INFO:root:Avg. loss in the last 100 batches: 0.010965250432491302
+INFO:root:New lr: 0.07358258024499209
+INFO:root:Avg. loss in the last 100 batches: 0.011606459505856037
+INFO:root:New lr: 0.0737058967808828
+INFO:root:Avg. loss in the last 100 batches: 0.014226570725440979
+INFO:root:New lr: 0.07382928958731547
+INFO:root:Avg. loss in the last 100 batches: 0.012845988385379314
+INFO:root:New lr: 0.0739527584971103
+INFO:root:Avg. loss in the last 100 batches: 0.012743962928652763
+INFO:root:New lr: 0.07407630334298443
+INFO:root:Avg. loss in the last 100 batches: 0.012341592460870743
+INFO:root:New lr: 0.07419992395755201
+INFO:root:Avg. loss in the last 100 batches: 0.010926861315965652
+INFO:root:New lr: 0.07432362017332464
+INFO:root:Avg. loss in the last 100 batches: 0.011429592035710812
+INFO:root:New lr: 0.07444739182271146
+INFO:root:Avg. loss in the last 100 batches: 0.011656979098916054
+INFO:root:New lr: 0.07457123873801941
+INFO:root:Avg. loss in the last 100 batches: 0.010464807972311974
+INFO:root:New lr: 0.07469516075145341
+INFO:root:Avg. loss in the last 100 batches: 0.013273772783577442
+INFO:root:New lr: 0.07481915769511677
+INFO:root:Avg. loss in the last 100 batches: 0.01521221362054348
+INFO:root:New lr: 0.07494322940101106
+INFO:root:Avg. loss in the last 100 batches: 0.013359440490603447
+INFO:root:New lr: 0.07506737570103672
+INFO:root:Avg. loss in the last 100 batches: 0.013556101359426975
+INFO:root:New lr: 0.07519159642699311
+INFO:root:Avg. loss in the last 100 batches: 0.012118397280573845
+INFO:root:New lr: 0.07531589141057873
+INFO:root:Avg. loss in the last 100 batches: 0.010983932763338089
+INFO:root:New lr: 0.07544026048339147
+INFO:root:Avg. loss in the last 100 batches: 0.011640583164989948
+INFO:root:New lr: 0.07556470347692876
+INFO:root:Avg. loss in the last 100 batches: 0.01183845940977335
+INFO:root:New lr: 0.07568922022258812
+INFO:root:Avg. loss in the last 100 batches: 0.011573624797165394
+INFO:root:New lr: 0.0758138105516668
+INFO:root:Avg. loss in the last 100 batches: 0.013026507571339607
+INFO:root:New lr: 0.07593847429536266
+INFO:root:Avg. loss in the last 100 batches: 0.013047352433204651
+INFO:root:New lr: 0.07606321128477397
+INFO:root:Avg. loss in the last 100 batches: 0.011994460597634315
+INFO:root:New lr: 0.07618802135089969
+INFO:root:Avg. loss in the last 100 batches: 0.012737884186208248
+INFO:root:New lr: 0.07631290432463989
+INFO:root:Avg. loss in the last 100 batches: 0.01109295804053545
+INFO:root:New lr: 0.07643786003679584
+INFO:root:Avg. loss in the last 100 batches: 0.010308784432709217
+INFO:root:New lr: 0.0765628883180702
+INFO:root:Avg. loss in the last 100 batches: 0.012630962766706944
+INFO:root:New lr: 0.07668798899906734
+INFO:root:Avg. loss in the last 100 batches: 0.012820589356124401
+INFO:root:New lr: 0.07681316191029361
+INFO:root:Avg. loss in the last 100 batches: 0.012507261708378792
+INFO:root:New lr: 0.07693840688215736
+INFO:root:Avg. loss in the last 100 batches: 0.015161658637225628
+INFO:root:New lr: 0.07706372374496936
+INFO:root:Avg. loss in the last 100 batches: 0.014498012140393257
+INFO:root:New lr: 0.0771891123289431
+INFO:root:Avg. loss in the last 100 batches: 0.013933958485722542
+INFO:root:New lr: 0.07731457246419474
+INFO:root:Avg. loss in the last 100 batches: 0.015570160001516342
+INFO:root:New lr: 0.07744010398074352
+INFO:root:Avg. loss in the last 100 batches: 0.01396866887807846
+INFO:root:New lr: 0.07756570670851207
+INFO:root:Avg. loss in the last 100 batches: 0.013007662259042263
+INFO:root:New lr: 0.07769138047732638
+INFO:root:Avg. loss in the last 100 batches: 0.015542331151664257
+INFO:root:New lr: 0.07781712511691638
+INFO:root:Avg. loss in the last 100 batches: 0.014109181240200996
+INFO:root:New lr: 0.07794294045691585
+INFO:root:Avg. loss in the last 100 batches: 0.013025264255702496
+INFO:root:New lr: 0.07806882632686277
+INFO:root:Avg. loss in the last 100 batches: 0.016878731548786163
+INFO:root:New lr: 0.07819478255619969
+INFO:root:Avg. loss in the last 100 batches: 0.014599205926060677
+INFO:root:New lr: 0.07832080897427365
+INFO:root:Avg. loss in the last 100 batches: 0.014123461209237576
+INFO:root:New lr: 0.07844690541033675
+INFO:root:Avg. loss in the last 100 batches: 0.015066394582390785
+INFO:root:New lr: 0.07857307169354616
+INFO:root:Avg. loss in the last 100 batches: 0.01195862703025341
+INFO:root:New lr: 0.0786993076529644
+INFO:root:Avg. loss in the last 100 batches: 0.011524231173098087
+INFO:root:New lr: 0.07882561311755962
+INFO:root:Avg. loss in the last 100 batches: 0.0124590415507555
+INFO:root:New lr: 0.07895198791620586
+INFO:root:Avg. loss in the last 100 batches: 0.011265767738223076
+INFO:root:New lr: 0.07907843187768307
+INFO:root:Avg. loss in the last 100 batches: 0.011011655442416668
+INFO:root:New lr: 0.07920494483067758
+INFO:root:Avg. loss in the last 100 batches: 0.013170740567147732
+INFO:root:New lr: 0.07933152660378226
+INFO:root:Avg. loss in the last 100 batches: 0.012259185314178467
+INFO:root:New lr: 0.07945817702549679
+INFO:root:Avg. loss in the last 100 batches: 0.01187754888087511
+INFO:root:New lr: 0.07958489592422768
+INFO:root:Avg. loss in the last 100 batches: 0.015248558484017849
+INFO:root:New lr: 0.0797116831282888
+INFO:root:Avg. loss in the last 100 batches: 0.013483718037605286
+INFO:root:New lr: 0.07983853846590147
+INFO:root:Avg. loss in the last 100 batches: 0.013353693298995495
+INFO:root:New lr: 0.07996546176519456
+INFO:root:Avg. loss in the last 100 batches: 0.013701653108000755
+INFO:root:New lr: 0.0800924528542051
+INFO:root:Avg. loss in the last 100 batches: 0.01200158428400755
+INFO:root:New lr: 0.08021951156087803
+INFO:root:Avg. loss in the last 100 batches: 0.011627173982560635
+INFO:root:New lr: 0.08034663771306683
+INFO:root:Avg. loss in the last 100 batches: 0.015216135419905186
+INFO:root:New lr: 0.08047383113853357
+INFO:root:Avg. loss in the last 100 batches: 0.013026098720729351
+INFO:root:New lr: 0.08060109166494911
+INFO:root:Avg. loss in the last 100 batches: 0.013254856690764427
+INFO:root:New lr: 0.08072841911989351
+INFO:root:Avg. loss in the last 100 batches: 0.016653066501021385
+INFO:root:New lr: 0.08085581333085606
+INFO:root:Avg. loss in the last 100 batches: 0.013671118766069412
+INFO:root:New lr: 0.08098327412523562
+INFO:root:Avg. loss in the last 100 batches: 0.01411360502243042
+INFO:root:New lr: 0.0811108013303409
+INFO:root:Avg. loss in the last 100 batches: 0.012145623564720154
+INFO:root:New lr: 0.08123839477339054
+INFO:root:Avg. loss in the last 100 batches: 0.010060349479317665
+INFO:root:New lr: 0.08136605428151353
+INFO:root:Avg. loss in the last 100 batches: 0.010936724953353405
+INFO:root:New lr: 0.08149377968174926
+INFO:root:Avg. loss in the last 100 batches: 0.013331006281077862
+INFO:root:New lr: 0.08162157080104793
+INFO:root:Avg. loss in the last 100 batches: 0.012321527116000652
+INFO:root:New lr: 0.08174942746627062
+INFO:root:Avg. loss in the last 100 batches: 0.012444531545042992
+INFO:root:New lr: 0.08187734950418968
+INFO:root:Avg. loss in the last 100 batches: 0.014697805047035217
+INFO:root:New lr: 0.08200533674148885
+INFO:root:Avg. loss in the last 100 batches: 0.013585682027041912
+INFO:root:New lr: 0.0821333890047635
+INFO:root:Avg. loss in the last 100 batches: 0.014096079394221306
+INFO:root:New lr: 0.08226150612052102
+INFO:root:Avg. loss in the last 100 batches: 0.013092530891299248
+INFO:root:New lr: 0.08238968791518078
+INFO:root:Avg. loss in the last 100 batches: 0.011628527194261551
+INFO:root:New lr: 0.08251793421507461
+INFO:root:Avg. loss in the last 100 batches: 0.012455803342163563
+INFO:root:New lr: 0.08264624484644695
+INFO:root:Avg. loss in the last 100 batches: 0.010483142919838428
+INFO:root:New lr: 0.08277461963545496
+INFO:root:Avg. loss in the last 100 batches: 0.009192576631903648
+INFO:root:New lr: 0.08290305840816911
+INFO:root:Avg. loss in the last 100 batches: 0.01215749979019165
+INFO:root:New lr: 0.08303156099057302
+INFO:root:Avg. loss in the last 100 batches: 0.01298334077000618
+INFO:root:New lr: 0.08316012720856372
+INFO:root:Avg. loss in the last 100 batches: 0.011323359794914722
+INFO:root:New lr: 0.0832887568879524
+INFO:root:Avg. loss in the last 100 batches: 0.012334573082625866
+INFO:root:New lr: 0.08341744985446392
+INFO:root:Avg. loss in the last 100 batches: 0.012045537121593952
+INFO:root:New lr: 0.08354620593373754
+INFO:root:Avg. loss in the last 100 batches: 0.011189653538167477
+INFO:root:New lr: 0.08367502495132703
+INFO:root:Avg. loss in the last 100 batches: 0.014164363034069538
+INFO:root:New lr: 0.08380390673270083
+INFO:root:Avg. loss in the last 100 batches: 0.014932953752577305
+INFO:root:New lr: 0.08393285110324239
+INFO:root:Avg. loss in the last 100 batches: 0.014397220686078072
+INFO:root:New lr: 0.08406185788825032
+INFO:root:Avg. loss in the last 100 batches: 0.014926224946975708
+INFO:root:New lr: 0.0841909269129387
+INFO:root:Avg. loss in the last 100 batches: 0.01212469581514597
+INFO:root:New lr: 0.08432005800243719
+INFO:root:Avg. loss in the last 100 batches: 0.01064293272793293
+INFO:root:New lr: 0.0844492509817916
+INFO:root:Avg. loss in the last 100 batches: 0.01382860541343689
+INFO:root:New lr: 0.08457850567596359
+INFO:root:Avg. loss in the last 100 batches: 0.013802187517285347
+INFO:root:New lr: 0.0847078219098314
+INFO:root:Avg. loss in the last 100 batches: 0.012864862568676472
+INFO:root:New lr: 0.08483719950818985
+INFO:root:Avg. loss in the last 100 batches: 0.012906338088214397
+INFO:root:New lr: 0.0849666382957506
+INFO:root:Avg. loss in the last 100 batches: 0.011381162330508232
+INFO:root:New lr: 0.08509613809714237
+INFO:root:Avg. loss in the last 100 batches: 0.010806117206811905
+INFO:root:New lr: 0.08522569873691127
+INFO:root:Avg. loss in the last 100 batches: 0.013685010373592377
+INFO:root:New lr: 0.08535532003952104
+INFO:root:Avg. loss in the last 100 batches: 0.013017017394304276
+INFO:root:New lr: 0.08548500182935309
+INFO:root:Avg. loss in the last 100 batches: 0.012605501338839531
+INFO:root:New lr: 0.08561474393070698
+INFO:root:Avg. loss in the last 100 batches: 0.014360159635543823
+INFO:root:New lr: 0.0857445461678005
+INFO:root:Avg. loss in the last 100 batches: 0.013337613083422184
+INFO:root:New lr: 0.08587440836477003
+INFO:root:Avg. loss in the last 100 batches: 0.01256141159683466
+INFO:root:New lr: 0.08600433034567065
+INFO:root:Avg. loss in the last 100 batches: 0.013514465652406216
+INFO:root:New lr: 0.08613431193447646
+INFO:root:Avg. loss in the last 100 batches: 0.011880598030984402
+INFO:root:New lr: 0.08626435295508084
+INFO:root:Avg. loss in the last 100 batches: 0.01184930745512247
+INFO:root:New lr: 0.08639445323129658
+INFO:root:Avg. loss in the last 100 batches: 0.014451541937887669
+INFO:root:New lr: 0.0865246125868562
+INFO:root:Avg. loss in the last 100 batches: 0.01181514747440815
+INFO:root:New lr: 0.08665483084541223
+INFO:root:Avg. loss in the last 100 batches: 0.011269018054008484
+INFO:root:New lr: 0.08678510783053739
+INFO:root:Avg. loss in the last 100 batches: 0.014243489131331444
+INFO:root:New lr: 0.08691544336572471
+INFO:root:Avg. loss in the last 100 batches: 0.012195206247270107
+INFO:root:New lr: 0.08704583727438808
+INFO:root:Avg. loss in the last 100 batches: 0.011560974642634392
+INFO:root:New lr: 0.08717628937986222
+INFO:root:Avg. loss in the last 100 batches: 0.012322226539254189
+INFO:root:New lr: 0.0873067995054029
+INFO:root:Avg. loss in the last 100 batches: 0.010953700169920921
+INFO:root:New lr: 0.0874373674741874
+INFO:root:Avg. loss in the last 100 batches: 0.010213992558419704
+INFO:root:New lr: 0.08756799310931468
+INFO:root:Avg. loss in the last 100 batches: 0.014943880960345268
+INFO:root:New lr: 0.0876986762338054
+INFO:root:Avg. loss in the last 100 batches: 0.01291575562208891
+INFO:root:New lr: 0.08782941667060246
+INFO:root:Avg. loss in the last 100 batches: 0.012753304094076157
+INFO:root:New lr: 0.08796021424257108
+INFO:root:Avg. loss in the last 100 batches: 0.014354214072227478
+INFO:root:New lr: 0.08809106877249909
+INFO:root:Avg. loss in the last 100 batches: 0.012234417721629143
+INFO:root:New lr: 0.08822198008309706
+INFO:root:Avg. loss in the last 100 batches: 0.012256572023034096
+INFO:root:New lr: 0.08835294799699869
+INFO:root:Avg. loss in the last 100 batches: 0.014420565217733383
+INFO:root:New lr: 0.08848397233676106
+INFO:root:Avg. loss in the last 100 batches: 0.01222918089479208
+INFO:root:New lr: 0.08861505292486471
+INFO:root:Avg. loss in the last 100 batches: 0.01211949810385704
+INFO:root:New lr: 0.088746189583714
+INFO:root:Avg. loss in the last 100 batches: 0.013518402352929115
+INFO:root:New lr: 0.08887738213563728
+INFO:root:Avg. loss in the last 100 batches: 0.012389907613396645
+INFO:root:New lr: 0.08900863040288723
+INFO:root:Avg. loss in the last 100 batches: 0.01282366830855608
+INFO:root:New lr: 0.08913993420764102
+INFO:root:Avg. loss in the last 100 batches: 0.012651865370571613
+INFO:root:New lr: 0.08927129337200063
+INFO:root:Avg. loss in the last 100 batches: 0.010930445045232773
+INFO:root:New lr: 0.08940270771799297
+INFO:root:Avg. loss in the last 100 batches: 0.012597228400409222
+INFO:root:New lr: 0.08953417706757014
+INFO:root:Avg. loss in the last 100 batches: 0.014709649607539177
+INFO:root:New lr: 0.08966570124260981
+INFO:root:Avg. loss in the last 100 batches: 0.013425113633275032
+INFO:root:New lr: 0.08979728006491539
+INFO:root:Avg. loss in the last 100 batches: 0.01443372294306755
+INFO:root:New lr: 0.08992891335621608
+INFO:root:Avg. loss in the last 100 batches: 0.014382882975041866
+INFO:root:New lr: 0.09006060093816753
+INFO:root:Avg. loss in the last 100 batches: 0.012608344666659832
+INFO:root:New lr: 0.09019234263235168
+INFO:root:Avg. loss of epoch 5: 0.012670673429965973
+INFO:root:New lr: 0.09032413826027713
+INFO:root:Avg. testing loss: 0.017105501145124435
+INFO:root:Starting epoch 6
+INFO:root:Avg. loss in the last 100 batches: 0.01375935785472393
+INFO:root:New lr: 0.09045598764337948
+INFO:root:Avg. loss in the last 100 batches: 0.011538030579686165
+INFO:root:New lr: 0.0905878906030215
+INFO:root:Avg. loss in the last 100 batches: 0.011122414842247963
+INFO:root:New lr: 0.09071984696049329
+INFO:root:Avg. loss in the last 100 batches: 0.012704653665423393
+INFO:root:New lr: 0.09085185653701272
+INFO:root:Avg. loss in the last 100 batches: 0.011252214200794697
+INFO:root:New lr: 0.09098391915372547
+INFO:root:Avg. loss in the last 100 batches: 0.011256543919444084
+INFO:root:New lr: 0.09111603463170545
+INFO:root:Avg. loss in the last 100 batches: 0.013716323301196098
+INFO:root:New lr: 0.09124820279195478
+INFO:root:Avg. loss in the last 100 batches: 0.010836232453584671
+INFO:root:New lr: 0.09138042345540442
+INFO:root:Avg. loss in the last 100 batches: 0.010941140353679657
+INFO:root:New lr: 0.09151269644291402
+INFO:root:Avg. loss in the last 100 batches: 0.012091689743101597
+INFO:root:New lr: 0.09164502157527238
+INFO:root:Avg. loss in the last 100 batches: 0.010788100771605968
+INFO:root:New lr: 0.09177739867319776
+INFO:root:Avg. loss in the last 100 batches: 0.011240205727517605
+INFO:root:New lr: 0.09190982755733784
+INFO:root:Avg. loss in the last 100 batches: 0.011802354827523232
+INFO:root:New lr: 0.09204230804827027
+INFO:root:Avg. loss in the last 100 batches: 0.010288652963936329
+INFO:root:New lr: 0.09217483996650275
+INFO:root:Avg. loss in the last 100 batches: 0.011122788302600384
+INFO:root:New lr: 0.09230742313247325
+INFO:root:Avg. loss in the last 100 batches: 0.014989035204052925
+INFO:root:New lr: 0.0924400573665504
+INFO:root:Avg. loss in the last 100 batches: 0.013138683512806892
+INFO:root:New lr: 0.09257274248903352
+INFO:root:Avg. loss in the last 100 batches: 0.013399208895862103
+INFO:root:New lr: 0.0927054783201531
+INFO:root:Avg. loss in the last 100 batches: 0.011990917846560478
+INFO:root:New lr: 0.09283826468007092
+INFO:root:Avg. loss in the last 100 batches: 0.010465533472597599
+INFO:root:New lr: 0.0929711013888801
+INFO:root:Avg. loss in the last 100 batches: 0.012225721031427383
+INFO:root:New lr: 0.09310398826660582
+INFO:root:Avg. loss in the last 100 batches: 0.014482777565717697
+INFO:root:New lr: 0.0932369251332052
+INFO:root:Avg. loss in the last 100 batches: 0.013272051699459553
+INFO:root:New lr: 0.09336991180856749
+INFO:root:Avg. loss in the last 100 batches: 0.01401303056627512
+INFO:root:New lr: 0.09350294811251464
+INFO:root:Avg. loss in the last 100 batches: 0.014813892543315887
+INFO:root:New lr: 0.0936360338648013
+INFO:root:Avg. loss in the last 100 batches: 0.013608722016215324
+INFO:root:New lr: 0.0937691688851151
+INFO:root:Avg. loss in the last 100 batches: 0.01431992370635271
+INFO:root:New lr: 0.09390235299307687
+INFO:root:Avg. loss in the last 100 batches: 0.012215596623718739
+INFO:root:New lr: 0.09403558600824108
+INFO:root:Avg. loss in the last 100 batches: 0.010899394750595093
+INFO:root:New lr: 0.09416886775009581
+INFO:root:Avg. loss in the last 100 batches: 0.011931590735912323
+INFO:root:New lr: 0.09430219803806317
+INFO:root:Avg. loss in the last 100 batches: 0.012463660910725594
+INFO:root:New lr: 0.09443557669149949
+INFO:root:Avg. loss in the last 100 batches: 0.011963236145675182
+INFO:root:New lr: 0.09456900352969558
+INFO:root:Avg. loss in the last 100 batches: 0.012830163352191448
+INFO:root:New lr: 0.09470247837187692
+INFO:root:Avg. loss in the last 100 batches: 0.01226094737648964
+INFO:root:New lr: 0.0948360010372041
+INFO:root:Avg. loss in the last 100 batches: 0.011230632662773132
+INFO:root:New lr: 0.09496957134477269
+INFO:root:Avg. loss in the last 100 batches: 0.013271798379719257
+INFO:root:New lr: 0.09510318911361387
+INFO:root:Avg. loss in the last 100 batches: 0.014004339464008808
+INFO:root:New lr: 0.09523685416269448
+INFO:root:Avg. loss in the last 100 batches: 0.012966117821633816
+INFO:root:New lr: 0.09537056631091731
+INFO:root:Avg. loss in the last 100 batches: 0.01388651505112648
+INFO:root:New lr: 0.09550432537712131
+INFO:root:Avg. loss in the last 100 batches: 0.01267621573060751
+INFO:root:New lr: 0.09563813118008185
+INFO:root:Avg. loss in the last 100 batches: 0.012313771061599255
+INFO:root:New lr: 0.09577198353851105
+INFO:root:Avg. loss in the last 100 batches: 0.01459550578147173
+INFO:root:New lr: 0.0959058822710579
+INFO:root:Avg. loss in the last 100 batches: 0.013270251452922821
+INFO:root:New lr: 0.09603982719630857
+INFO:root:Avg. loss in the last 100 batches: 0.013962901197373867
+INFO:root:New lr: 0.09617381813278664
+INFO:root:Avg. loss in the last 100 batches: 0.012081813998520374
+INFO:root:New lr: 0.09630785489895335
+INFO:root:Avg. loss in the last 100 batches: 0.011230806820094585
+INFO:root:New lr: 0.09644193731320785
+INFO:root:Avg. loss in the last 100 batches: 0.013268460519611835
+INFO:root:New lr: 0.09657606519388748
+INFO:root:Avg. loss in the last 100 batches: 0.012898893095552921
+INFO:root:New lr: 0.0967102383592679
+INFO:root:Avg. loss in the last 100 batches: 0.012176906690001488
+INFO:root:New lr: 0.0968444566275635
+INFO:root:Avg. loss in the last 100 batches: 0.012803773395717144
+INFO:root:New lr: 0.09697871981692749
+INFO:root:Avg. loss in the last 100 batches: 0.011145669035613537
+INFO:root:New lr: 0.09711302774545227
+INFO:root:Avg. loss in the last 100 batches: 0.010985161177814007
+INFO:root:New lr: 0.09724738023116963
+INFO:root:Avg. loss in the last 100 batches: 0.014211573638021946
+INFO:root:New lr: 0.0973817770920509
+INFO:root:Avg. loss in the last 100 batches: 0.012901456095278263
+INFO:root:New lr: 0.09751621814600744
+INFO:root:Avg. loss in the last 100 batches: 0.012278053909540176
+INFO:root:New lr: 0.09765070321089059
+INFO:root:Avg. loss in the last 100 batches: 0.013397755101323128
+INFO:root:New lr: 0.09778523210449216
+INFO:root:Avg. loss in the last 100 batches: 0.010861952789127827
+INFO:root:New lr: 0.09791980464454453
+INFO:root:Avg. loss in the last 100 batches: 0.010161785408854485
+INFO:root:New lr: 0.09805442064872091
+INFO:root:Avg. loss in the last 100 batches: 0.011244988068938255
+INFO:root:New lr: 0.09818907993463577
+INFO:root:Avg. loss in the last 100 batches: 0.01100232359021902
+INFO:root:New lr: 0.09832378231984473
+INFO:root:Avg. loss in the last 100 batches: 0.0109057342633605
+INFO:root:New lr: 0.09845852762184518
+INFO:root:Avg. loss in the last 100 batches: 0.012876834720373154
+INFO:root:New lr: 0.0985933156580763
+INFO:root:Avg. loss in the last 100 batches: 0.012189594097435474
+INFO:root:New lr: 0.09872814624591941
+INFO:root:Avg. loss in the last 100 batches: 0.011546418070793152
+INFO:root:New lr: 0.09886301920269805
+INFO:root:Avg. loss in the last 100 batches: 0.012821515090763569
+INFO:root:New lr: 0.09899793434567855
+INFO:root:Avg. loss in the last 100 batches: 0.011869301088154316
+INFO:root:New lr: 0.09913289149206997
+INFO:root:Avg. loss in the last 100 batches: 0.01131942868232727
+INFO:root:New lr: 0.09926789045902443
+INFO:root:Avg. loss in the last 100 batches: 0.014879003167152405
+INFO:root:New lr: 0.09940293106363751
+INFO:root:Avg. loss in the last 100 batches: 0.012917540967464447
+INFO:root:New lr: 0.09953801312294824
+INFO:root:Avg. loss in the last 100 batches: 0.012303918600082397
+INFO:root:New lr: 0.09967313645393955
+INFO:root:Avg. loss in the last 100 batches: 0.014286004938185215
+INFO:root:New lr: 0.09980830087353851
+INFO:root:Avg. loss in the last 100 batches: 0.012476441450417042
+INFO:root:New lr: 0.09994350619861644
+INFO:root:Avg. loss in the last 100 batches: 0.012297537177801132
+INFO:root:New lr: 0.10007875224598922
+INFO:root:Avg. loss in the last 100 batches: 0.01452385913580656
+INFO:root:New lr: 0.10021403883241761
+INFO:root:Avg. loss in the last 100 batches: 0.012106831185519695
+INFO:root:New lr: 0.10034936577460749
+INFO:root:Avg. loss in the last 100 batches: 0.01249424833804369
+INFO:root:New lr: 0.10048473288921
+INFO:root:Avg. loss in the last 100 batches: 0.013524657115340233
+INFO:root:New lr: 0.10062013999282177
+INFO:root:Avg. loss in the last 100 batches: 0.011169427074491978
+INFO:root:New lr: 0.10075558690198544
+INFO:root:Avg. loss in the last 100 batches: 0.011316435411572456
+INFO:root:New lr: 0.10089107343318957
+INFO:root:Avg. loss in the last 100 batches: 0.012547037564218044
+INFO:root:New lr: 0.1010265994028691
+INFO:root:Avg. loss in the last 100 batches: 0.010799238458275795
+INFO:root:New lr: 0.10116216462740549
+INFO:root:Avg. loss in the last 100 batches: 0.01167374849319458
+INFO:root:New lr: 0.10129776892312711
+INFO:root:Avg. loss in the last 100 batches: 0.01427211333066225
+INFO:root:New lr: 0.1014334121063093
+INFO:root:Avg. loss in the last 100 batches: 0.012539369985461235
+INFO:root:New lr: 0.10156909399317474
+INFO:root:Avg. loss in the last 100 batches: 0.013228495605289936
+INFO:root:New lr: 0.10170481439989368
+INFO:root:Avg. loss in the last 100 batches: 0.012385252863168716
+INFO:root:New lr: 0.10184057314258424
+INFO:root:Avg. loss in the last 100 batches: 0.011004716157913208
+INFO:root:New lr: 0.10197637003731241
+INFO:root:Avg. loss in the last 100 batches: 0.011588796973228455
+INFO:root:New lr: 0.10211220490009273
+INFO:root:Avg. loss in the last 100 batches: 0.01176031120121479
+INFO:root:New lr: 0.10224807754688817
+INFO:root:Avg. loss in the last 100 batches: 0.010393020696938038
+INFO:root:New lr: 0.10238398779361046
+INFO:root:Avg. loss in the last 100 batches: 0.013166067190468311
+INFO:root:New lr: 0.10251993545612054
+INFO:root:Avg. loss in the last 100 batches: 0.015087276697158813
+INFO:root:New lr: 0.10265592035022847
+INFO:root:Avg. loss in the last 100 batches: 0.01355156023055315
+INFO:root:New lr: 0.10279194229169406
+INFO:root:Avg. loss in the last 100 batches: 0.013697381131350994
+INFO:root:New lr: 0.1029280010962268
+INFO:root:Avg. loss in the last 100 batches: 0.012227699160575867
+INFO:root:New lr: 0.10306409657948623
+INFO:root:Avg. loss in the last 100 batches: 0.010883692651987076
+INFO:root:New lr: 0.1032002285570823
+INFO:root:Avg. loss in the last 100 batches: 0.011967046186327934
+INFO:root:New lr: 0.1033363968445754
+INFO:root:Avg. loss in the last 100 batches: 0.011906604282557964
+INFO:root:New lr: 0.10347260125747676
+INFO:root:Avg. loss in the last 100 batches: 0.011519063264131546
+INFO:root:New lr: 0.10360884161124875
+INFO:root:Avg. loss in the last 100 batches: 0.012835673056542873
+INFO:root:New lr: 0.10374511772130493
+INFO:root:Avg. loss in the last 100 batches: 0.013272866606712341
+INFO:root:New lr: 0.10388142940301043
+INFO:root:Avg. loss in the last 100 batches: 0.01196104846894741
+INFO:root:New lr: 0.10401777647168228
+INFO:root:Avg. loss in the last 100 batches: 0.012517151422798634
+INFO:root:New lr: 0.10415415874258946
+INFO:root:Avg. loss in the last 100 batches: 0.011221653781831264
+INFO:root:New lr: 0.10429057603095329
+INFO:root:Avg. loss in the last 100 batches: 0.010668089613318443
+INFO:root:New lr: 0.10442702815194765
+INFO:root:Avg. loss in the last 100 batches: 0.012828315608203411
+INFO:root:New lr: 0.10456351492069929
+INFO:root:Avg. loss in the last 100 batches: 0.012903567403554916
+INFO:root:New lr: 0.10470003615228785
+INFO:root:Avg. loss in the last 100 batches: 0.012366500683128834
+INFO:root:New lr: 0.10483659166174647
+INFO:root:Avg. loss in the last 100 batches: 0.014871587045490742
+INFO:root:New lr: 0.10497318126406177
+INFO:root:Avg. loss in the last 100 batches: 0.01483138371258974
+INFO:root:New lr: 0.10510980477417414
+INFO:root:Avg. loss in the last 100 batches: 0.01380517054349184
+INFO:root:New lr: 0.10524646200697801
+INFO:root:Avg. loss in the last 100 batches: 0.015718791633844376
+INFO:root:New lr: 0.1053831527773223
+INFO:root:Avg. loss in the last 100 batches: 0.01396725233644247
+INFO:root:New lr: 0.10551987690001025
+INFO:root:Avg. loss in the last 100 batches: 0.013121537864208221
+INFO:root:New lr: 0.10565663418980004
+INFO:root:Avg. loss in the last 100 batches: 0.01569368876516819
+INFO:root:New lr: 0.10579342446140497
+INFO:root:Avg. loss in the last 100 batches: 0.014053784310817719
+INFO:root:New lr: 0.10593024752949348
+INFO:root:Avg. loss in the last 100 batches: 0.01319798082113266
+INFO:root:New lr: 0.10606710320868978
+INFO:root:Avg. loss in the last 100 batches: 0.016513708978891373
+INFO:root:New lr: 0.10620399131357375
+INFO:root:Avg. loss in the last 100 batches: 0.01480187475681305
+INFO:root:New lr: 0.10634091165868137
+INFO:root:Avg. loss in the last 100 batches: 0.01419621892273426
+INFO:root:New lr: 0.10647786405850496
+INFO:root:Avg. loss in the last 100 batches: 0.01529372576624155
+INFO:root:New lr: 0.10661484832749343
+INFO:root:Avg. loss in the last 100 batches: 0.012057492509484291
+INFO:root:New lr: 0.10675186428005246
+INFO:root:Avg. loss in the last 100 batches: 0.01123051531612873
+INFO:root:New lr: 0.10688891173054482
+INFO:root:Avg. loss in the last 100 batches: 0.0128255570307374
+INFO:root:New lr: 0.10702599049329062
+INFO:root:Avg. loss in the last 100 batches: 0.011103873141109943
+INFO:root:New lr: 0.10716310038256754
+INFO:root:Avg. loss in the last 100 batches: 0.010868567042052746
+INFO:root:New lr: 0.10730024121261111
+INFO:root:Avg. loss in the last 100 batches: 0.013428498059511185
+INFO:root:New lr: 0.10743741279761487
+INFO:root:Avg. loss in the last 100 batches: 0.012213567271828651
+INFO:root:New lr: 0.10757461495173076
+INFO:root:Avg. loss in the last 100 batches: 0.011949398554861546
+INFO:root:New lr: 0.10771184748906934
+INFO:root:Avg. loss in the last 100 batches: 0.015254808589816093
+INFO:root:New lr: 0.10784911022369983
+INFO:root:Avg. loss in the last 100 batches: 0.013592785224318504
+INFO:root:New lr: 0.1079864029696507
+INFO:root:Avg. loss in the last 100 batches: 0.013211297802627087
+INFO:root:New lr: 0.10812372554090982
+INFO:root:Avg. loss in the last 100 batches: 0.013613425195217133
+INFO:root:New lr: 0.10826107775142435
+INFO:root:Avg. loss in the last 100 batches: 0.012104334309697151
+INFO:root:New lr: 0.1083984594151016
+INFO:root:Avg. loss in the last 100 batches: 0.011709910817444324
+INFO:root:New lr: 0.10853587034580889
+INFO:root:Avg. loss in the last 100 batches: 0.014935626648366451
+INFO:root:New lr: 0.10867331035737376
+INFO:root:Avg. loss in the last 100 batches: 0.013503419235348701
+INFO:root:New lr: 0.10881077926358448
+INFO:root:Avg. loss in the last 100 batches: 0.01311167050153017
+INFO:root:New lr: 0.10894827687819023
+INFO:root:Avg. loss in the last 100 batches: 0.01639866828918457
+INFO:root:New lr: 0.10908580301490112
+INFO:root:Avg. loss in the last 100 batches: 0.014336766675114632
+INFO:root:New lr: 0.10922335748738865
+INFO:root:Avg. loss in the last 100 batches: 0.013929426670074463
+INFO:root:New lr: 0.1093609401092861
+INFO:root:Avg. loss in the last 100 batches: 0.011903633363544941
+INFO:root:New lr: 0.10949855069418843
+INFO:root:Avg. loss in the last 100 batches: 0.010225385427474976
+INFO:root:New lr: 0.10963618905565276
+INFO:root:Avg. loss in the last 100 batches: 0.010940838605165482
+INFO:root:New lr: 0.10977385500719858
+INFO:root:Avg. loss in the last 100 batches: 0.01373796071857214
+INFO:root:New lr: 0.1099115483623081
+INFO:root:Avg. loss in the last 100 batches: 0.011742115020751953
+INFO:root:New lr: 0.11004926893442621
+INFO:root:Avg. loss in the last 100 batches: 0.012869826517999172
+INFO:root:New lr: 0.11018701653696111
+INFO:root:Avg. loss in the last 100 batches: 0.01457179244607687
+INFO:root:New lr: 0.11032479098328421
+INFO:root:Avg. loss in the last 100 batches: 0.01363535225391388
+INFO:root:New lr: 0.11046259208673073
+INFO:root:Avg. loss in the last 100 batches: 0.014148008078336716
+INFO:root:New lr: 0.11060041966059961
+INFO:root:Avg. loss in the last 100 batches: 0.013158644549548626
+INFO:root:New lr: 0.11073827351815399
+INFO:root:Avg. loss in the last 100 batches: 0.01203259825706482
+INFO:root:New lr: 0.11087615347262147
+INFO:root:Avg. loss in the last 100 batches: 0.012189699336886406
+INFO:root:New lr: 0.11101405933719422
+INFO:root:Avg. loss in the last 100 batches: 0.010700078681111336
+INFO:root:New lr: 0.1111519909250292
+INFO:root:Avg. loss in the last 100 batches: 0.00946830864995718
+INFO:root:New lr: 0.11128994804924877
+INFO:root:Avg. loss in the last 100 batches: 0.011685917153954506
+INFO:root:New lr: 0.11142793052294048
+INFO:root:Avg. loss in the last 100 batches: 0.013218930922448635
+INFO:root:New lr: 0.11156593815915763
+INFO:root:Avg. loss in the last 100 batches: 0.011455518193542957
+INFO:root:New lr: 0.1117039707709194
+INFO:root:Avg. loss in the last 100 batches: 0.012263098731637001
+INFO:root:New lr: 0.11184202817121117
+INFO:root:Avg. loss in the last 100 batches: 0.012049087323248386
+INFO:root:New lr: 0.11198011017298462
+INFO:root:Avg. loss in the last 100 batches: 0.011476173996925354
+INFO:root:New lr: 0.11211821658915827
+INFO:root:Avg. loss in the last 100 batches: 0.013866571709513664
+INFO:root:New lr: 0.11225634723261746
+INFO:root:Avg. loss in the last 100 batches: 0.015394278801977634
+INFO:root:New lr: 0.11239450191621467
+INFO:root:Avg. loss in the last 100 batches: 0.013992645777761936
+INFO:root:New lr: 0.1125326804527699
+INFO:root:Avg. loss in the last 100 batches: 0.015100142918527126
+INFO:root:New lr: 0.11267088265507078
+INFO:root:Avg. loss in the last 100 batches: 0.012307081371545792
+INFO:root:New lr: 0.11280910833587285
+INFO:root:Avg. loss in the last 100 batches: 0.010911129415035248
+INFO:root:New lr: 0.11294735730789995
+INFO:root:Avg. loss in the last 100 batches: 0.013627848587930202
+INFO:root:New lr: 0.11308562938384423
+INFO:root:Avg. loss in the last 100 batches: 0.013591882772743702
+INFO:root:New lr: 0.11322392437636664
+INFO:root:Avg. loss in the last 100 batches: 0.013185667805373669
+INFO:root:New lr: 0.113362242098097
+INFO:root:Avg. loss in the last 100 batches: 0.012950766831636429
+INFO:root:New lr: 0.1135005823616344
+INFO:root:Avg. loss in the last 100 batches: 0.011361705139279366
+INFO:root:New lr: 0.11363894497954738
+INFO:root:Avg. loss in the last 100 batches: 0.010809037834405899
+INFO:root:New lr: 0.11377732976437413
+INFO:root:Avg. loss in the last 100 batches: 0.013550984673202038
+INFO:root:New lr: 0.11391573652862291
+INFO:root:Avg. loss in the last 100 batches: 0.013115989044308662
+INFO:root:New lr: 0.11405416508477209
+INFO:root:Avg. loss in the last 100 batches: 0.01273675449192524
+INFO:root:New lr: 0.1141926152452706
+INFO:root:Avg. loss in the last 100 batches: 0.014634598046541214
+INFO:root:New lr: 0.11433108682253806
+INFO:root:Avg. loss in the last 100 batches: 0.013164535164833069
+INFO:root:New lr: 0.11446957962896512
+INFO:root:Avg. loss in the last 100 batches: 0.01280149444937706
+INFO:root:New lr: 0.11460809347691353
+INFO:root:Avg. loss in the last 100 batches: 0.013198954984545708
+INFO:root:New lr: 0.11474662817871673
+INFO:root:Avg. loss in the last 100 batches: 0.012353233993053436
+INFO:root:New lr: 0.11488518354667979
+INFO:root:Avg. loss in the last 100 batches: 0.011783774010837078
+INFO:root:New lr: 0.11502375939307977
+INFO:root:Avg. loss in the last 100 batches: 0.014064667746424675
+INFO:root:New lr: 0.11516235553016599
+INFO:root:Avg. loss in the last 100 batches: 0.01222367025911808
+INFO:root:New lr: 0.11530097177016038
+INFO:root:Avg. loss in the last 100 batches: 0.011314285919070244
+INFO:root:New lr: 0.11543960792525751
+INFO:root:Avg. loss in the last 100 batches: 0.014166904613375664
+INFO:root:New lr: 0.11557826380762498
+INFO:root:Avg. loss in the last 100 batches: 0.0122813256457448
+INFO:root:New lr: 0.11571693922940374
+INFO:root:Avg. loss in the last 100 batches: 0.011641470715403557
+INFO:root:New lr: 0.11585563400270818
+INFO:root:Avg. loss in the last 100 batches: 0.012394784018397331
+INFO:root:New lr: 0.1159943479396266
+INFO:root:Avg. loss in the last 100 batches: 0.010972063057124615
+INFO:root:New lr: 0.11613308085222115
+INFO:root:Avg. loss in the last 100 batches: 0.010352233424782753
+INFO:root:New lr: 0.1162718325525284
+INFO:root:Avg. loss in the last 100 batches: 0.014896169304847717
+INFO:root:New lr: 0.1164106028525595
+INFO:root:Avg. loss in the last 100 batches: 0.01316213607788086
+INFO:root:New lr: 0.11654939156430025
+INFO:root:Avg. loss in the last 100 batches: 0.012577621266245842
+INFO:root:New lr: 0.11668819849971157
+INFO:root:Avg. loss in the last 100 batches: 0.014389095827937126
+INFO:root:New lr: 0.11682702347072985
+INFO:root:Avg. loss in the last 100 batches: 0.012360450811684132
+INFO:root:New lr: 0.11696586628926675
+INFO:root:Avg. loss in the last 100 batches: 0.012225659564137459
+INFO:root:New lr: 0.11710472676721001
+INFO:root:Avg. loss in the last 100 batches: 0.014466265216469765
+INFO:root:New lr: 0.11724360471642326
+INFO:root:Avg. loss in the last 100 batches: 0.012493307702243328
+INFO:root:New lr: 0.11738249994874658
+INFO:root:Avg. loss in the last 100 batches: 0.012058348394930363
+INFO:root:New lr: 0.11752141227599658
+INFO:root:Avg. loss in the last 100 batches: 0.01374480128288269
+INFO:root:New lr: 0.11766034150996671
+INFO:root:Avg. loss in the last 100 batches: 0.012550988234579563
+INFO:root:New lr: 0.11779928746242754
+INFO:root:Avg. loss in the last 100 batches: 0.012688972987234592
+INFO:root:New lr: 0.11793824994512692
+INFO:root:Avg. loss in the last 100 batches: 0.012599567882716656
+INFO:root:New lr: 0.11807722876979046
+INFO:root:Avg. loss in the last 100 batches: 0.010961351916193962
+INFO:root:New lr: 0.11821622374812144
+INFO:root:Avg. loss in the last 100 batches: 0.012635045684874058
+INFO:root:New lr: 0.11835523469180131
+INFO:root:Avg. loss in the last 100 batches: 0.014987470582127571
+INFO:root:New lr: 0.11849426141249
+INFO:root:Avg. loss in the last 100 batches: 0.01316830050200224
+INFO:root:New lr: 0.11863330372182593
+INFO:root:Avg. loss in the last 100 batches: 0.014371348544955254
+INFO:root:New lr: 0.11877236143142647
+INFO:root:Avg. loss in the last 100 batches: 0.014566692523658276
+INFO:root:New lr: 0.11891143435288812
+INFO:root:Avg. loss in the last 100 batches: 0.01288224570453167
+INFO:root:New lr: 0.11905052229778673
+INFO:root:Avg. loss of epoch 6: 0.012709449976682663
+INFO:root:New lr: 0.11918962507767783
+INFO:root:Avg. testing loss: 0.017116963863372803
+INFO:root:Starting epoch 7
+INFO:root:Avg. loss in the last 100 batches: 0.013776100240647793
+INFO:root:New lr: 0.11932874250409686
+INFO:root:Avg. loss in the last 100 batches: 0.011664507910609245
+INFO:root:New lr: 0.11946787438855933
+INFO:root:Avg. loss in the last 100 batches: 0.011138508096337318
+INFO:root:New lr: 0.11960702054256131
+INFO:root:Avg. loss in the last 100 batches: 0.012584994547069073
+INFO:root:New lr: 0.11974618077757943
+INFO:root:Avg. loss in the last 100 batches: 0.01130598969757557
+INFO:root:New lr: 0.11988535490507121
+INFO:root:Avg. loss in the last 100 batches: 0.011444233357906342
+INFO:root:New lr: 0.12002454273647548
+INFO:root:Avg. loss in the last 100 batches: 0.013742615468800068
+INFO:root:New lr: 0.12016374408321248
+INFO:root:Avg. loss in the last 100 batches: 0.011051544919610023
+INFO:root:New lr: 0.12030295875668393
+INFO:root:Avg. loss in the last 100 batches: 0.010804117657244205
+INFO:root:New lr: 0.12044218656827374
+INFO:root:Avg. loss in the last 100 batches: 0.012221273966133595
+INFO:root:New lr: 0.12058142732934798
+INFO:root:Avg. loss in the last 100 batches: 0.010883859358727932
+INFO:root:New lr: 0.12072068085125506
+INFO:root:Avg. loss in the last 100 batches: 0.011104446835815907
+INFO:root:New lr: 0.12085994694532615
+INFO:root:Avg. loss in the last 100 batches: 0.011961422860622406
+INFO:root:New lr: 0.12099922542287553
+INFO:root:Avg. loss in the last 100 batches: 0.010194119065999985
+INFO:root:New lr: 0.1211385160952004
+INFO:root:Avg. loss in the last 100 batches: 0.011047378182411194
+INFO:root:New lr: 0.12127781877358168
+INFO:root:Avg. loss in the last 100 batches: 0.01516492199152708
+INFO:root:New lr: 0.12141713326928402
+INFO:root:Avg. loss in the last 100 batches: 0.013306912034749985
+INFO:root:New lr: 0.12155645939355597
+INFO:root:Avg. loss in the last 100 batches: 0.013292605988681316
+INFO:root:New lr: 0.12169579695763033
+INFO:root:Avg. loss in the last 100 batches: 0.01229703426361084
+INFO:root:New lr: 0.12183514577272442
+INFO:root:Avg. loss in the last 100 batches: 0.010328506119549274
+INFO:root:New lr: 0.12197450565004031
+INFO:root:Avg. loss in the last 100 batches: 0.012240714393556118
+INFO:root:New lr: 0.12211387640076513
+INFO:root:Avg. loss in the last 100 batches: 0.014688058756291866
+INFO:root:New lr: 0.12225325783607122
+INFO:root:Avg. loss in the last 100 batches: 0.01351527776569128
+INFO:root:New lr: 0.12239264976711647
+INFO:root:Avg. loss in the last 100 batches: 0.013938194140791893
+INFO:root:New lr: 0.12253205200504452
+INFO:root:Avg. loss in the last 100 batches: 0.014840744435787201
+INFO:root:New lr: 0.12267146436098508
+INFO:root:Avg. loss in the last 100 batches: 0.013558989390730858
+INFO:root:New lr: 0.12281088664605416
+INFO:root:Avg. loss in the last 100 batches: 0.014135254546999931
+INFO:root:New lr: 0.12295031867135425
+INFO:root:Avg. loss in the last 100 batches: 0.012348923832178116
+INFO:root:New lr: 0.12308976024797477
+INFO:root:Avg. loss in the last 100 batches: 0.01091577298939228
+INFO:root:New lr: 0.12322921118699201
+INFO:root:Avg. loss in the last 100 batches: 0.012312359176576138
+INFO:root:New lr: 0.12336867129946982
+INFO:root:Avg. loss in the last 100 batches: 0.012750469148159027
+INFO:root:New lr: 0.12350814039645935
+INFO:root:Avg. loss in the last 100 batches: 0.011768780648708344
+INFO:root:New lr: 0.12364761828899981
+INFO:root:Avg. loss in the last 100 batches: 0.012821040116250515
+INFO:root:New lr: 0.12378710478811841
+INFO:root:Avg. loss in the last 100 batches: 0.012485277839004993
+INFO:root:New lr: 0.12392659970483058
+INFO:root:Avg. loss in the last 100 batches: 0.011203350499272346
+INFO:root:New lr: 0.12406610285014052
+INFO:root:Avg. loss in the last 100 batches: 0.013163645751774311
+INFO:root:New lr: 0.12420561403504127
+INFO:root:Avg. loss in the last 100 batches: 0.013986443169414997
+INFO:root:New lr: 0.12434513307051479
+INFO:root:Avg. loss in the last 100 batches: 0.012990206480026245
+INFO:root:New lr: 0.12448465976753265
+INFO:root:Avg. loss in the last 100 batches: 0.013888580724596977
+INFO:root:New lr: 0.12462419393705584
+INFO:root:Avg. loss in the last 100 batches: 0.012884888797998428
+INFO:root:New lr: 0.12476373539003538
+INFO:root:Avg. loss in the last 100 batches: 0.012354264035820961
+INFO:root:New lr: 0.12490328393741229
+INFO:root:Avg. loss in the last 100 batches: 0.014608470723032951
+INFO:root:New lr: 0.12504283939011812
+INFO:root:Avg. loss in the last 100 batches: 0.013340204954147339
+INFO:root:New lr: 0.1251824015590749
+INFO:root:Avg. loss in the last 100 batches: 0.014019107446074486
+INFO:root:New lr: 0.1253219702551957
+INFO:root:Avg. loss in the last 100 batches: 0.012146872468292713
+INFO:root:New lr: 0.12546154528938466
+INFO:root:Avg. loss in the last 100 batches: 0.011317859403789043
+INFO:root:New lr: 0.1256011264725374
+INFO:root:Avg. loss in the last 100 batches: 0.013528089039027691
+INFO:root:New lr: 0.12574071361554112
+INFO:root:Avg. loss in the last 100 batches: 0.012678045779466629
+INFO:root:New lr: 0.12588030652927504
+INFO:root:Avg. loss in the last 100 batches: 0.012194400653243065
+INFO:root:New lr: 0.1260199050246105
+INFO:root:Avg. loss in the last 100 batches: 0.013043409213423729
+INFO:root:New lr: 0.1261595089124113
+INFO:root:Avg. loss in the last 100 batches: 0.011403684504330158
+INFO:root:New lr: 0.12629911800353397
+INFO:root:Avg. loss in the last 100 batches: 0.010677141137421131
+INFO:root:New lr: 0.1264387321088279
+INFO:root:Avg. loss in the last 100 batches: 0.013759506866335869
+INFO:root:New lr: 0.12657835103913576
+INFO:root:Avg. loss in the last 100 batches: 0.01323411799967289
+INFO:root:New lr: 0.12671797460529366
+INFO:root:Avg. loss in the last 100 batches: 0.012312670238316059
+INFO:root:New lr: 0.1268576026181314
+INFO:root:Avg. loss in the last 100 batches: 0.013591919094324112
+INFO:root:New lr: 0.12699723488847287
+INFO:root:Avg. loss in the last 100 batches: 0.011007196269929409
+INFO:root:New lr: 0.12713687122713602
+INFO:root:Avg. loss in the last 100 batches: 0.01010055746883154
+INFO:root:New lr: 0.12727651144493338
+INFO:root:Avg. loss in the last 100 batches: 0.011270805262029171
+INFO:root:New lr: 0.1274161553526723
+INFO:root:Avg. loss in the last 100 batches: 0.011036139912903309
+INFO:root:New lr: 0.127555802761155
+INFO:root:Avg. loss in the last 100 batches: 0.010878938250243664
+INFO:root:New lr: 0.12769545348117894
+INFO:root:Avg. loss in the last 100 batches: 0.01321155484765768
+INFO:root:New lr: 0.12783510732353728
+INFO:root:Avg. loss in the last 100 batches: 0.011796259321272373
+INFO:root:New lr: 0.12797476409901878
+INFO:root:Avg. loss in the last 100 batches: 0.011609458364546299
+INFO:root:New lr: 0.12811442361840825
+INFO:root:Avg. loss in the last 100 batches: 0.013096287846565247
+INFO:root:New lr: 0.1282540856924868
+INFO:root:Avg. loss in the last 100 batches: 0.011659462936222553
+INFO:root:New lr: 0.1283937501320322
+INFO:root:Avg. loss in the last 100 batches: 0.011534392833709717
+INFO:root:New lr: 0.12853341674781876
+INFO:root:Avg. loss in the last 100 batches: 0.015023022890090942
+INFO:root:New lr: 0.12867308535061805
+INFO:root:Avg. loss in the last 100 batches: 0.013019946403801441
+INFO:root:New lr: 0.12881275575119888
+INFO:root:Avg. loss in the last 100 batches: 0.012207254767417908
+INFO:root:New lr: 0.12895242776032761
+INFO:root:Avg. loss in the last 100 batches: 0.014449827373027802
+INFO:root:New lr: 0.12909210118876852
+INFO:root:Avg. loss in the last 100 batches: 0.012561463750898838
+INFO:root:New lr: 0.12923177584728374
+INFO:root:Avg. loss in the last 100 batches: 0.012187294661998749
+INFO:root:New lr: 0.129371451546634
+INFO:root:Avg. loss in the last 100 batches: 0.014687776565551758
+INFO:root:New lr: 0.12951112809757842
+INFO:root:Avg. loss in the last 100 batches: 0.012139816768467426
+INFO:root:New lr: 0.12965080531087506
+INFO:root:Avg. loss in the last 100 batches: 0.01231090072542429
+INFO:root:New lr: 0.12979048299728113
+INFO:root:Avg. loss in the last 100 batches: 0.013070275075733662
+INFO:root:New lr: 0.12993016096755305
+INFO:root:Avg. loss in the last 100 batches: 0.011398671194911003
+INFO:root:New lr: 0.13006983903244695
+INFO:root:Avg. loss in the last 100 batches: 0.01167162787169218
+INFO:root:New lr: 0.13020951700271888
+INFO:root:Avg. loss in the last 100 batches: 0.012623139657080173
+INFO:root:New lr: 0.1303491946891249
+INFO:root:Avg. loss in the last 100 batches: 0.011067377403378487
+INFO:root:New lr: 0.1304888719024216
+INFO:root:Avg. loss in the last 100 batches: 0.011345990933477879
+INFO:root:New lr: 0.13062854845336602
+INFO:root:Avg. loss in the last 100 batches: 0.01449268776923418
+INFO:root:New lr: 0.13076822415271627
+INFO:root:Avg. loss in the last 100 batches: 0.012826819904148579
+INFO:root:New lr: 0.1309078988112315
+INFO:root:Avg. loss in the last 100 batches: 0.013112912885844707
+INFO:root:New lr: 0.13104757223967234
+INFO:root:Avg. loss in the last 100 batches: 0.012786559760570526
+INFO:root:New lr: 0.13118724424880107
+INFO:root:Avg. loss in the last 100 batches: 0.01084725558757782
+INFO:root:New lr: 0.1313269146493819
+INFO:root:Avg. loss in the last 100 batches: 0.011344769969582558
+INFO:root:New lr: 0.13146658325218125
+INFO:root:Avg. loss in the last 100 batches: 0.012043318711221218
+INFO:root:New lr: 0.13160624986796782
+INFO:root:Avg. loss in the last 100 batches: 0.010429397225379944
+INFO:root:New lr: 0.13174591430751317
+INFO:root:Avg. loss in the last 100 batches: 0.013134036213159561
+INFO:root:New lr: 0.13188557638159176
+INFO:root:Avg. loss in the last 100 batches: 0.015239753760397434
+INFO:root:New lr: 0.13202523590098122
+INFO:root:Avg. loss in the last 100 batches: 0.013498370535671711
+INFO:root:New lr: 0.1321648926764627
+INFO:root:Avg. loss in the last 100 batches: 0.013765154406428337
+INFO:root:New lr: 0.132304546518821
+INFO:root:Avg. loss in the last 100 batches: 0.01221633143723011
+INFO:root:New lr: 0.13244419723884504
+INFO:root:Avg. loss in the last 100 batches: 0.011092884466052055
+INFO:root:New lr: 0.1325838446473277
+INFO:root:Avg. loss in the last 100 batches: 0.011600438505411148
+INFO:root:New lr: 0.1327234885550666
+INFO:root:Avg. loss in the last 100 batches: 0.01235728245228529
+INFO:root:New lr: 0.132863128772864
+INFO:root:Avg. loss in the last 100 batches: 0.011366620659828186
+INFO:root:New lr: 0.13300276511152714
+INFO:root:Avg. loss in the last 100 batches: 0.013167403638362885
+INFO:root:New lr: 0.13314239738186856
+INFO:root:Avg. loss in the last 100 batches: 0.013132350519299507
+INFO:root:New lr: 0.13328202539470635
+INFO:root:Avg. loss in the last 100 batches: 0.012177200056612492
+INFO:root:New lr: 0.13342164896086425
+INFO:root:Avg. loss in the last 100 batches: 0.01253824308514595
+INFO:root:New lr: 0.13356126789117212
+INFO:root:Avg. loss in the last 100 batches: 0.01132237445563078
+INFO:root:New lr: 0.13370088199646601
+INFO:root:Avg. loss in the last 100 batches: 0.01051635853946209
+INFO:root:New lr: 0.13384049108758866
+INFO:root:Avg. loss in the last 100 batches: 0.012807659804821014
+INFO:root:New lr: 0.13398009497538949
+INFO:root:Avg. loss in the last 100 batches: 0.013101013377308846
+INFO:root:New lr: 0.13411969347072494
+INFO:root:Avg. loss in the last 100 batches: 0.01228382159024477
+INFO:root:New lr: 0.1342592863844589
+INFO:root:Avg. loss in the last 100 batches: 0.014972580596804619
+INFO:root:New lr: 0.13439887352746263
+INFO:root:Avg. loss in the last 100 batches: 0.014769102446734905
+INFO:root:New lr: 0.13453845471061532
+INFO:root:Avg. loss in the last 100 batches: 0.01409496646374464
+INFO:root:New lr: 0.1346780297448043
+INFO:root:Avg. loss in the last 100 batches: 0.01551911048591137
+INFO:root:New lr: 0.13481759844092508
+INFO:root:Avg. loss in the last 100 batches: 0.014088636264204979
+INFO:root:New lr: 0.13495716060988183
+INFO:root:Avg. loss in the last 100 batches: 0.013199900276958942
+INFO:root:New lr: 0.13509671606258766
+INFO:root:Avg. loss in the last 100 batches: 0.015444517135620117
+INFO:root:New lr: 0.13523626460996463
+INFO:root:Avg. loss in the last 100 batches: 0.014370574615895748
+INFO:root:New lr: 0.13537580606294414
+INFO:root:Avg. loss in the last 100 batches: 0.013195967301726341
+INFO:root:New lr: 0.13551534023246736
+INFO:root:Avg. loss in the last 100 batches: 0.016654983162879944
+INFO:root:New lr: 0.1356548669294852
+INFO:root:Avg. loss in the last 100 batches: 0.014773277565836906
+INFO:root:New lr: 0.13579438596495874
+INFO:root:Avg. loss in the last 100 batches: 0.014265010133385658
+INFO:root:New lr: 0.13593389714985946
+INFO:root:Avg. loss in the last 100 batches: 0.015050023794174194
+INFO:root:New lr: 0.13607340029516946
+INFO:root:Avg. loss in the last 100 batches: 0.012154355645179749
+INFO:root:New lr: 0.13621289521188162
+INFO:root:Avg. loss in the last 100 batches: 0.011447148397564888
+INFO:root:New lr: 0.1363523817110002
+INFO:root:Avg. loss in the last 100 batches: 0.012737613171339035
+INFO:root:New lr: 0.13649185960354063
+INFO:root:Avg. loss in the last 100 batches: 0.011525592766702175
+INFO:root:New lr: 0.13663132870053019
+INFO:root:Avg. loss in the last 100 batches: 0.010753358714282513
+INFO:root:New lr: 0.13677078881300797
+INFO:root:Avg. loss in the last 100 batches: 0.013525926508009434
+INFO:root:New lr: 0.1369102397520252
+INFO:root:Avg. loss in the last 100 batches: 0.012436974793672562
+INFO:root:New lr: 0.13704968132864576
+INFO:root:Avg. loss in the last 100 batches: 0.011782543733716011
+INFO:root:New lr: 0.13718911335394587
+INFO:root:Avg. loss in the last 100 batches: 0.015310666523873806
+INFO:root:New lr: 0.13732853563901493
+INFO:root:Avg. loss in the last 100 batches: 0.013570616953074932
+INFO:root:New lr: 0.13746794799495549
+INFO:root:Avg. loss in the last 100 batches: 0.013200630433857441
+INFO:root:New lr: 0.13760735023288354
+INFO:root:Avg. loss in the last 100 batches: 0.013506808318197727
+INFO:root:New lr: 0.13774674216392874
+INFO:root:Avg. loss in the last 100 batches: 0.012062435038387775
+INFO:root:New lr: 0.13788612359923486
+INFO:root:Avg. loss in the last 100 batches: 0.011995896697044373
+INFO:root:New lr: 0.1380254943499597
+INFO:root:Avg. loss in the last 100 batches: 0.015182467177510262
+INFO:root:New lr: 0.1381648542272756
+INFO:root:Avg. loss in the last 100 batches: 0.013317045755684376
+INFO:root:New lr: 0.13830420304236968
+INFO:root:Avg. loss in the last 100 batches: 0.013108690269291401
+INFO:root:New lr: 0.138443540606444
+INFO:root:Avg. loss in the last 100 batches: 0.016548290848731995
+INFO:root:New lr: 0.1385828667307159
+INFO:root:Avg. loss in the last 100 batches: 0.014253376051783562
+INFO:root:New lr: 0.13872218122641827
+INFO:root:Avg. loss in the last 100 batches: 0.014056642539799213
+INFO:root:New lr: 0.13886148390479963
+INFO:root:Avg. loss in the last 100 batches: 0.011842869222164154
+INFO:root:New lr: 0.1390007745771245
+INFO:root:Avg. loss in the last 100 batches: 0.010275495238602161
+INFO:root:New lr: 0.13914005305467383
+INFO:root:Avg. loss in the last 100 batches: 0.010979880578815937
+INFO:root:New lr: 0.13927931914874495
+INFO:root:Avg. loss in the last 100 batches: 0.013529638759791851
+INFO:root:New lr: 0.139418572670652
+INFO:root:Avg. loss in the last 100 batches: 0.012265989556908607
+INFO:root:New lr: 0.1395578134317262
+INFO:root:Avg. loss in the last 100 batches: 0.012755404226481915
+INFO:root:New lr: 0.13969704124331606
+INFO:root:Avg. loss in the last 100 batches: 0.014716540463268757
+INFO:root:New lr: 0.13983625591678756
+INFO:root:Avg. loss in the last 100 batches: 0.013731864280998707
+INFO:root:New lr: 0.1399754572635245
+INFO:root:Avg. loss in the last 100 batches: 0.01381540298461914
+INFO:root:New lr: 0.14011464509492877
+INFO:root:Avg. loss in the last 100 batches: 0.013341831974685192
+INFO:root:New lr: 0.14025381922242058
+INFO:root:Avg. loss in the last 100 batches: 0.012071197852492332
+INFO:root:New lr: 0.1403929794574387
+INFO:root:Avg. loss in the last 100 batches: 0.012248679995536804
+INFO:root:New lr: 0.14053212561144066
+INFO:root:Avg. loss in the last 100 batches: 0.010585248470306396
+INFO:root:New lr: 0.1406712574959032
+INFO:root:Avg. loss in the last 100 batches: 0.009598311968147755
+INFO:root:New lr: 0.14081037492232218
+INFO:root:Avg. loss in the last 100 batches: 0.01191452145576477
+INFO:root:New lr: 0.14094947770221328
+INFO:root:Avg. loss in the last 100 batches: 0.013362010009586811
+INFO:root:New lr: 0.14108856564711186
+INFO:root:Avg. loss in the last 100 batches: 0.011531091295182705
+INFO:root:New lr: 0.1412276385685735
+INFO:root:Avg. loss in the last 100 batches: 0.012285975739359856
+INFO:root:New lr: 0.14136669627817403
+INFO:root:Avg. loss in the last 100 batches: 0.012269164435565472
+INFO:root:New lr: 0.14150573858750998
+INFO:root:Avg. loss in the last 100 batches: 0.011054002679884434
+INFO:root:New lr: 0.1416447653081987
+INFO:root:Avg. loss in the last 100 batches: 0.014382023364305496
+INFO:root:New lr: 0.1417837762518786
+INFO:root:Avg. loss in the last 100 batches: 0.015147410333156586
+INFO:root:New lr: 0.14192277123020952
+INFO:root:Avg. loss in the last 100 batches: 0.014403373934328556
+INFO:root:New lr: 0.14206175005487304
+INFO:root:Avg. loss in the last 100 batches: 0.014659566804766655
+INFO:root:New lr: 0.14220071253757244
+INFO:root:Avg. loss in the last 100 batches: 0.01240602321922779
+INFO:root:New lr: 0.14233965849003327
+INFO:root:Avg. loss in the last 100 batches: 0.010869204998016357
+INFO:root:New lr: 0.1424785877240034
+INFO:root:Avg. loss in the last 100 batches: 0.013456652872264385
+INFO:root:New lr: 0.14261750005125345
+INFO:root:Avg. loss in the last 100 batches: 0.014101139269769192
+INFO:root:New lr: 0.14275639528357675
+INFO:root:Avg. loss in the last 100 batches: 0.012986354529857635
+INFO:root:New lr: 0.14289527323279
+INFO:root:Avg. loss in the last 100 batches: 0.013013198971748352
+INFO:root:New lr: 0.14303413371073323
+INFO:root:Avg. loss in the last 100 batches: 0.011437158100306988
+INFO:root:New lr: 0.14317297652927016
+INFO:root:Avg. loss in the last 100 batches: 0.01094017457216978
+INFO:root:New lr: 0.14331180150028838
+INFO:root:Avg. loss in the last 100 batches: 0.013588358648121357
+INFO:root:New lr: 0.1434506084356998
+INFO:root:Avg. loss in the last 100 batches: 0.012946930713951588
+INFO:root:New lr: 0.14358939714744054
+INFO:root:Avg. loss in the last 100 batches: 0.012792280875146389
+INFO:root:New lr: 0.14372816744747158
+INFO:root:Avg. loss in the last 100 batches: 0.014551317319273949
+INFO:root:New lr: 0.14386691914777883
+INFO:root:Avg. loss in the last 100 batches: 0.013205214403569698
+INFO:root:New lr: 0.1440056520603734
+INFO:root:Avg. loss in the last 100 batches: 0.012939093634486198
+INFO:root:New lr: 0.1441443659972918
+INFO:root:Avg. loss in the last 100 batches: 0.013524679467082024
+INFO:root:New lr: 0.14428306077059627
+INFO:root:Avg. loss in the last 100 batches: 0.0119840819388628
+INFO:root:New lr: 0.14442173619237506
+INFO:root:Avg. loss in the last 100 batches: 0.011976361274719238
+INFO:root:New lr: 0.14456039207474253
+INFO:root:Avg. loss in the last 100 batches: 0.014437231235206127
+INFO:root:New lr: 0.1446990282298396
+INFO:root:Avg. loss in the last 100 batches: 0.012088852003216743
+INFO:root:New lr: 0.144837644469834
+INFO:root:Avg. loss in the last 100 batches: 0.011395726352930069
+INFO:root:New lr: 0.14497624060692021
+INFO:root:Avg. loss in the last 100 batches: 0.01415948010981083
+INFO:root:New lr: 0.1451148164533202
+INFO:root:Avg. loss in the last 100 batches: 0.012240741401910782
+INFO:root:New lr: 0.14525337182128323
+INFO:root:Avg. loss in the last 100 batches: 0.011843442916870117
+INFO:root:New lr: 0.14539190652308648
+INFO:root:Avg. loss in the last 100 batches: 0.012522220611572266
+INFO:root:New lr: 0.14553042037103492
+INFO:root:Avg. loss in the last 100 batches: 0.010890793986618519
+INFO:root:New lr: 0.14566891317746195
+INFO:root:Avg. loss in the last 100 batches: 0.010377995669841766
+INFO:root:New lr: 0.14580738475472937
+INFO:root:Avg. loss in the last 100 batches: 0.01490398496389389
+INFO:root:New lr: 0.1459458349152279
+INFO:root:Avg. loss in the last 100 batches: 0.013246997259557247
+INFO:root:New lr: 0.1460842634713771
+INFO:root:Avg. loss in the last 100 batches: 0.012647238560020924
+INFO:root:New lr: 0.14622267023562585
