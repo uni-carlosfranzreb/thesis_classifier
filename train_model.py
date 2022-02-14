@@ -31,7 +31,7 @@ if __name__ == '__main__':
     "dropout": .7,
     "loss": BCELoss(),
     "batch_size": 10,
-    "n_epochs": 30,
+    "n_epochs": 20,
     "lr": .4,
     "momentum": .5,
     "optimizer": 'SGD',
