@@ -25,7 +25,7 @@ def split(docs_folder, dump_folder, test_pctg=.01):
     logging.info(f'Training set of {file}: {len(tr_docs)} docs')
     json.dump(tr_docs, open(f'{dump_folder}/{file}', 'w', encoding='utf-8'))
   json.dump(ts_docs, open(f'{dump_folder}/test.json', 'w', encoding='utf-8'))
-  logging.info(f'Test has {len(ts_docs)} files')
+  logging.info(f'Test has {len(ts_docs)} docs')
 
 
 def debug_data():
