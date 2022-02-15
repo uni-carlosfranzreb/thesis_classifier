@@ -12,7 +12,7 @@ The architecture and embedding choices are similar to those described in Giargul
 1. pre-trained fasttext word vectors, trained on a Wikipedia dump of 2017 and three other sources,
 2. two convolution layers with ReLU activations, followed by max. pooling layers and finally a dropout layer,
 3. a fully connected two layer neural network, whose output layer has as many nodes as there are subjects,
-4. training occurs with batch size 10, learning rate 0.1, momentum 0.5 and Nesterov accelerated gradient.
+4. training occurs with batch size 10, learning rate 0.1, momentum 0.5 and Nesterov accelerated gradients.
 
 He does not mention clipping in the paper, so we will first try to train the model without.
 
@@ -50,14 +50,12 @@ If the data is still raw text, you can process it with the file `process_docs.py
 Here is an example:
 
 ```json
-{
-  "subject ID": [
-    {
-      "data": "text (str)",
-      "subjects": "list of subject IDs"
-    }
-  ]
-}
+[
+  {
+    "data": "text (str)",
+    "subjects": "list of subject IDs"
+  }
+]
 ```
 
 
@@ -99,6 +97,9 @@ This model avoided overfitting much better. The training loss increased after th
 ### 1644093287
 
 This model, with increased dropout rate (from 0.01 to 0.05), was extremely similar to the previous one. I have now increased the batch size to 32 and decreased the scheduler steps from 3,000 to 2,000, to account for the smaller number of batches.
+### 1644314094
+
+The test loss decreased monotonically, but very slowly. As Garguilo did, I didn't use a scheduler. This is not optimal. I will try a couple of schedulers now to accelerate training. 
 
 ## TODO
 
