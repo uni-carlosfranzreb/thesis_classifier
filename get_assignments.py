@@ -10,10 +10,15 @@ from os import listdir
 from cnn.convolutional_model import Classifier
 
 
-def compute(model_file, dump_file, n_words=400, n_dims=300):
+def compute(model_file, dump_file, n_words=400, n_dims=300, hidden_size=100):
   data_folder = 'data/pretrained_vecs/data'
   subjects = list(json.load(open('data/openalex/subjects.json')).keys())
-  model = Classifier(len(subjects), n_dims, 6200, 200)
+  input_linear = -1
+  if n_words == 400:
+    input_linear = 10000
+  elif n_words == 250:
+    input_linear = 6200
+  model = Classifier(len(subjects), n_dims, input_linear, hidden_size)
   model.load_state_dict(
     torch.load(model_file, map_location=torch.device('cpu'))
   )
@@ -47,8 +52,8 @@ def prepare_data(data, n_words, n_dims):
   
 
 if __name__ == '__main__':
-  runs = [(1644599055, 20), (1644599121, 20)]
+  runs = [(1644783567, 20)]
   for run_id, epoch in runs:
     model_file = f'data/classifiers/{run_id}/epoch_{epoch}.pt'
     dump_file = f'data/classifiers/{run_id}/probabilities.json'
-    compute(model_file, dump_file, n_words=250)
+    compute(model_file, dump_file, n_words=250, hidden_size=100)
