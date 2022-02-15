@@ -52,8 +52,8 @@ def prepare_data(data, n_words, n_dims):
   
 
 if __name__ == '__main__':
-  runs = [(1644783567, 20)]
+  runs = [(1644783471, 20)]
   for run_id, epoch in runs:
     model_file = f'data/classifiers/{run_id}/epoch_{epoch}.pt'
     dump_file = f'data/classifiers/{run_id}/probabilities.json'
-    compute(model_file, dump_file, n_words=250, hidden_size=100)
+    compute(model_file, dump_file, n_words=250, hidden_size=200)
