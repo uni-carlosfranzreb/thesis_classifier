@@ -58,7 +58,6 @@ Here is an example:
 ]
 ```
 
-
 ## Open questions
 
 * Subjects are assigned to documents with proability scores. How can I include these scores? Gargulio's subjects are assigned by humans (no scores).
@@ -97,9 +96,14 @@ This model avoided overfitting much better. The training loss increased after th
 ### 1644093287
 
 This model, with increased dropout rate (from 0.01 to 0.05), was extremely similar to the previous one. I have now increased the batch size to 32 and decreased the scheduler steps from 3,000 to 2,000, to account for the smaller number of batches.
+
 ### 1644314094
 
-The test loss decreased monotonically, but very slowly. As Garguilo did, I didn't use a scheduler. This is not optimal. I will try a couple of schedulers now to accelerate training. 
+The test loss decreased monotonically, but very slowly. As Garguilo did, I didn't use a scheduler. This is not optimal. I will try a couple of schedulers now to accelerate training.
+
+### ASL
+
+The models trained with ASL were not working properly because the original ASL implementation sums the individual label losses, instead of averaging them, like PyTorch's BCE does.
 
 ## TODO
 
