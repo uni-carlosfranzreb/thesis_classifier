@@ -8,7 +8,7 @@ from torch.nn import BCELoss
 from torch.optim import lr_scheduler
 
 from cnn.init_training import init
-from cnn.asymmetric_loss import AsymmetricLossOptimized
+from cnn.asymmetric_loss import ASL
 from cnn.convolutional_model import Classifier as ConvClassifier
 from cnn.sum_model import Classifier as SumClassifier
 from cnn.hierarchy_model import Classifier as HierarchyClassifier
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     "n_words": 250,
     "n_dims": 300,
     "dropout": .7,
-    "loss": AsymmetricLossOptimized(gamma_pos=0, clip=None),
+    "loss": ASL(),
     "batch_size": 10,
     "n_epochs": 20,
     "lr": .5,
