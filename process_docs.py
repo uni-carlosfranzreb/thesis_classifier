@@ -168,9 +168,11 @@ def vectorize_repos(data_file, dump_folder):
 if __name__ == '__main__':
   logging.basicConfig(
     level=logging.INFO, 
-    handlers=[logging.FileHandler('logs/get_repo_vecs.log', 'w', 'utf-8')],
+    handlers=[logging.FileHandler('logs/get_all_vecs.log', 'w', 'utf-8')],
     format='%(message)s'
   )
+  get_vecs()
+  logging.info('\n\n--- SWITCH TO REPO DATA ---\n\n')
   vectorize_repos(
     'data/json/dim/all/data_lemmas.json',
     'data/pretrained_vecs/data'
