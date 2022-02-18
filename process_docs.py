@@ -119,7 +119,7 @@ def get_vecs():
         for w in doc['data']:
           if w in pretrained:
             vecs[-1]['data'].append(pretrained[w])
-        found = len(vecs[subject][-1]["data"])
+        found = len(vecs[-1]["data"])
         logging.info(f'Found {found} vecs for {len(doc["data"])} words')
     json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
 
