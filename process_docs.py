@@ -101,7 +101,7 @@ def filter_text(text, stopwords):
 
 def get_vecs():
   """ Retrieve the vectors of the docs and dump them in another folder. """
-  docs_folder = 'data/openalex/docs'
+  docs_folder = 'data/openalex/docs_hierarchy'
   vecs_folder = 'data/openalex/vecs'
   fname = 'data/pretrained_vecs/wiki-news-300d-1M-subword.vec'
   fin = open(fname, encoding='utf-8', newline='\n', errors='ignore')
@@ -112,14 +112,13 @@ def get_vecs():
     pretrained[tokens[0]] = list(map(float, tokens[1:]))
   for file in listdir(docs_folder):
     docs = json.load(open(f'{docs_folder}/{file}', encoding='utf-8'))
-    vecs = {}
+    vecs = []
     for subject in docs:
-      vecs[subject] = []
       for doc in docs[subject]:
-        vecs[subject].append({'data': [], 'subjects': doc['subjects']})
+        vecs.append({'data': [], 'subjects': doc['subjects']})
         for w in doc['data']:
           if w in pretrained:
-            vecs[subject][-1]['data'].append(pretrained[w])
+            vecs[-1]['data'].append(pretrained[w])
         found = len(vecs[subject][-1]["data"])
         logging.info(f'Found {found} vecs for {len(doc["data"])} words')
     json.dump(vecs, open(f'{vecs_folder}/{file}', 'w', encoding='utf-8'))
@@ -168,12 +167,7 @@ def vectorize_repos(data_file, dump_folder):
 if __name__ == '__main__':
   logging.basicConfig(
     level=logging.INFO, 
-    handlers=[logging.FileHandler('logs/get_all_vecs.log', 'w', 'utf-8')],
+    handlers=[logging.FileHandler('logs/get_vecs.log', 'w', 'utf-8')],
     format='%(message)s'
   )
   get_vecs()
-  logging.info('\n\n--- SWITCH TO REPO DATA ---\n\n')
-  vectorize_repos(
-    'data/json/dim/all/data_lemmas.json',
-    'data/pretrained_vecs/data'
-  )
