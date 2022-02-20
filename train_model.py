@@ -29,7 +29,7 @@ if __name__ == '__main__':
     "n_words": 250,
     "n_dims": 300,
     "dropout": .7,
-    "loss": ASL(2, 1),
+    "loss": ASL(3, 0),
     "batch_size": 10,
     "n_epochs": 20,
     "lr": .4,
