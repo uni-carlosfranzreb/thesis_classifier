@@ -52,7 +52,7 @@ def prepare_data(data, n_words, n_dims):
   
 
 if __name__ == '__main__':
-  runs = [(1644783471, 20)]
+  runs = [(1645270129, 20), (1645376136, 20), (1645376086, 20)]
   for run_id, epoch in runs:
     model_file = f'data/classifiers/{run_id}/epoch_{epoch}.pt'
     dump_file = f'data/classifiers/{run_id}/probabilities.json'
