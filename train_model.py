@@ -29,7 +29,7 @@ if __name__ == '__main__':
     "n_words": 250,
     "n_dims": 300,
     "dropout": .7,
-    "loss": ASL(2, 0),
+    "loss": ASL(2, 1),
     "batch_size": 10,
     "n_epochs": 20,
     "lr": .4,
@@ -40,7 +40,8 @@ if __name__ == '__main__':
     "scheduler_gamma": .9,
     "shuffle": True,
     "hidden_layer": 100,
-    "input_linear": 6200
+    "input_linear": 6200,
+    "model_state": "data/classifiers/1645270129/epoch_20.pt"
   }
   logging.basicConfig(
     level=logging.INFO,

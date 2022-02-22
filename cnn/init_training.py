@@ -29,15 +29,19 @@ def init(params):
 
 def init_model(n_subjects, params):
   """ Initialize the model. It can be ConvClassifier, SumClassifier or
-  HierarchyClassifier """
+  HierarchyClassifier. Load the state_dict if one is given. """
   if 'hierarchy' in str(params["model"]):
     hierarchy_mask = create_mask(params["subjects_file"])
-    return params["model"](params["n_dims"], hierarchy_mask, params["dropout"])
+    model = params["model"](params["n_dims"], hierarchy_mask, params["dropout"])
   elif params["dropout"] is not None:
-    return params["model"](n_subjects, params["n_dims"], params["input_linear"],
+    model = params["model"](n_subjects, params["n_dims"], params["input_linear"],
         params["hidden_layer"], params["dropout"])
-  return params["model"](n_subjects, params["n_dims"], params["input_linear"],
+  else:
+    model= params["model"](n_subjects, params["n_dims"], params["input_linear"],
         params["hidden_layer"])
+  if params["model_state"] is not None:
+    model.load_state_dict(torch.load(params["model_state"]))
+  return model
 
 
 def init_optimizer(model, params):
