@@ -29,7 +29,7 @@ if __name__ == '__main__':
     "n_words": 250,
     "n_dims": 300,
     "dropout": .7,
-    "loss": ASL(2, 1),
+    "loss": BCELoss(),
     "batch_size": 10,
     "n_epochs": 20,
     "lr": .4,
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     "shuffle": True,
     "hidden_layer": 100,
     "input_linear": 6200,
-    "model_state": "data/classifiers/1645270129/epoch_20.pt"
+    "model_state": None
   }
   logging.basicConfig(
     level=logging.INFO,
