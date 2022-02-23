@@ -91,3 +91,4 @@ def log_params(params):
   logging.info(f'Scheduler steps: {params["scheduler_steps"]}')
   logging.info(f'Scheduler gamma: {params["scheduler_gamma"]}')
   logging.info(f'Data shuffling?: {params["shuffle"]}\n')
+  logging.info(f'Restart model: {params["model_state"]}\n')
