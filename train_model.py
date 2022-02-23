@@ -41,7 +41,7 @@ if __name__ == '__main__':
     "shuffle": True,
     "hidden_layer": 100,
     "input_linear": 6200,
-    "model_state": None
+    "model_state": 'data/classifiers/1645527301/epoch_20.pt'
   }
   logging.basicConfig(
     level=logging.INFO,
