@@ -6,7 +6,6 @@ import logging
 
 import torch.optim
 
-from hierarchy_mask import create_mask
 from cnn.load_data import Dataset
 from cnn.train import ModelTrainer
 
@@ -28,12 +27,9 @@ def init(params):
 
 
 def init_model(n_subjects, params):
-  """ Initialize the model. It can be ConvClassifier, SumClassifier or
-  HierarchyClassifier. Load the state_dict if one is given. """
-  if 'hierarchy' in str(params["model"]):
-    hierarchy_mask = create_mask(params["subjects_file"])
-    model = params["model"](params["n_dims"], hierarchy_mask, params["dropout"])
-  elif params["dropout"] is not None:
+  """ Initialize the model. It can be ConvClassifier or SumClassifier. Load
+  the state_dict if one is given. """
+  if params["dropout"] is not None:
     model = params["model"](n_subjects, params["n_dims"], params["input_linear"],
         params["hidden_layer"], params["dropout"])
   else:

@@ -47,8 +47,6 @@ class ModelTrainer:
         data, labels = [t.to(self.device) for t in batch]
         optimizer.zero_grad()
         out = self.model(data)
-        if out.shape[1] == 2138:  # fields are not present in hierarchy model
-          labels = labels[:, 19:]  # remove fields from labels
         loss = loss_fn(out, labels)
         loss.backward()
         optimizer.step()
@@ -67,8 +65,6 @@ class ModelTrainer:
       for doc in self.dataset.test_set():
         data, labels = [t.unsqueeze(0).to(self.device) for t in doc]
         out = self.model(data)
-        if out.shape[1] == 2138:  # fields are not present in hierarchy model
-          labels = labels[:, 19:]  # remove fields from labels
         loss = loss_fn(out, labels)
         losses.append(loss)
     logging.info(f'Avg. testing loss: {sum(losses)/len(losses)}')

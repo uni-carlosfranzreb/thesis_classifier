@@ -11,12 +11,11 @@ from cnn.init_training import init
 from cnn.asymmetric_loss import ASL
 from cnn.convolutional_model import Classifier as ConvClassifier
 from cnn.sum_model import Classifier as SumClassifier
-from cnn.hierarchy_model import Classifier as HierarchyClassifier
 
 
 if __name__ == '__main__':
   """ Set the parameters for the training run.
-  - Models: ConvClassifier, SumClassifier, HierarchyClassifier.
+  - Models: ConvClassifier, SumClassifier.
   - Losses: BCELoss, AsymmetricLossOptimized.
   - Scheduler can also be None.
   - Optimizer can be 'SGD' or 'Adam'. """
