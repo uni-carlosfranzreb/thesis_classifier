@@ -29,12 +29,12 @@ def init(params):
 def init_model(n_subjects, params):
   """ Initialize the model. It can be ConvClassifier or SumClassifier. Load
   the state_dict if one is given. """
-  if params["dropout"] is not None:
+  if params["mask"] is not None:  # model is coherent_model
+    model = params["model"](n_subjects, params["n_dims"], params["mask"],
+        params["input_linear"], params["hidden_layer"], params["dropout"])   
+  else:  # model is either sum_model or convolutional_model
     model = params["model"](n_subjects, params["n_dims"], params["input_linear"],
         params["hidden_layer"], params["dropout"])
-  else:
-    model= params["model"](n_subjects, params["n_dims"], params["input_linear"],
-        params["hidden_layer"])
   if params["model_state"] is not None:
     model.load_state_dict(torch.load(params["model_state"]))
   return model
