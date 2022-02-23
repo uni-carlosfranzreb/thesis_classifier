@@ -29,7 +29,7 @@ if __name__ == '__main__':
     "run_id": int(time()),
     "model": CoherentClassifier,
     "subjects_file": subjects_file,
-    "docs_folder": 'data/openalex/debug_docs',
+    "docs_folder": 'data/openalex/split_docs',
     "n_words": 250,
     "n_dims": 300,
     "dropout": .7,
