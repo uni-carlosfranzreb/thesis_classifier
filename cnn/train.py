@@ -38,6 +38,7 @@ class ModelTrainer:
       os.mkdir(self.dump_folder)
 
   def train(self, loss_fn, batch_size, n_epochs, optimizer, scheduler=None):
+    loss_fn.to(self.device)
     for epoch in range(1, n_epochs+1):
       loader = DataLoader(self.dataset, batch_size=batch_size)
       self.cnt, self.current_loss = 0, 0  # for last 100 batches
