@@ -26,7 +26,7 @@ class Classifier(nn.Module):
     self.dropout = nn.Dropout(dropout)
     self.fc1 = nn.Linear(input_linear, hidden_layer)
     self.fc2 = nn.Linear(hidden_layer, n_labels)
-    self.mask = mask
+    self.register_buffer('mask', mask)
 
   def forward(self, x):
     """ Computes the forward pass.
