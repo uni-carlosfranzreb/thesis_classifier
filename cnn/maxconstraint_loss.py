@@ -9,8 +9,8 @@ class MCL(nn.Module):
 		""" The mask is the same mask that is input in the coherent model.
 		The gammas are the same ones as in ASL. """
 		super(MCL, self).__init__()
-		self.mask = mask
-		self.ones = torch.ones(mask.shape[0])
+		self.register_buffer('mask', mask)
+		self.register_buffer('ones', torch.ones(mask.shape[0]))
 		self.gamma_neg = gamma_neg
 		self.gamma_pos = gamma_pos
 
