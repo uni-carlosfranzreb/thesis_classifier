@@ -24,10 +24,7 @@ class Dataset(IterableDataset):
     self.n_words = n_words
     self.n_dims = n_dims
     self.shuffle = shuffle
-    self.n_docs = 0
-    for file in listdir(self.folder):
-      docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
-      self.n_docs += len(docs)
+    self.n_docs = len(listdir(self.folder)) * 3000  # aprox
   
   def __len__(self):
     """ Return the number of documents across all files. """
