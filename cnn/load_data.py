@@ -21,13 +21,13 @@ class Dataset(IterableDataset):
     self.folder = folder
     self.subject_info = json.load(open(subjects_file))
     self.subjects = [subject_id for subject_id in self.subject_info]
-    self.n_docs = 0
     self.n_words = n_words
     self.n_dims = n_dims
     self.shuffle = shuffle
+    self.n_docs = 0
     for file in listdir(self.folder):
       docs = json.load(open(f'{self.folder}/{file}', encoding='utf-8'))
-      self.n_docs += sum([len(doc) for doc in docs])
+      self.n_docs += len(docs)
   
   def __len__(self):
     """ Return the number of documents across all files. """
