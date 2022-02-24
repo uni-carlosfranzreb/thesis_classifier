@@ -9,7 +9,7 @@ class MCL(nn.Module):
 		""" The mask is the same mask that is input in the coherent model.
 		The gammas are the same ones as in ASL. """
 		super(MCL, self).__init__()
-		self.register_buffer('mask', mask)
+		self.register_buffer('mask', mask.unsqueeze(1))
 		self.register_buffer('ones', torch.ones(mask.shape[0]))
 		self.gamma_neg = gamma_neg
 		self.gamma_pos = gamma_pos
@@ -24,7 +24,7 @@ class MCL(nn.Module):
 	
 	def prepare_input(self, x, y):
 		""" Prepare the input as explained in the paper. """
-		masked = x.mul(self.mask.unsqueeze(1)).transpose(0, 1)
+		masked = x.mul(self.mask).transpose(0, 1)
 		out_y = x.mul(y).unsqueeze(2).transpose(1, 2)
 		max_masked_outy = masked.mul(out_y).max(dim=2).values
 		return (self.ones-y).mul(x) + y.mul(max_masked_outy)
