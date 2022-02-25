@@ -33,7 +33,7 @@ if __name__ == '__main__':
     "n_words": 250,
     "n_dims": 300,
     "dropout": .7,
-    "loss": MCL(mask),
+    "loss": MCL(mask, 2, 1),
     "batch_size": 10,
     "n_epochs": 20,
     "lr": .4,
