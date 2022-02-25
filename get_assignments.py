@@ -7,8 +7,8 @@ import json
 import torch
 from os import listdir
 
-from cnn.convolutional_model import ConvClassifier
-from cnn.coherent_model import CoherentClassifier
+from cnn.convolutional_model import Classifier as ConvClassifier
+from cnn.coherent_model import Classifier as CoherentClassifier
 
 from descendant_mask import create_mask
 
