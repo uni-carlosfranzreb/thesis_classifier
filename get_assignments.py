@@ -7,7 +7,10 @@ import json
 import torch
 from os import listdir
 
-from cnn.convolutional_model import Classifier
+from cnn.convolutional_model import ConvClassifier
+from cnn.coherent_model import CoherentClassifier
+
+from descendant_mask import create_mask
 
 
 def compute(model_file, dump_file, n_words=400, n_dims=300, hidden_size=100):
@@ -18,10 +21,18 @@ def compute(model_file, dump_file, n_words=400, n_dims=300, hidden_size=100):
     input_linear = 10000
   elif n_words == 250:
     input_linear = 6200
-  model = Classifier(len(subjects), n_dims, input_linear, hidden_size)
-  model.load_state_dict(
-    torch.load(model_file, map_location=torch.device('cpu'))
-  )
+  try:
+    model = ConvClassifier(len(subjects), n_dims, input_linear, hidden_size)
+    model.load_state_dict(
+      torch.load(model_file, map_location=torch.device('cpu'))
+    )
+  except RuntimeError:
+    mask = create_mask('data/openalex/subjects.json')
+    model = CoherentClassifier(len(subjects), n_dims, mask, input_linear,
+      hidden_size)
+    model.load_state_dict(
+      torch.load(model_file, map_location=torch.device('cpu'))
+    )
   model.eval()  # deactivate dropout
   assigned = {}
   for file in listdir(data_folder):
