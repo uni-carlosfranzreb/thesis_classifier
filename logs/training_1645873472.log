@@ -18,7 +18,7 @@ INFO:root:Scheduler steps: 6000
 INFO:root:Scheduler gamma: 0.9
 INFO:root:Data shuffling?: True
 
-INFO:root:Restart model: data/classifiers/1645720728/epoch_20.pt
+INFO:root:Restart model: 'data/classifiers/1645720728/epoch_20.pt'
 
 INFO:root:Dataset has 219000 documents
 INFO:root:There are 2157 subjects.
