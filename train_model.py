@@ -35,17 +35,17 @@ if __name__ == '__main__':
     "dropout": .7,
     "loss": MCL(mask, 2, 1),
     "batch_size": 10,
-    "n_epochs": 20,
+    "n_epochs": 40,
     "lr": .4,
     "momentum": .5,
     "optimizer": 'SGD',
     "scheduler": lr_scheduler.OneCycleLR,
-    "scheduler_steps": 6000,
+    "scheduler_steps": 12000,
     "scheduler_gamma": .9,
     "shuffle": True,
     "hidden_layer": 100,
     "input_linear": 6200,
-    "model_state": 'data/classifiers/1645720728/epoch_20.pt',
+    "model_state": None,
     "mask": mask
   }
   logging.basicConfig(
