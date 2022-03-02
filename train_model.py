@@ -36,7 +36,7 @@ if __name__ == '__main__':
     "loss": MCL(mask, 3, 1),
     "batch_size": 10,
     "n_epochs": 40,
-    "lr": .4,
+    "lr": .5,
     "momentum": .5,
     "optimizer": 'SGD',
     "scheduler": lr_scheduler.OneCycleLR,
